@@ -1,3 +1,5 @@
 compas-analysis/compas.db
 /.venv
 /tmp
+/data
+/results
