@@ -1,0 +1,19 @@
+race,Risk_Group,0,1
+African-American,Low,789,423
+African-American,Medium,423,514
+African-American,High,228,580
+Asian,Low,16,2
+Asian,Medium,1,4
+Asian,High,1,2
+Caucasian,Low,910,358
+Caucasian,Medium,224,247
+Caucasian,High,66,158
+Hispanic,Low,246,105
+Hispanic,Medium,48,57
+Hispanic,High,24,29
+Native American,Low,5,1
+Native American,Medium,2,1
+Native American,High,1,4
+Other,Low,163,75
+Other,Medium,22,18
+Other,High,6,18
