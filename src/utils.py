@@ -1,6 +1,22 @@
 '''utility functions'''
 
+import os
+from dataclasses import dataclass
 import pandas as pd
+
+
+@dataclass
+class ProjectFolders:
+    '''
+    A dataclass containing the project folders.
+    '''
+
+    RESULTS_FOLDER = "../results"
+    DATA_FOLDER = "../data"
+    TEMP_FOLDER = "../tmp"
+
+    FINAL_DATASET_FILE =  os.path.join(DATA_FOLDER, "final_dataset.csv")
+
 
 
 def get_info(df: pd.DataFrame):
