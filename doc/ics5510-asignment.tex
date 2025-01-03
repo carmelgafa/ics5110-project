@@ -1,0 +1,268 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{makecell}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+	
+	\title{ICS5510 Assignment}
+	
+	\author{\IEEEauthorblockN{Carmel Gafa}
+		\date{December 2024}
+		
+	}
+	
+	\maketitle
+	
+	\begin{abstract}
+	TODO: abstract here
+	\end{abstract}
+	
+	\begin{IEEEkeywords}
+		TODO: keywords
+	\end{IEEEkeywords}
+	
+	\section{Introduction}
+
+	This exercise will explore the well-known COMPAS dataset using several machine-learning techniques. We will also look into the ethical implications of predictive risk assessment models. We have taken the opportunity of this study to implement some of the techniques discussed in ICS5510, like imputation and encoding, to help in data preparation, linear regression, neural networks and others as the tools used for prediction.
+	
+	Wherever possible, we preferred the manual implementation of some of the steps over the functionality available in popular Python libraries to appreciate the techniques implemented more thoroughly.
+	
+	\subsection{History of the COMPAS tool}
+	
+	The COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) dataset and tool have a controversial history rooted in its use for assessing the likelihood of recidivism among criminal defendants. Developed by Northpointe, COMPAS gained widespread adoption in the U.S. judicial system for pretrial risk assessments and sentencing decisions. This tool is helpful in various stages of the criminal justice process, including bail, sentencing, and parole decisions.
+	
+	However, in 2016, an investigative report by ProPublica revealed significant racial biases in the tool's predictions. The report found that COMPAS disproportionately labelled Black defendants as high risk for reoffending while underestimating the risk for white defendants, even when both groups had similar criminal histories. This revelation sparked a broader debate about using algorithmic tools in criminal justice and their transparency and fairness. 
+	
+	The COMPAS tool has not been directly the subject of lawsuits, but its use in judicial decisions has led to legal challenges. For instance, in State v. Loomis (2016), the Wisconsin Supreme Court upheld using COMPAS in sentencing. However, judges must be informed about its limitations, particularly its proprietary nature and potential biases. The case highlighted the broader tension between the utility of predictive algorithms and their application's need for accountability and fairness.
+	
+	\subsection{The COMPAS dataset}
+	
+	The dataset that originates from the COMPAS tool is widely used in criminology and machine learning studies. 
+	
+	The dataset contains attributes such as demographic information, prior charges, juvenile records, and risk scores, including the widely analysed `decile score`, which categorises individuals into ten different risk groups. 
+	
+	The decile score is a critical feature, assigning a numerical value to an individual's likelihood of reoffending. Other important features include the number of prior offences \textbf{\texttt{priors\_count}} and the type of offence \textbf{\texttt{c\_charge\_degree}}, provide context for these predictions. At the same time, the label \textbf{\texttt{two\_year\_recid}} indicates whether an individual reoffended within two years of their COMPAS assessment.
+	
+	While the dataset has been instrumental in research aimed at understanding and improving risk prediction models, it has also been the subject of extensive scrutiny due to its implications for fairness and equity in the justice system. A couple of thoughts resulting from this scrutiny include:
+	
+	
+	\begin{itemize}
+		\item Multiple studies, including the influential ProPublica investigation in 2016, have highlighted racial disparities in the COMPAS predictions. African-American defendants were found to be nearly twice as likely as Caucasian defendants to be labelled as high-risk for recidivism but not reoffend. Conversely, Caucasian defendants were more likely to be classified as low-risk but later reoffend, raising concerns about systemic bias embedded in the algorithm, which could exacerbate existing inequalities in the justice system.
+	
+		\item The COMPAS tool operates as a proprietary black-box model, meaning its internal workings and feature weights are not disclosed to the public or even to the defendants it evaluates. This lack of transparency prevents meaningful scrutiny and accountability, leaving users unable to fully understand or challenge the tool's predictions.
+	
+		\item The COMPAS algorithm relies on historical criminal justice data, which may reflect social and systemic biases. For example, law enforcement practices that can result in sentencing disparities can all influence the patterns observed in the data. Using such data as input, the COMPAS tool risks perpetuating these biases into an electronic tool.
+	
+		\item Some features in the COMPAS dataset, such as age and criminal history, are static and cannot change over time, as this data is based on the date of the COMPAS assessment. We can argue that these features in risk predictions without considering the period after the COMPAS assessment undermines the potential for individuals to reform and leads to insensible punitive outcomes.
+	
+		\item The ethical implications of using predictive algorithms in high-stakes decisions, such as sentencing and parole, constitute a significant area of concern. The potential for false positives can lead to unjustly harsher treatment, while false negatives can impact public safety.
+	
+		\item The dataset available for research purposes is a reduced version of the original COMPAS data, with several features anonymised or removed. Missing important data introduces limitations for academic studies aiming to replicate or validate the findings from real-world COMPAS applications.
+	\end{itemize}
+	
+	
+	The criticism of the COMPAS tool emphasises the challenges of deploying machine learning systems in sensitive domains like justice. These challenges are not unique to COMPAS but highlight broader issues in applying algorithmic decision-making tools in socially important contexts. They highlight the need for transparency, fairness-aware modelling techniques, and careful ethical evaluations when designing and implementing such tools.
+	
+	\subsection{Objectives of this work}
+	
+	The main objectives of this study are:  
+	
+	\begin{itemize}[]
+		\item Analyse the COMPAS dataset and its predictions.
+		\item Prepare the dataset for machine learning through cleaning, transformation, and feature engineering.
+		\item Train and evaluate machine learning models for ethical analysis.
+		\item Investigate potential biases and ethical implications in predictions.
+	\end{itemize}
+	
+	
+	\section{Downloading and first look at the dataset}
+	
+	The COMPAS dataset used in this study is publicly available through ProPublica's GitHub repository. This repository contains the dataset and other assets used by ProPublica to investigate the biases present in the COMPAS risk assessment tool.
+	
+	The file chosen for this analysis is \textbf{\texttt{compas-scores-two-years.csv}}, as it provides the cleanest and most relevant data for general recidivism prediction. This CSV file contains the key data required for our study, including several attributes related to demographics, criminal history, COMPAS risk scores, and the two-year recidivism outcomes that are important for exploring the predictive capabilities and the ethical implications of machine learning models in the context of recidivism prediction. 
+		
+	The dataset includes important information about individuals. Following an initial analysis, a list of the key fields in the dataset is below.
+	
+	\begin{itemize}
+	
+		\item Personal Information, includes attributes such as \textbf{\texttt{age}}, \textbf{\texttt{race}}, \textbf{\texttt{age\_category}}, etc.
+		
+		\item Case and Event-Related Details are the fields prefixed with \textbf{\texttt{c\_}} that provide a timeline and details of a person's interactions with the criminal justice system.
+	
+		\item Violence Risk Assessment are the fields prefixed with \textbf{\texttt{v\_}} and are associated with the violence risk assessment in COMPAS. This dimension predicts violent recidivism risk.
+	
+		\item Case-Level Details for Violent Recidivism are the fields prefixed with \textbf{\texttt{vr\_}}. These fields provide additional details specific to violent recidivism events.
+	
+		\item Juvenile Criminal Record are the fields prefixed with \textbf{\texttt{juv\_}}. These fields capture information about an individual's juvenile criminal record, which is a key predictor of future adult criminal behaviour.
+	
+		\item Previous Charges and Severity can be deduced from fields such as \textbf{\texttt{priors\_count}} and \textbf{\texttt{juv\_}} fields.
+	
+		\item Additional fields, including \textbf{\texttt{r\_charge\_}}, \textbf{\texttt{r\_offense\_}}`, \textbf{\texttt{vr\_}} fields, \textbf{\texttt{c\_charge\_degree}}, and \textbf{\texttt{c\_charge\_desc}}, provide a broader perspective on criminal history and severity.
+	
+	
+		\item Two-Year Recidivism,  or the \textbf{\texttt{two\_year\_recid}} field in the COMPAS dataset, indicates whether an individual reoffended (recidivated) within two years of their initial assessment or release. This field is critical for evaluating the predictive accuracy of the COMPAS risk assessment tool.
+	
+		\item Decile Score is a standardized risk score in the COMPAS dataset. It categorizes an individual's likelihood of recidivism into ten equal groups (deciles) where 1 is the lowest risk, and 10 is the highest risk. Each decile represents approximately 10\% of the sample when applied to a norm group.
+	
+
+	\end{itemize}
+
+	Suppose that we observe the following data:
+	
+	
+	\begin{table}[!ht]
+		\centering
+		\begin{tabular}{|l|l|}
+			\hline
+			Field & Value \\ \hline
+			\textbf{\texttt{priors\_count}} & 5 \\ \hline
+			\textbf{\texttt{juv\_felony\_count}} & 2 \\ \hline
+			\textbf{\texttt{juv\_misdemeanor\_count}} & 3 \\ \hline
+			\textbf{\texttt{r\_charge\_degree}} & Felony \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	We can interpret this as an  individual who has five total prior charges, including:
+	
+	\begin{itemize}
+		\item 2 juvenile felonies
+		\item 3 juvenile misdemeanours
+		\item The severity of previous charges includes felonies (\textbf{\texttt{r\_charge\_degree}}).
+	\end{itemize}
+	
+
+
+	\section{Preparing the data for further analysis and training}
+	
+	Before we can perform any analysis or apply machine learning techniques, it is important to pre-process and prepare the dataset so that we can handle missing values, encode categorical features, and split the data into training, testing, and validation sets. This step will produce a clean dataset for building accurate and unbiased models. The following steps outline the procedures to prepare the dataset for further analysis and training.
+	
+	\subsection{Initial look at data and missing values handling}
+	After downloading the dataset for this exercise, the first step is to perform some preliminary analysis; namely, we look at the dataset structure, the first few records and some statistical information related to the numerical fields. The size of the dataset makes it very hard to visualise all the information on the screen. For this reason, we have developed a \textbf{\texttt{ReportWriter}}  class to save \textbf{\texttt{DataFrame}}  objects and images into an Excel file to analyse and manipulate data easily. We have used this class for all reporting requirements in this exercise instead of \textbf{\texttt{print}}  statements that are cumbersome and not persistent.
+	
+	Some considerations after this initial analysis:
+
+	\begin{flushleft}	
+	\begin{itemize}
+		\item There are a total of 7214 records in this dataset
+		
+		\item There is one field,\textbf{\texttt{violent\_recid}}, where all the fields are null.
+	
+		\item \textbf{\texttt{vr\_case\_number}}, \textbf{\texttt{vr\_charge\_degree}}, \textbf{\texttt{vr\_offense\_date}}, \textbf{\texttt{vr\_charge\_desc}} and \textbf{\texttt{c\_arrest\_date}}  have over 6000 missing entries.
+		
+		\item \textbf{\texttt{r\_days\_from\_arrest}}, \textbf{\texttt{r\_jail\_in}} and \textbf{\texttt{r\_jail\_out}} have nearly 5000 null entries.
+		
+		\item \textbf{\texttt{r\_charge\_desc}}, \textbf{\texttt{r\_case\_number}}, \textbf{\texttt{r\_charge\_degree}} and \textbf{\texttt{r\_offense\_date}} have over 3000 missing records, \textbf{\texttt{c\_jail\_in}}, \textbf{\texttt{c\_jail\_out}}, \textbf{\texttt{in\_custody}} and \textbf{\texttt{out\_custody}} have a few hundred missing entries , 
+	\end{itemize}
+	\end{flushleft}
+	
+	\begin{flushleft}
+	After considering all the columns with a high proportion of missing data, we decided to remove all columns with less than 50\% of fields that were not null. As a result of this step \textbf{\texttt{c\_arrest\_date}}, \textbf{\texttt{r\_case\_number}}, \textbf{\texttt{r\_charge\_degree}}, \textbf{\texttt{r\_charge\_desc}}, \textbf{\texttt{r\_days\_from\_arrest}}, \textbf{\texttt{r\_jail\_in}}, \textbf{\texttt{r\_jail\_out}}, \textbf{\texttt{r\_offense\_date}}, \textbf{\texttt{violent\_recid}}, \textbf{\texttt{vr\_case\_number}}, \textbf{\texttt{vr\_charge\_degree}}, \textbf{\texttt{vr\_charge\_desc}} and \textbf{\texttt{vr\_offense\_date}} were removed from the dataset.
+	\end{flushleft}
+	
+	\subsection{Data cleaning, missing values and imputation}
+	
+	\begin{flushleft}
+	The features\textbf{\texttt{compas\_screening\_date}}, \textbf{\texttt{sex}}, \textbf{\texttt{age}}, \textbf{\texttt{age\_cat}}, \textbf{\texttt{race}}, \textbf{\texttt{juv\_misd\_count}}, \textbf{\texttt{juv\_other\_count}}, \textbf{\texttt{priors\_count}}, \textbf{\texttt{days\_b\_screening\_arrest}}, \textbf{\texttt{c\_charge\_degree}}, \textbf{\texttt{two\_year\_recid}}, \textbf{\texttt{decile\_score}}, \textbf{\texttt{score\_text}} are considered important to the dataset are then extracted so that they can be further analysed. 
+	\end{flushleft}
+	
+	While examining the resultant dataset, we noticed that \textbf{\texttt{days\_b\_screening\_arrest}}  has  6907 values that are not null. Whilst it is possible to eliminate the rows that contain the null values at this stage, we replaced the missing values using a KNN imputation technique by grouping the numeric values of this dataset so that we can calculate the missing values. We checked this process by plotting the distribution of \textbf{\texttt{days\_b\_screening \_arrest}}  before and after imputation to see if any variations occurred.
+	
+	
+	\section{Aim and Objectives}
+	
+	
+
+	
+	\subsection{Aim}
+	
+	\subsection{Objectives}
+	
+
+	
+	
+	\section{Background}
+	
+	\subsection{Abbreviations and Acronyms}\label{AA}
+	
+	\subsection{Technologies}
+	
+	\subsection{Techniques}
+	
+	\subsection{Similar System}
+	
+	\subsection{Consistency}
+	
+	\subsection{Length}
+	
+	
+	
+	\begin{thebibliography}{00}
+		\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+		\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
+		\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
+		\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
+		\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
+		\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
+		\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+	\end{thebibliography}
+
+
+\onecolumn
+\pagebreak
+\appendix 
+\section{COMPAS dataset fields}
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		Field Name	&	Description	&	Type	&	Options (if Categorical)	&	Used \\ \hline\hline
+		\textbf{\texttt{id}}	&	Unique identifier for each individual.	&	Numeric	&	N/A	&	No \\ \hline
+		\textbf{\texttt{name}}	&	Full name of the defendant	&	Text	&	N/A	&	No \\ \hline
+		\textbf{\texttt{first}}	&	First name of the defendant (anonymized).	&	Text	&	N/A	&	No \\ \hline
+		\textbf{\texttt{last}}	&	Last name of the defendant (anonymized).	&	Text	&	N/A	&	No \\ \hline
+		\textbf{\texttt{compas\_screening\_date}}	&	Date of the COMPAS assessment.	&	Date	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{sex}}	&	Gender of the defendant.	&	Categorical	&	Male, Female	&	Yes \\ \hline
+		\textbf{\texttt{dob}}	&	Date of birth of the defendant.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{age}}	&	Age of the defendant at the time of assessment.	&	Numeric	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{age\_cat}}	&	Age category of the defendant.	&	Categorical	&	\makecell[l]{Less than 25\\25 - 45\\Greater than 45}	&	Yes \\ \hline
+		\textbf{\texttt{race}}	&	Race of the defendant.	&	Categorical	&	\makecell[l]{African-American\\Caucasian\\Hispanic\\Asian\\Native American\\Other}	&	Yes \\ \hline
+		\textbf{\texttt{juv\_fel\_count}}	&	Number of juvenile felony offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{juv\_misd\_count}}	&	Number of juvenile misdemeanor offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{juv\_other\_count}}	&	Number of other juvenile offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{priors\_count}}	&	Number of prior offenses (adult and juvenile).	&	Numeric	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{days\_b\_screening\_arrest}}	&	Days between arrest and COMPAS screening.	&	Numeric	&	N/A	&	Yes \\ \hline
+		\textbf{\texttt{c\_jail\_in}}	&	Jail booking date for the charge.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{c\_jail\_out}}	&	Jail release date for the charge.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{c\_case\_number}}	&	Case number associated with the charge.	&	Text	&	N/A	&	No \\ \hline
+		\textbf{\texttt{c\_offense\_date}}	&	Date of the alleged offense.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{c\_arrest\_date}}	&	Arrest date for the charge.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{c\_charge\_degree}}	&	Degree of the charge.	&	Categorical	&	\makecell[l]{F (Felony)\\M (Misdemeanor)}	&	Yes \\ \hline
+		\textbf{\texttt{c\_charge\_desc}}	&	Description of the charge.	&	Text	&	Free text	&	No \\ \hline
+		\textbf{\texttt{is\_recid}}	&	reoffended after COMPAS screening.	&	Binary	&	0 (No), 1 (Yes)	&	No \\ \hline
+		\textbf{\texttt{r\_case\_number}}	&	Case number for the re-offense.	&	Text	&	N/A	&	No \\ \hline
+		\textbf{\texttt{r\_charge\_degree}}	&	Degree of the re-offense charge.	&	Categorical	&	\makecell[l]{F (Felony)\\M (Misdemeanor)}	&	No \\ \hline
+		\textbf{\texttt{r\_charge\_desc}}	&	Description of the re-offense charge.	&	Text	&	Free text	&	No \\ \hline
+		\textbf{\texttt{r\_jail\_in}}	&	Jail booking date for the re-offense.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{r\_jail\_out}}	&	Jail release date for the re-offense.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{two\_year\_recid}}	&	Label: offense within two years.	&	Binary	&	0 (No), 1 (Yes)	&	Yes \\ \hline
+		\textbf{\texttt{decile\_score}}	&	COMPAS risk score (1-10).	&	Numeric	&	1–10	&	Yes \\ \hline
+		\textbf{\texttt{score\_text}}	&	Risk category for general recidivism.	&	Categorical	&	Low, Medium, High	&	Yes \\ \hline
+		\textbf{\texttt{v\_type\_of\_assessment}}	&	Type of COMPAS assessment conducted.	&	Text	&	Risk of Recidivism	&	No \\ \hline
+		\textbf{\texttt{v\_decile\_score}}	&	Violent recidivism COMPAS score (1-10).	&	Numeric	&	1–10	&	No \\ \hline
+		\textbf{\texttt{v\_score\_text}}	&	Risk category for violent recidivism.	&	Categorical	&	Low, Medium, High	&	No \\ \hline
+		\textbf{\texttt{start}}	&	Start date of the two-year recidivism period.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{end}}	&	End date of the two-year recidivism period.	&	Date	&	N/A	&	No \\ \hline
+		\textbf{\texttt{event}}	&	offense during the two-year period.	&	Binary	&	0 (No), 1 (Yes)	&	No \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\end{document}

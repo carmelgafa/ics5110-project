@@ -43,7 +43,6 @@ def compare_score(predictions_val, y_two_year_recid_val_tensor, threshold=0.4):
         pd.Series(predictions_val).map(categorize_score),
     )
 
-
     prob_recid_tensor = torch.Tensor(prob_recid_tensor)
     y_two_year_recid_tensor = torch.Tensor( y_two_year_recid_val_tensor)
 
