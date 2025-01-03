@@ -404,14 +404,23 @@ from skfuzzy import control as ctrl
 import skfuzzy as fuzz
 
 # Create the problem variables
-age = ctrl.Antecedent(np.arange(18, 100, 1), 'age')
+age = ctrl.Antecedent(np.arange(18, 70, 1), 'age')
 priors_count = ctrl.Antecedent(np.arange(0, 10, 1), 'priors_count')
 decile_score = ctrl.Consequent(np.arange(0, 10, 1), 'decile_score')
 
 # Create the membership functions
-age.automf(3)
-priors_count.automf(3)
-decile_score['1'] = fuzz.trimf(decile_score.universe, [0, 1, 2])
+
+age['young'] = fuzz.trimf(age.universe, [18, 18, 25])
+age['middle'] = fuzz.trimf(age.universe, [20, 35, 50])
+age['old'] = fuzz.trimf(age.universe, [45, 60, 60])
+
+priors_count['low'] = fuzz.trimf(priors_count.universe, [0, 0, 2])
+priors_count['medium'] = fuzz.trimf(priors_count.universe, [1, 4, 6])
+priors_count['high'] = fuzz.trimf(priors_count.universe, [5, 10, 10])
+
+# age.automf(3)
+# priors_count.automf(3)
+decile_score['1'] = fuzz.trimf(decile_score.universe, [0, 0, 2])
 decile_score['2'] = fuzz.trimf(decile_score.universe, [1, 2, 3])
 decile_score['3'] = fuzz.trimf(decile_score.universe, [2, 3, 4])
 decile_score['4'] = fuzz.trimf(decile_score.universe, [3, 4, 5])
@@ -420,19 +429,20 @@ decile_score['6'] = fuzz.trimf(decile_score.universe, [5, 6, 7])
 decile_score['7'] = fuzz.trimf(decile_score.universe, [6, 7, 8])
 decile_score['8'] = fuzz.trimf(decile_score.universe, [7, 8, 9])
 decile_score['9'] = fuzz.trimf(decile_score.universe, [8, 9, 10])
+decile_score['10'] = fuzz.trimf(decile_score.universe, [9, 10, 10])
 
 # Create the rules
-rule1 = ctrl.Rule(age['poor'] | priors_count['poor'], decile_score['3'])
-rule2 = ctrl.Rule(age['poor'] | priors_count['average'], decile_score['6'])
-rule3 = ctrl.Rule(age['poor'] | priors_count['good'], decile_score['8'])
+rule1 = ctrl.Rule(age['young'] | priors_count['low'], decile_score['5'])
+rule2 = ctrl.Rule(age['young'] | priors_count['medium'], decile_score['9'])
+rule3 = ctrl.Rule(age['young'] | priors_count['high'], decile_score['10'])
 
-rule4 = ctrl.Rule(age['average'] | priors_count['poor'], decile_score['4'])
-rule5 = ctrl.Rule(age['average'] | priors_count['average'], decile_score['7'])
-rule6 = ctrl.Rule(age['average'] | priors_count['good'], decile_score['9'])
+rule4 = ctrl.Rule(age['middle'] | priors_count['low'], decile_score['2'])
+rule5 = ctrl.Rule(age['middle'] | priors_count['medium'], decile_score['5'])
+rule6 = ctrl.Rule(age['middle'] | priors_count['high'], decile_score['8'])
 
-rule7 = ctrl.Rule(age['good'] | priors_count['poor'], decile_score['2'])
-rule8 = ctrl.Rule(age['good'] | priors_count['average'], decile_score['5'])
-rule9 = ctrl.Rule(age['good'] | priors_count['good'], decile_score['8'])
+rule7 = ctrl.Rule(age['old'] | priors_count['low'], decile_score['2'])
+rule8 = ctrl.Rule(age['old'] | priors_count['medium'], decile_score['2'])
+rule9 = ctrl.Rule(age['old'] | priors_count['high'], decile_score['1'])
  
 # Create the control system
 decile_ctrl = ctrl.ControlSystem([rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9])
@@ -470,8 +480,13 @@ from sklearn.metrics import mean_squared_error
 mse = mean_squared_error(y_test, y_pred)
 print(f'MSE on test set: {mse}')
 
-print(y_pred)
+print(pd.DataFrame(y_pred).describe())
 print(y_test)
+
+#stretch values of y pred to 0.1-1 from its min and max values
+y_pred = (y_pred - y_pred.min())/(y_pred.max() - y_pred.min())
+print(pd.DataFrame(y_pred).describe())
+
 
 
 # use com,pare_score to compare the results
