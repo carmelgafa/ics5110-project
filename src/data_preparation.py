@@ -18,7 +18,97 @@ from utils import get_info
 df_compas_path = os.path.join('data', 'compas-scores-two-years.csv')
 df_compas = pd.read_csv(df_compas_path)
 
-print(get_info(df_compas))
+print(df_compas.info())
+print(df_compas.head())
+print(df_compas.describe())
+
+df_reduced = df_compas[[
+    'sex',
+    'age',
+    'age_cat',
+    'race',
+    'juv_fel_count',
+    'juv_misd_count',
+    'juv_other_count',
+    'priors_count',
+    'days_b_screening_arrest',
+    'c_jail_in',
+    'c_jail_out',
+    'c_charge_degree',
+    'c_charge_desc',
+    'in_custody',
+    'out_custody',
+    'decile_score',
+    'two_year_recid'
+]]
+
+
+# calculate the jail time
+
+df_reduced = df_reduced.copy()
+
+df_reduced['c_jail_in'] = pd.to_datetime(df_reduced['c_jail_in'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+df_reduced['c_jail_out'] = pd.to_datetime(df_reduced['c_jail_out'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+
+
+print(df_reduced[['c_jail_in', 'c_jail_out']].dtypes)
+df_reduced['days_in_jail'] = abs((df_reduced['c_jail_out'] - df_reduced['c_jail_in']).dt.days)
+
+# not available values should be 0
+df_reduced['days_in_jail'] = df_reduced['days_in_jail'].fillna(0)
+# ensure that it is an integer
+df_reduced['days_in_jail'] = df_reduced['days_in_jail'].astype(int)
+
+
+df_reduced['in_custody'] = pd.to_datetime(df_reduced['in_custody'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+df_reduced['out_custody'] = pd.to_datetime(df_reduced['out_custody'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+
+df_reduced['days_in_custody'] = abs((df_reduced['out_custody'] - df_reduced['in_custody']).dt.days)
+df_reduced['days_in_custody'] = df_reduced['days_in_custody'].fillna(0)
+df_reduced['days_in_custody'] = df_reduced['days_in_custody'].astype(int)
+
+
+# remove the days in and days out from the dataset
+df_reduced = df_reduced.drop(['c_jail_in', 'c_jail_out', 'in_custody', 'out_custody'], axis=1)
+
+#one hot encode sex, race, c_charge_degree, age_cat
+ohe = OneHotEncoder()
+ohe_features = ['sex', 'race', 'c_charge_degree', 'age_cat']
+df_ohe = pd.DataFrame(ohe.fit_transform(df_reduced[ohe_features]).toarray(), columns=ohe.get_feature_names_out(ohe_features))
+df_reduced = pd.concat([df_reduced, df_ohe], axis=1)
+
+df_reduced = df_reduced.drop(ohe_features, axis=1)
+
+print(df_reduced.info())
+
+
+
+
+
+
+# #update sex to be 1 if M and 0 if F
+# df_reduced['sex'] = df_reduced['sex'].apply(lambda x: 1 if x == 'M' else 0)
+
+# #update c_charge_desc to be 1 if M and 0 if F
+# df_reduced['c_charge_degree'] = df_reduced['c_charge_degree'].apply(lambda x: 1 if x == 'M' else 0)
+
+# print(df_reduced.info())
+
+# df_reduced_numerical = df_reduced.select_dtypes(include=['int64', 'float64'])
+
+# print(df_reduced_numerical.info())
+
+# do correlation plot on df_reduced_numerical
+
+df_corr = df_reduced_numerical.corr()
+print(df_corr)
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.heatmap(df_corr, annot=True)
+plt.show()
+
 
 
 
