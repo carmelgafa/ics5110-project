@@ -92,7 +92,7 @@
 	The COMPAS dataset used in this study is publicly available through ProPublica's GitHub repository. This repository contains the dataset and other assets used by ProPublica to investigate the biases present in the COMPAS risk assessment tool.
 	
 	The file chosen for this analysis is \textbf{\texttt{compas-scores-two-years.csv}}, as it provides the cleanest and most relevant data for general recidivism prediction. This CSV file contains the key data required for our study, including several attributes related to demographics, criminal history, COMPAS risk scores, and the two-year recidivism outcomes that are important for exploring the predictive capabilities and the ethical implications of machine learning models in the context of recidivism prediction. 
-	--------	
+	
 	The dataset includes important information about individuals. Following an initial analysis, a list of the key fields in the dataset is below.
 	
 	\begin{itemize}
@@ -174,7 +174,7 @@
 	\subsection{Data cleaning, missing values and imputation}
 	
 	\begin{flushleft}
-	The features\textbf{\texttt{compas\_screening\_date}}, \textbf{\texttt{sex}}, \textbf{\texttt{age}}, \textbf{\texttt{age\_cat}}, \textbf{\texttt{race}}, \textbf{\texttt{juv\_misd\_count}}, \textbf{\texttt{juv\_other\_count}}, \textbf{\texttt{priors\_count}}, \textbf{\texttt{days\_b\_screening\_arrest}}, \textbf{\texttt{c\_charge\_degree}}, \textbf{\texttt{two\_year\_recid}}, \textbf{\texttt{decile\_score}}, \textbf{\texttt{score\_text}} are considered important to the dataset are then extracted so that they can be further analysed. 
+	The features \textbf{\texttt{compas\_screening\_date}}, \textbf{\texttt{sex}}, \textbf{\texttt{age}}, \textbf{\texttt{age\_cat}}, \textbf{\texttt{race}}, \textbf{\texttt{juv\_misd\_count}}, \textbf{\texttt{juv\_other\_count}}, \textbf{\texttt{priors\_count}}, \textbf{\texttt{days\_b\_screening\_arrest}}, \textbf{\texttt{c\_charge\_degree}}, \textbf{\texttt{two\_year\_recid}}, \textbf{\texttt{decile\_score}}, \textbf{\texttt{score\_text}} are considered important to the dataset are then extracted so that they can be further analysed. 
 	\end{flushleft}
 	
 	We also noticed that \textbf{\texttt{days\_b\_screening\_arrest}} had data ranging from -414 to  1057. As it is suggested by other researchers to only keep values in the range $[-30,30]$ \cite{barocas2023fairness}. Whilst it is possible to eliminate the rows that contain the null values at this stage, we replaced the missing values using a KNN imputation technique by grouping the numeric values of this dataset so that we can calculate the missing values. We checked this process by plotting the distribution of \textbf{\texttt{days\_b\_screening \_arrest}}  before and after imputation to see if any variations occurred.
