@@ -32,9 +32,9 @@ class ReportWriter():
                 df = pd.DataFrame(df)
             except Exception as e:
                 raise ValueError(f"Unable to convert input to DataFrame: {e}")
-        
 
         self.workbook_data[sheet_name] = ('dataframe', df)
+        print(f'Added DataFrame sheet: {sheet_name}')
 
     def add_current_plt(self, img_file, sheet_name):
         '''
@@ -47,6 +47,7 @@ class ReportWriter():
                 will be inserted.
         '''
         self.workbook_data[sheet_name] = ('img', img_file)
+        print(f'Added image sheet: {sheet_name}')
 
     def save(self):
         '''
@@ -69,6 +70,7 @@ class ReportWriter():
                     worksheet = workbook.add_worksheet(sheet_name)
                     worksheet.insert_image(0, 0, payload[1])
 
+        print(f'Saved report to {self.report_filename}')
 
 if __name__ == '__main__':
     import matplotlib.pyplot as plt

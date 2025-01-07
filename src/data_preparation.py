@@ -1,19 +1,32 @@
 '''data preparation'''
 
 import os
+import io
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.impute import KNNImputer
+from report_writer import ReportWriter
 
+DATA_FOLDER = 'data'
+RESULTS_FOLDER = 'results'
+TEMP_FOLDER = 'tmp'
 
-df_compas_path = os.path.join('data', 'compas-scores-two-years.csv')
+# start report to hold results
+report = ReportWriter(os.path.join(RESULTS_FOLDER, 'data_preparation_report.xlsx'))
+
+# load dataset
+df_compas_path = os.path.join(DATA_FOLDER, 'compas-scores-two-years.csv')
 df_compas = pd.read_csv(df_compas_path)
 
-print(df_compas.info())
-print(df_compas.head())
-print(df_compas.describe())
+# gather the trivial  dataset information
+report.add_data_frame(df_compas.head(), 'compas_data')
+report.add_data_frame(pd.DataFrame(df_compas.dtypes), 'compas_dtypes')
+report.add_data_frame(df_compas.count(), 'compas_count')
+report.add_data_frame(df_compas.describe(), 'compas_describe')
 
+
+# reduce dataset to required fields
 df_reduced = df_compas[[
     'sex',
     'age',
@@ -35,6 +48,7 @@ df_reduced = df_compas[[
 ]]
 
 
+# start data manipulation
 df_reduced = df_reduced.copy()
 
 # calculate the jail time
@@ -61,6 +75,19 @@ df_reduced['days_in_custody'] = df_reduced['days_in_custody'].astype(int)
 # remove the days in and days out from the dataset
 df_reduced = df_reduced.drop(['c_jail_in', 'c_jail_out', 'in_custody', 'out_custody'], axis=1)
 
+import matplotlib.pyplot as plt
+# plot histogram of all numerical features
+
+numerical_features = ['age', 'juv_fel_count', 'juv_misd_count',
+                      'juv_other_count', 'priors_count', 'days_b_screening_arrest',
+                      'days_in_jail', 'days_in_custody', 'decile_score',
+                      'two_year_recid']
+
+df_reduced.hist(bins=50, figsize=(20, 15))
+plt.savefig(os.path.join(TEMP_FOLDER, 'histogram.png'))
+report.add_current_plt(os.path.join(TEMP_FOLDER, 'histogram.png'), 'histogram')
+
+
 #one hot encode sex, race, c_charge_degree, age_cat
 ohe = OneHotEncoder()
 ohe_features = ['sex', 'race', 'c_charge_degree', 'age_cat']
@@ -85,13 +112,18 @@ df_reduced['days_b_screening_arrest'] = imputer.fit_transform(
 df_reduced_train, df_reduced_val = train_test_split(df_reduced, test_size=0.2, random_state=42)
 df_reduced_val, df_reduced_test = train_test_split(df_reduced_val, test_size=0.5, random_state=42)
 
-print(df_reduced_train.shape)
-print(df_reduced_val.shape)
-print(df_reduced_test.shape)
+df_split_results = pd.DataFrame({
+    'train': [df_reduced_train.shape[0]],
+    'val': [df_reduced_val.shape[0]],
+    'test': [df_reduced_test.shape[0]]
+})
+report.add_data_frame(df_split_results, 'split_results')
 
 # save the datasets
-df_reduced.to_csv('../data/df_reduced.csv', index=False)
+df_reduced.to_csv(os.path.join(DATA_FOLDER, 'df_reduced.csv'), index=False)
 
-df_reduced_train.to_csv('../data/df_reduced_train.csv', index=False)
-df_reduced_val.to_csv('../data/df_reduced_val.csv', index=False)
-df_reduced_test.to_csv('../data/df_reduced_test.csv', index=False)
+df_reduced_train.to_csv( os.path.join(DATA_FOLDER, 'df_reduced_train.csv'), index=False)
+df_reduced_val.to_csv(os.path.join(DATA_FOLDER, 'df_reduced_val.csv'), index=False)
+df_reduced_test.to_csv(os.path.join(DATA_FOLDER, 'df_reduced_test.csv'), index=False)
+
+report.save()
