@@ -1,8 +1,11 @@
 {
     "cSpell.words": [
+        "compas",
         "dataframe",
+        "fillna",
         "iloc",
         "recid",
-        "senstivity"
+        "senstivity",
+        "toarray"
     ]
 }
