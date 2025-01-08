@@ -4,8 +4,11 @@
         "dataframe",
         "fillna",
         "iloc",
+        "kdeplot",
         "recid",
         "senstivity",
-        "toarray"
+        "toarray",
+        "xlabel",
+        "ylabel"
     ]
 }

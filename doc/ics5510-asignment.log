@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  7 JAN 2025 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  8 JAN 2025 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,41 +539,90 @@ Package: xparse 2024-03-14 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-\@quotelevel=\count414
-\@quotereset=\count415
+(C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 
-(ics5510-asignment.aux)
+(C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen178
+\captionmargin=\dimen179
+\caption@leftmargin=\dimen180
+\caption@rightmargin=\dimen181
+\caption@width=\dimen182
+\caption@indent=\dimen183
+\caption@parindent=\dimen184
+\caption@hangindent=\dimen185
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count414
+\c@continuedfloat=\count415
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count416
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count417
+) (C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count418
+\float@exts=\toks26
+\float@box=\box58
+\@float@everytoks=\toks27
+\@floatcapt=\box59
+)
+\@quotelevel=\count419
+\@quotereset=\count420
+ (ics5510-asignment.aux)
 \openout1 = `ics5510-asignment.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 -- Lines per column: 56 (exact).
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count416
-\scratchdimen=\dimen178
-\scratchbox=\box58
-\nofMPsegments=\count417
-\nofMParguments=\count418
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count419
-\MPscratchDim=\dimen179
-\MPnumerator=\count420
-\makeMPintoPDFobject=\count421
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count421
+\scratchdimen=\dimen186
+\scratchbox=\box60
+\nofMPsegments=\count422
+\nofMParguments=\count423
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count424
+\MPscratchDim=\dimen187
+\MPnumerator=\count425
+\makeMPintoPDFobject=\count426
+\everyMPtoPDFconversion=\toks29
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -597,29 +646,32 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ics5510-asignment.bbl' found.
 
 (ics5510-asignment.bbl)
-Package biblatex Info: Reference section=0 on input line 17.
-Package biblatex Info: Reference segment=0 on input line 17.
+Package biblatex Info: Reference section=0 on input line 20.
+Package biblatex Info: Reference segment=0 on input line 20.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
-6.
+9.
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1546) in paragraph at lines 56--57
+Underfull \hbox (badness 1546) in paragraph at lines 59--60
 \OT1/ptm/m/n/10 mer-i-cal value to an in-di-vid-ual's like-li-hood of re-of-fen
 d-
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 56--57
+Underfull \hbox (badness 4872) in paragraph at lines 59--60
 \OT1/ptm/m/n/10 ing. Other im-por-tant fea-tures in-clude the num-ber of
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -629,36 +681,92 @@ m Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 []\OT1/ptm/m/n/10 The file cho-sen for this anal-y-sis is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 \OT1/pcr/b/n/10 compas-scores-two-years.csv\OT1/ptm/m/n/10 , as it pro-vides
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 []\OT1/ptm/m/n/10 Additional fields, in-clud-ing \OT1/pcr/b/n/10 r_charge_\OT1/
 ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 \OT1/pcr/b/n/10 r_offense_\OT1/ptm/m/n/10 `, \OT1/pcr/b/n/10 vr_ \OT1/ptm/m/n/1
 0 fields, \OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 142--143
+Underfull \hbox (badness 2469) in paragraph at lines 143--144
 []\OT1/ptm/m/n/10 The sever-ity of pre-vi-ous charges in-cludes felonies
  []
 
-[2] [3
+[2]
+<img/imputation.png, id=14, 867.24pt x 433.62pt>
+File: img/imputation.png Graphic file (type png)
+<use img/imputation.png>
+Package pdftex.def Info: img/imputation.png  used on input line 167.
+(pdftex.def)             Requested size: 226.79846pt x 113.39357pt.
 
-]
-** WARNING: Ignoring useless \section in Appendix (line 200).
+Overfull \hbox (15.28691pt too wide) in paragraph at lines 176--184
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+[]\OT1/ptm/m/n/10 One-Hot En-cod-ing on \OT1/pcr/b/n/10 sex\OT1/ptm/m/n/10 , \O
+T1/pcr/b/n/10 race\OT1/ptm/m/n/10 , and
+ []
+
+<img/race_percentages_pie.png, id=16, 578.16pt x 578.16pt>
+File: img/race_percentages_pie.png Graphic file (type png)
+<use img/race_percentages_pie.png>
+Package pdftex.def Info: img/race_percentages_pie.png  used on input line 214.
+(pdftex.def)             Requested size: 232.19843pt x 232.19502pt.
+<img/sex_percentages_pie.png, id=17, 578.16pt x 578.16pt>
+File: img/sex_percentages_pie.png Graphic file (type png)
+<use img/sex_percentages_pie.png>
+Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 222.
+(pdftex.def)             Requested size: 232.19843pt x 232.19502pt.
+<img/age_by_race_boxplot.png, id=18, 722.7pt x 433.62pt>
+File: img/age_by_race_boxplot.png Graphic file (type png)
+<use img/age_by_race_boxplot.png>
+Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 248.
+(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
+
+Underfull \hbox (badness 4940) in paragraph at lines 262--262
+[]|\OT1/ptm/m/n/8 Moderately broad spread, with
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 264--264
+[]|\OT1/ptm/m/n/8 Very tight dis-tri-bu-tion, with all
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 265--265
+[]|\OT1/ptm/m/n/8 Similar to Cau-casians but with
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 265--265
+\OT1/ptm/m/n/8 slightly fewer older in-di-vid-u-als.
+ []
+
+
+Overfull \hbox (4.34146pt too wide) in paragraph at lines 257--267
+ [][] 
+ []
+
+[3 <./img/imputation.png>] [4 <./img/race_percentages_pie.png> <./img/sex_perce
+ntages_pie.png> <./img/age_by_race_boxplot.png>]
+** WARNING: Ignoring useless \section in Appendix (line 277).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -670,36 +778,43 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
+[5
 
 ] (ics5510-asignment.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                ics5510-asignment
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 \openout1 = `ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12415 strings out of 474424
- 226209 string characters out of 5751554
+ 13970 strings out of 474424
+ 256283 string characters out of 5751554
  1951496 words of memory out of 5000000
- 34637 multiletter control sequences out of 15000+600000
- 593265 words of font info for 108 fonts, out of 8000000 for 9000
+ 36178 multiletter control sequences out of 15000+600000
+ 594343 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,15n,81p,732b,1332s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier
-/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/font
-s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utm
-ri8a.pfb>
-Output written on ics5510-asignment.pdf (4 pages, 117993 bytes).
+ 67i,15n,81p,861b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
+/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ti
+mes/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on ics5510-asignment.pdf (5 pages, 226461 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

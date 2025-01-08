@@ -1,0 +1,12 @@
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+        Feature & Description & Unique Values \\ \hline\hline
+       \textbf{\texttt{sex}} & Gender of the individual & Male, Female \\ \hline
+       \textbf{\texttt{race}} & Race of the individual & African-American, Caucasian, Hispanic, Asian, Native American, Other \\ \hline
+       \textbf{\texttt{age\_cat}} & Age category & Less than 25, 25 - 45, Greater than 45 \\ \hline
+       \textbf{\texttt{c\_charge\_degree}} & Degree of the criminal charge & F (Felony), M (Misdemeanor) \\ \hline
+       \textbf{\texttt{score\_text}} & Risk category for recidivism & Low, Medium, High \\ \hline
+    \end{tabular}
+\end{table}
