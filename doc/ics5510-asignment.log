@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  8 JAN 2025 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  8 JAN 2025 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -727,46 +727,63 @@ T1/pcr/b/n/10 race\OT1/ptm/m/n/10 , and
 <img/race_percentages_pie.png, id=16, 578.16pt x 578.16pt>
 File: img/race_percentages_pie.png Graphic file (type png)
 <use img/race_percentages_pie.png>
-Package pdftex.def Info: img/race_percentages_pie.png  used on input line 214.
-(pdftex.def)             Requested size: 232.19843pt x 232.19502pt.
+Package pdftex.def Info: img/race_percentages_pie.png  used on input line 212.
+(pdftex.def)             Requested size: 176.39923pt x 176.39587pt.
 <img/sex_percentages_pie.png, id=17, 578.16pt x 578.16pt>
 File: img/sex_percentages_pie.png Graphic file (type png)
 <use img/sex_percentages_pie.png>
-Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 222.
-(pdftex.def)             Requested size: 232.19843pt x 232.19502pt.
-<img/age_by_race_boxplot.png, id=18, 722.7pt x 433.62pt>
+Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 220.
+(pdftex.def)             Requested size: 176.39923pt x 176.39587pt.
+[3 <./img/imputation.png> <./img/race_percentages_pie.png>]
+
+LaTeX Warning: Reference `fig:race-sex-breakdown' on page 4 undefined on input 
+line 233.
+
+<img/age_by_race_boxplot.png, id=23, 722.7pt x 433.62pt>
 File: img/age_by_race_boxplot.png Graphic file (type png)
 <use img/age_by_race_boxplot.png>
-Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 248.
+Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 243.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 262--262
+Underfull \hbox (badness 4940) in paragraph at lines 257--257
 []|\OT1/ptm/m/n/8 Moderately broad spread, with
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 264--264
+Underfull \hbox (badness 1509) in paragraph at lines 259--259
 []|\OT1/ptm/m/n/8 Very tight dis-tri-bu-tion, with all
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 265--265
+Underfull \hbox (badness 1783) in paragraph at lines 260--260
 []|\OT1/ptm/m/n/8 Similar to Cau-casians but with
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 265--265
+Underfull \hbox (badness 1888) in paragraph at lines 260--260
 \OT1/ptm/m/n/8 slightly fewer older in-di-vid-u-als.
  []
 
 
-Overfull \hbox (4.34146pt too wide) in paragraph at lines 257--267
+Overfull \hbox (4.34146pt too wide) in paragraph at lines 252--262
  [][] 
  []
 
-[3 <./img/imputation.png>] [4 <./img/race_percentages_pie.png> <./img/sex_perce
-ntages_pie.png> <./img/age_by_race_boxplot.png>]
-** WARNING: Ignoring useless \section in Appendix (line 277).
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<img/distribution-plots.png, id=24, 846.66313pt x 930.47626pt>
+File: img/distribution-plots.png Graphic file (type png)
+<use img/distribution-plots.png>
+Package pdftex.def Info: img/distribution-plots.png  used on input line 291.
+(pdftex.def)             Requested size: 226.79846pt x 249.24423pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./img/sex_percentages_pie.png> <./img/age_by_race_boxplot.png>] [5
+
+ <./img/distribution-plots.png>]
+** WARNING: Ignoring useless \section in Appendix (line 303).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -778,7 +795,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
+[6
 
 ] (ics5510-asignment.aux)
  ***********
@@ -799,22 +816,22 @@ Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13970 strings out of 474424
- 256283 string characters out of 5751554
+ 13973 strings out of 474424
+ 256439 string characters out of 5751554
  1951496 words of memory out of 5000000
- 36178 multiletter control sequences out of 15000+600000
- 594343 words of font info for 109 fonts, out of 8000000 for 9000
+ 36181 multiletter control sequences out of 15000+600000
+ 594372 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,15n,81p,861b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,15n,81p,861b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
 /fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ti
 mes/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (5 pages, 226461 bytes).
+Output written on ics5510-asignment.pdf (6 pages, 481219 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

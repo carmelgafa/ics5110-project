@@ -206,27 +206,22 @@
 	We begin this analysis by segmenting the dataset based by race and gender.
 	
 	
-	\begin{figure}[!ht]
+	% First image
+	\begin{figure}
 		\centering
-		% First image
-		\begin{subfigure}[b]{0.45\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{img/race_percentages_pie.png}
-			\caption{Caption for the first image}
-			\label{fig:image1}
-		\end{subfigure}
-		\hfill
-		% Second image
-		\begin{subfigure}[b]{0.45\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{img/sex_percentages_pie.png}
-			\caption{Caption for the second image}
-			\label{fig:image2}
-		\end{subfigure}
-		\caption{Overall caption for the figure containing both images}
-		\label{fig:race-sex-breakdown}
+		\includegraphics[width=0.7\linewidth]{img/race_percentages_pie.png}
+		\caption{Caption for the first image}
+		\label{fig:image1}
 	\end{figure}
-	
+	\hfill
+	% Second image
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/sex_percentages_pie.png}
+		\caption{Caption for the second image}
+		\label{fig:image2}
+	\end{figure}
+
 	
 	By examining the racial composition of the dataset, we observe the following:
 	
@@ -243,7 +238,7 @@
 
 	We used a boxplot to illustrate the age patterns across racial groups, helping to identify central values, spread, and any anomalies.
 
-	\begin{figure}[!ht]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{img/age_by_race_boxplot}
 		\caption{}
@@ -252,7 +247,7 @@
 	
 
 
-	\begin{table}[!ht]
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|l|l|p{4cm}|}
 			\hline
@@ -267,6 +262,37 @@
 	\end{table}
 
 
+
+	\subsection{Analysing distributions}
+
+
+	Next, we plotted the distributions of all the features in our dataset; this is depicted in Figure \ref{fig:distribution-plots} . From these histograms, we notice 
+	\begin{itemize}
+		\item The age distribution shows a right-skewed pattern, with most individuals falling in the younger age ranges (20–40 years).
+		
+		\item There is a significant over-representation of certain racial groups, particularly African Americans, which could indicate potential biases in the dataset's sampling.
+		
+		\item Most individuals have zero juvenile felony counts, zero juvenile misdemeanour counts, and no recorded "other" juvenile offences, with each distribution rapidly declining for higher counts.
+		
+		\item A large proportion of individuals have a low number of prior offences, but there is a long tail indicating some individuals have a significant number of priors.
+		
+		\item Most individuals have relatively short jail durations, with a few experiencing significantly longer durations.
+		
+		\item The distribution of days between screening and arrest is clustered around zero, with few extreme outliers on both ends.
+		
+		\item The decile scores appear relatively evenly distributed, but slight patterns suggest clustering at specific score levels (e.g., lower decile scores are slightly more frequent).
+		
+		\item Two-year recidivism plot shows a near-equal distribution, indicating a balanced dataset for recidivism outcomes.
+	\end{itemize}
+
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{img/distribution-plots}
+		\caption{}
+		\label{fig:distribution-plots}
+	\end{figure}
+	
 	
 	
 \printbibliography
