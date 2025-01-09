@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  8 JAN 2025 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  9 JAN 2025 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,8 +698,8 @@ ptm/m/n/10 ,
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\OT1/pcr/b/n/10 r_offense_\OT1/ptm/m/n/10 `, \OT1/pcr/b/n/10 vr_ \OT1/ptm/m/n/1
-0 fields, \OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 ,
+\OT1/pcr/b/n/10 r_offense_\OT1/ptm/m/n/10 , \OT1/pcr/b/n/10 vr_ \OT1/ptm/m/n/10
+ fields, \OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 ,
  []
 
 
@@ -743,7 +743,7 @@ line 233.
 File: img/age_by_race_boxplot.png Graphic file (type png)
 <use img/age_by_race_boxplot.png>
 Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 243.
-(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
+(pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
 
 Underfull \hbox (badness 4940) in paragraph at lines 257--257
 []|\OT1/ptm/m/n/8 Moderately broad spread, with
@@ -780,10 +780,78 @@ Package pdftex.def Info: img/distribution-plots.png  used on input line 291.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./img/sex_percentages_pie.png> <./img/age_by_race_boxplot.png>] [5
+ [4 <./img/sex_percentages_pie.png> <./img/age_by_race_boxplot.png>]
+<img/correlation_matrix_heatmap.png, id=31, 722.7pt x 578.16pt>
+File: img/correlation_matrix_heatmap.png Graphic file (type png)
+<use img/correlation_matrix_heatmap.png>
+Package pdftex.def Info: img/correlation_matrix_heatmap.png  used on input line
+ 303.
+(pdftex.def)             Requested size: 176.39923pt x 141.1167pt.
 
- <./img/distribution-plots.png>]
-** WARNING: Ignoring useless \section in Appendix (line 303).
+Underfull \hbox (badness 1424) in paragraph at lines 323--324
+[]\OT1/ptm/m/n/10 Figure 7[] is a pair plot cre-ated to sub-stan-ti-ate these
+ []
+
+<img/pair_plot.png, id=32, 1355.0625pt x 1264.725pt>
+File: img/pair_plot.png Graphic file (type png)
+<use img/pair_plot.png>
+Package pdftex.def Info: img/pair_plot.png  used on input line 327.
+(pdftex.def)             Requested size: 176.39923pt x 164.6323pt.
+[5 <./img/distribution-plots.png> <./img/correlation_matrix_heatmap.png> <./img
+/pair_plot.png>]
+<img/decile_score_by_race_boxplot.png, id=39, 722.7pt x 433.62pt>
+File: img/decile_score_by_race_boxplot.png Graphic file (type png)
+<use img/decile_score_by_race_boxplot.png>
+Package pdftex.def Info: img/decile_score_by_race_boxplot.png  used on input li
+ne 353.
+(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
+<img/correlation_by_race.png, id=40, 722.7pt x 433.62pt>
+File: img/correlation_by_race.png Graphic file (type png)
+<use img/correlation_by_race.png>
+Package pdftex.def Info: img/correlation_by_race.png  used on input line 366.
+(pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+[]\OT1/ptm/m/n/10 The cor-re-la-tion be-tween \OT1/pcr/b/n/10 two_year_recid \O
+T1/ptm/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 376--377
+\OT1/pcr/b/n/10 decile_score \OT1/ptm/m/n/10 for His-pan-ics is 0.22, the low-e
+st
+ []
+
+
+Underfull \hbox (badness 6792) in paragraph at lines 376--377
+\OT1/ptm/m/n/10 among the groups, sug-gest-ing that for His-panic
+ []
+
+<img/decile_score_by_race_hispanic.png, id=41, 722.7pt x 433.62pt>
+File: img/decile_score_by_race_hispanic.png Graphic file (type png)
+<use img/decile_score_by_race_hispanic.png>
+Package pdftex.def Info: img/decile_score_by_race_hispanic.png  used on input l
+ine 383.
+(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
+
+Underfull \hbox (badness 1783) in paragraph at lines 397--398
+ \OT1/ptm/m/it/10 1) Anal-y-sis of the African-American sec-tor: [][] \OT1/ptm/
+m/n/10 We cre-
+ []
+
+<img/decile_score_by_race_african_american.png, id=42, 722.7pt x 433.62pt>
+File: img/decile_score_by_race_african_american.png Graphic file (type png)
+<use img/decile_score_by_race_african_american.png>
+Package pdftex.def Info: img/decile_score_by_race_african_american.png  used on
+ input line 401.
+(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
+[6 <./img/decile_score_by_race_boxplot.png> <./img/correlation_by_race.png> <./
+img/decile_score_by_race_hispanic.png> <./img/decile_score_by_race_african_amer
+ican.png>]
+LaTeX Font Info:    Font shape `OT1/pcr/b/it' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 411.
+ [7]
+** WARNING: Ignoring useless \section in Appendix (line 463).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -795,7 +863,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
+[8
 
 ] (ics5510-asignment.aux)
  ***********
@@ -816,22 +884,23 @@ Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13973 strings out of 474424
- 256439 string characters out of 5751554
+ 14057 strings out of 474424
+ 259301 string characters out of 5751554
  1951496 words of memory out of 5000000
- 36181 multiletter control sequences out of 15000+600000
- 594372 words of font info for 109 fonts, out of 8000000 for 9000
+ 36260 multiletter control sequences out of 15000+600000
+ 596986 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,15n,81p,861b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,15n,81p,881b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
-/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ti
-mes/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (6 pages, 481219 bytes).
+/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/co
+urier/ucrbo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:
+/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTe
+X/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on ics5510-asignment.pdf (8 pages, 1403111 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
