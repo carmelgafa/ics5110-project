@@ -1,42 +1,11 @@
-'''
-data preparation
+'''prepares the dataset'''
 
-The following preparation steps are performed:
-
-1. reduce dataset to required fields
-2. calculate the jail time and custody time
-3. impute the missing values in days_b_screening_arrest
-4. encode categorical features
-5. split it into train val and test
-
-'''
-
-import os
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.pipeline import Pipeline
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
-from sklearn.model_selection import train_test_split, StratifiedShuffleSplit
-from sklearn.impute import KNNImputer
-from report_writer import ReportWriter
-
-DATA_FOLDER = 'data'
-RESULTS_FOLDER = 'results'
-TEMP_FOLDER = 'tmp'
-
-# start report to hold results
-report = ReportWriter(os.path.join(RESULTS_FOLDER, 'data_preparation_report.xlsx'))
-
-# load dataset
-df_compas_path = os.path.join(DATA_FOLDER, 'compas-scores-two-years.csv')
-df_compas = pd.read_csv(df_compas_path)
-
-# gather the trivial  dataset information
-report.add_data_frame(
-    pd.DataFrame({'records': [df_compas.shape[0]], 'columns': [df_compas.shape[1]]}),
-    'compas_summary')
 
 
+<<<<<<< HEAD
 # reduce dataset to required fields
 # ---------------------------------
 df_reduced = df_compas[[
@@ -60,111 +29,149 @@ df_reduced = df_compas[[
 ]]
 B N
 
+=======
+class ColumnReducer(BaseEstimator, TransformerMixin):
+    '''reduces the dataset to the necessary columns'''
+    def __init__(self, columns_to_keep:list):
+        self.columns_to_keep = columns_to_keep
+>>>>>>> 5225dd03b07ded7f4db580af221df49978c62ab7
 
-# start data manipulation
-df_reduced = df_reduced.copy()
+    def fit(self, df_x:pd.DataFrame, y=None)->'ColumnReducer':
+        '''no fitting required'''
+        return self
 
-# calculate the jail time and custody time
-# ----------------------------------------
-df_reduced['c_jail_in'] = pd.to_datetime(
-    df_reduced['c_jail_in'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-df_reduced['c_jail_out'] = pd.to_datetime(
-    df_reduced['c_jail_out'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-df_reduced['days_in_jail'] = abs((df_reduced['c_jail_out'] - df_reduced['c_jail_in']).dt.days)
-# not available values should be 0
-df_reduced['days_in_jail'] = df_reduced['days_in_jail'].fillna(0)
-# ensure that it is an integer
-df_reduced['days_in_jail'] = df_reduced['days_in_jail'].astype(int)
+    def transform(self, df_x:pd.DataFrame)->pd.DataFrame:
+        '''select columns to keep'''
+        # Ensure X is a DataFrame to support column selection
+        return df_x[self.columns_to_keep]
 
-# calculate custody time
-df_reduced['in_custody'] = pd.to_datetime(
-    df_reduced['in_custody'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-df_reduced['out_custody'] = pd.to_datetime(
-    df_reduced['out_custody'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+class JailTimeTransformer(BaseEstimator, TransformerMixin):
+    '''calculate jail time'''
+    def __init__(self):
+        pass
 
-df_reduced['days_in_custody'] = abs((df_reduced['out_custody'] - df_reduced['in_custody']).dt.days)
-df_reduced['days_in_custody'] = df_reduced['days_in_custody'].fillna(0)
-df_reduced['days_in_custody'] = df_reduced['days_in_custody'].astype(int)
+    def fit(self, df_x:pd.DataFrame, y=None):
+        '''no fitting required'''
+        return self
 
-# remove the days in and days out from the dataset
-df_reduced = df_reduced.drop(['c_jail_in', 'c_jail_out',
-                              'in_custody', 'out_custody', 
-                              'days_in_custody'], axis=1)
+    def transform(self, df_x:pd.DataFrame)->pd.DataFrame:
+        '''calculate jail time'''
+        df_x = df_x.copy()
+        df_x['c_jail_in'] = pd.to_datetime(
+            df_x['c_jail_in'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+        df_x['c_jail_out'] = pd.to_datetime(
+            df_x['c_jail_out'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+        df_x['c_jail_time'] = abs((df_x['c_jail_out'] - df_x['c_jail_in']).dt.days)
+        return df_x.drop(['c_jail_in', 'c_jail_out'], axis=1)
 
-report.add_data_frame(df_reduced.head(), 'compas_data')
-report.add_data_frame(pd.DataFrame(df_reduced.dtypes), 'compas_dtypes')
-report.add_data_frame(df_reduced.count(), 'compas_count')
-report.add_data_frame(df_reduced.describe(), 'compas_describe')
+class CustodyTimeTransformer(BaseEstimator, TransformerMixin):
+    '''calculate custody time'''
+    def __init__(self):
+        pass
 
-# plot histogram of all numerical features
+    def fit(self, df_x:pd.DataFrame, y=None):
+        '''no fitting required'''
+        return self
 
-numerical_features = ['age', 'juv_fel_count', 'juv_misd_count',
-                      'juv_other_count', 'priors_count', 'days_b_screening_arrest',
-                      'days_in_jail', 'decile_score',
-                      'two_year_recid']
+    def transform(self, df_x:pd.DataFrame)->pd.DataFrame:
+        '''calculate custody time'''
+        df_x = df_x.copy()
+        df_x['in_custody'] = pd.to_datetime(
+            df_x['in_custody'], format='%Y-%m-%d', errors='coerce')
+        df_x['out_custody'] = pd.to_datetime(
+            df_x['out_custody'], format='%Y-%m-%d', errors='coerce')
+        df_x['days_in_custody'] = abs((df_x['out_custody'] - df_x['in_custody']).dt.days)
+        return df_x.drop(['in_custody', 'out_custody'], axis=1)
 
-df_reduced.hist(bins=50, figsize=(20, 15))
-plt.savefig(os.path.join(TEMP_FOLDER, 'histogram.png'))
-report.add_current_plt(os.path.join(TEMP_FOLDER, 'histogram.png'), 'histogram')
+class EndStartTransformer(BaseEstimator, TransformerMixin):
+    '''calculate end-start time'''
+    def __init__(self):
+        pass
 
+    def fit(self, df_x:pd.DataFrame, y=None):
+        '''no fitting required'''
+        return self
 
-# impute the missing values in days_b_screening_arrest
-# ----------------------------------------------------
-df_reduced_copy = df_reduced.copy()
-
-# Columns to use as predictors for KNN Imputation (numeric only)
-predictor_columns = ['age', 'juv_fel_count', 'juv_misd_count',
-                      'juv_other_count', 'priors_count',
-                      'days_in_jail', 'decile_score',
-                      'two_year_recid']
-# target column to fill
-TARGET_COLUMN = "days_b_screening_arrest"
-
-# Combine the predictors and target column into a separate DataFrame
-df_subset = df_reduced[predictor_columns + [TARGET_COLUMN]]
-
-# KNN imputer to subset
-imputer = KNNImputer(n_neighbors=5)
-df_subset_imputed = pd.DataFrame(imputer.fit_transform(df_subset), columns=df_subset.columns)
-
-# replace only the target column in the original DataFrame
-df_reduced[TARGET_COLUMN] = df_subset_imputed[TARGET_COLUMN]
-
-# Plot distributions before and after imputation
-plt.figure(figsize=(12, 6))
-sns.kdeplot(df_reduced[TARGET_COLUMN], label="After Imputation", color="green", fill=True)
-sns.kdeplot(df_reduced_copy[TARGET_COLUMN], label="Before Imputation", color="red", fill=True)
-plt.title("Effect of KNN Imputation on 'days_b_screening_arrest'")
-plt.xlabel("Days Between Arrest and Screening")
-plt.ylabel("Density")
-plt.legend()
-plt.savefig(os.path.join(TEMP_FOLDER, 'imputation.png'))
-report.add_current_plt(os.path.join(TEMP_FOLDER, 'imputation.png'), 'imputation')
+    def transform(self, df_x:pd.DataFrame)->pd.DataFrame:
+        '''calculate end-start time'''
+        df_x = df_x.copy()
+        df_x['end_start'] = abs((df_x['end'] - df_x['start']))
+        return df_x
 
 
+class KNNImputeTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, n_neighbors=5):
+        self.n_neighbors = n_neighbors
 
-# encode categorical features
-# ---------------------------
-#one hot encode sex, race, c_charge_degree, age_cat
-ohe = OneHotEncoder()
-ohe_features = ['sex', 'race', 'c_charge_degree']
-df_ohe = pd.DataFrame(
-    ohe.fit_transform(df_reduced[ohe_features]).toarray(),
-    columns=ohe.get_feature_names_out(ohe_features))
-df_reduced = pd.concat([df_reduced, df_ohe], axis=1)
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        imputer = KNNImputer(n_neighbors=self.n_neighbors)
+        imputed = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
+        return imputed  
+
+class ToDataFrameTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, columns):
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        # Convert NumPy array to DataFrame
+        return pd.DataFrame(X, columns=self.columns)
+
+if __name__ == '__main__':
+
+    import os
+    import pandas as pd
+    from sklearn.impute import KNNImputer
+
+    DATA_FOLDER = 'data'
+    df_compas = pd.read_csv(os.path.join(DATA_FOLDER, 'compas-scores-two-years.csv'))
+
+    # Define the columns to keep
+    columns_to_keep = [ "sex", "age", "race", "juv_fel_count", "decile_score",
+                   "juv_misd_count", "juv_other_count", "priors_count",
+                   "days_b_screening_arrest", "c_jail_in", "c_jail_out",
+                   "c_days_from_compas", "c_charge_degree", "v_decile_score",
+                   "in_custody", "out_custody", "start", "end", "event", "two_year_recid" ]
 
 
-# ordinal encoding
-oe_features = ['age_cat']
-age_cat_order = ['Less than 25', '25 - 45', 'Greater than 45']
+    columns_needing_imputation = ['days_b_screening_arrest', 'c_jail_time', 'days_in_custody']
+    
+    categorical_columns = ['race', 'c_charge_degree', 'sex']
 
-ordinal_encoder = OrdinalEncoder(categories=[age_cat_order])
-df_reduced[['age_cat_encoded']] = ordinal_encoder.fit_transform(
-    df_reduced[['age_cat']]
-)
+    imputation_transformer = pipeline = Pipeline(steps=[
+        # ('jail_time', JailTimeTransformer()),
+        # ('custody_time', CustodyTimeTransformer()),
+        # ('end_start', EndStartTransformer()),
+        ('imputation_pipeline', KNNImputeTransformer(n_neighbors=5)),
+    ])
+    
+    from sklearn.compose import ColumnTransformer
+    processor = ColumnTransformer(
+        transformers=[
+            ('imputation', imputation_transformer, columns_needing_imputation)
+        ]
+    )
 
-report.add_data_frame(pd.DataFrame(df_reduced.dtypes), 'final_dtypes')
 
+    pipeline = Pipeline(steps=[
+        ('column_selector', ColumnReducer(columns_to_keep=columns_to_keep)),
+        ('jail_time', JailTimeTransformer()),
+        ('custody_time', CustodyTimeTransformer()),
+        ('end_start', EndStartTransformer()),
+        ('imputation_pipeline', processor),
+        ('to_dataframe', ToDataFrameTransformer(columns=columns_needing_imputation))
+
+    ])
+
+    # Apply the pipeline
+    df_x = pipeline.fit_transform(df_compas)
+
+<<<<<<< HEAD
 
 # split it into train val and test. keep y into the dataset#
 # ---------------------------------------------------------
@@ -212,3 +219,6 @@ df_train.to_csv( os.path.join(DATA_FOLDER, 'train_dataset.csv'), index=False)
 df_test.to_csv(os.path.join(DATA_FOLDER, 'df_reduced_test.csv'), index=False)
 
 report.save()
+=======
+    print(df_x.info())
+>>>>>>> 5225dd03b07ded7f4db580af221df49978c62ab7
