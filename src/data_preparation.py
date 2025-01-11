@@ -58,6 +58,8 @@ df_reduced = df_compas[[
     'decile_score',
     'two_year_recid'
 ]]
+B N
+
 
 # start data manipulation
 df_reduced = df_reduced.copy()
@@ -177,12 +179,12 @@ for train_idx, test_idx in split.split(df_reduced, df_reduced[stratify_column]):
     df_train = df_reduced.iloc[train_idx]
     df_test = df_reduced.iloc[test_idx]
 
-# Further split test into dev and test (50/50 split)
-split_dev = StratifiedShuffleSplit(n_splits=1, test_size=0.5, random_state=42)
+# # Further split test into dev and test (50/50 split)
+# split_dev = StratifiedShuffleSplit(n_splits=1, test_size=0.5, random_state=42)
 
-for test_idx, val_idx in split_dev.split(df_test, df_test[stratify_column]):
-    df_test_final = df_test.iloc[test_idx]
-    df_val = df_test.iloc[val_idx]
+# for test_idx, val_idx in split_dev.split(df_test, df_test[stratify_column]):
+#     df_test_final = df_test.iloc[test_idx]
+#     df_val = df_test.iloc[val_idx]
 
 # Function to print race counts and percentages
 def get_race_distribution(df:pd.DataFrame):
@@ -195,8 +197,8 @@ def get_race_distribution(df:pd.DataFrame):
 df_split_results = pd.DataFrame({
     'train': [df_train.shape[0]],
     'train race percentages': get_race_distribution(df_train),
-    'val': [df_val.shape[0]],
-    'val race percentages': get_race_distribution(df_val),
+    # 'val': [df_val.shape[0]],
+    # 'val race percentages': get_race_distribution(df_val),
     'test': [df_test.shape[0]],
     'test race percentages': get_race_distribution(df_test)
 })
@@ -206,7 +208,7 @@ report.add_data_frame(df_split_results, 'split_results')
 df_reduced.to_csv(os.path.join(DATA_FOLDER, 'df_reduced.csv'), index=False)
 
 df_train.to_csv( os.path.join(DATA_FOLDER, 'train_dataset.csv'), index=False)
-df_val.to_csv(os.path.join(DATA_FOLDER, 'test_dataset.csv'), index=False)
+# df_val.to_csv(os.path.join(DATA_FOLDER, 'test_dataset.csv'), index=False)
 df_test.to_csv(os.path.join(DATA_FOLDER, 'df_reduced_test.csv'), index=False)
 
 report.save()
