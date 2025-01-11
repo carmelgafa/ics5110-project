@@ -5,36 +5,9 @@ from sklearn.pipeline import Pipeline
 import pandas as pd
 
 
-<<<<<<< HEAD
-# reduce dataset to required fields
-# ---------------------------------
-df_reduced = df_compas[[
-    'sex',
-    'age',
-    'age_cat',
-    'race',
-    'juv_fel_count',
-    'juv_misd_count',
-    'juv_other_count',
-    'priors_count',
-    'days_b_screening_arrest',
-    'c_jail_in',
-    'c_jail_out',
-    'c_charge_degree',
-    'c_charge_desc',
-    'in_custody',
-    'out_custody',
-    'decile_score',
-    'two_year_recid'
-]]
-B N
-
-=======
 class ColumnReducer(BaseEstimator, TransformerMixin):
-    '''reduces the dataset to the necessary columns'''
-    def __init__(self, columns_to_keep:list):
+    def __init__(self, columns_to_keep:list)->None:
         self.columns_to_keep = columns_to_keep
->>>>>>> 5225dd03b07ded7f4db580af221df49978c62ab7
 
     def fit(self, df_x:pd.DataFrame, y=None)->'ColumnReducer':
         '''no fitting required'''
@@ -100,27 +73,52 @@ class EndStartTransformer(BaseEstimator, TransformerMixin):
 
 
 class KNNImputeTransformer(BaseEstimator, TransformerMixin):
-    def __init__(self, n_neighbors=5):
+    def __init__(self, n_neighbors=5, columns=[]):
         self.n_neighbors = n_neighbors
-
-    def fit(self, X, y=None):
-        return self
-
-    def transform(self, X):
-        imputer = KNNImputer(n_neighbors=self.n_neighbors)
-        imputed = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
-        return imputed  
-
-class ToDataFrameTransformer(BaseEstimator, TransformerMixin):
-    def __init__(self, columns):
         self.columns = columns
 
     def fit(self, X, y=None):
         return self
 
     def transform(self, X):
-        # Convert NumPy array to DataFrame
-        return pd.DataFrame(X, columns=self.columns)
+        imputer = KNNImputer(n_neighbors=self.n_neighbors)
+        for col in self.columns:
+            X[col] = imputer.fit_transform(X[[col]])
+        return X
+    
+class OneHotEncoderTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, columns=[]):
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        from sklearn.preprocessing import OneHotEncoder
+        ohe = OneHotEncoder()
+        for col in self.columns:
+            X[col] = X[col].astype('category')
+            ohe_col = pd.DataFrame(ohe.fit_transform(X[[col]]).toarray(), columns=ohe.get_feature_names_out([col]))
+            X = pd.concat([X, ohe_col], axis=1)
+            X.drop(col, axis=1, inplace=True)
+        return X
+
+
+class StandardScalerTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, columns=[]):
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        from sklearn.preprocessing import StandardScaler
+        scaler = StandardScaler()
+        for col in self.columns:
+            X[col] = scaler.fit_transform(X[[col]])
+        return X
+
+
 
 if __name__ == '__main__':
 
@@ -143,10 +141,12 @@ if __name__ == '__main__':
     
     categorical_columns = ['race', 'c_charge_degree', 'sex']
 
+    standard_columns = ['age', 'juv_fel_count', 'juv_misd_count', 'juv_other_count', 'priors_count', 'days_b_screening_arrest', 'c_jail_time', 'days_in_custody']
+
+    print(df_compas.describe())
+
+
     imputation_transformer = pipeline = Pipeline(steps=[
-        # ('jail_time', JailTimeTransformer()),
-        # ('custody_time', CustodyTimeTransformer()),
-        # ('end_start', EndStartTransformer()),
         ('imputation_pipeline', KNNImputeTransformer(n_neighbors=5)),
     ])
     
@@ -163,62 +163,12 @@ if __name__ == '__main__':
         ('jail_time', JailTimeTransformer()),
         ('custody_time', CustodyTimeTransformer()),
         ('end_start', EndStartTransformer()),
-        ('imputation_pipeline', processor),
-        ('to_dataframe', ToDataFrameTransformer(columns=columns_needing_imputation))
-
+        ('imputer', KNNImputeTransformer(columns=columns_needing_imputation)),
+        ('one_hot_encoder', OneHotEncoderTransformer(columns=categorical_columns)),
+        ('standard_scaler', StandardScalerTransformer(columns=standard_columns)),
     ])
 
     # Apply the pipeline
     df_x = pipeline.fit_transform(df_compas)
-
-<<<<<<< HEAD
-
-# split it into train val and test. keep y into the dataset#
-# ---------------------------------------------------------
-
-stratify_column = 'race'
-
-# Set up StratifiedShuffleSplit
-split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
-
-# Create train and test sets
-for train_idx, test_idx in split.split(df_reduced, df_reduced[stratify_column]):
-    df_train = df_reduced.iloc[train_idx]
-    df_test = df_reduced.iloc[test_idx]
-
-# # Further split test into dev and test (50/50 split)
-# split_dev = StratifiedShuffleSplit(n_splits=1, test_size=0.5, random_state=42)
-
-# for test_idx, val_idx in split_dev.split(df_test, df_test[stratify_column]):
-#     df_test_final = df_test.iloc[test_idx]
-#     df_val = df_test.iloc[val_idx]
-
-# Function to print race counts and percentages
-def get_race_distribution(df:pd.DataFrame):
-    ''' Returns a dataframe with race percentages'''
-    race_counts = df['race'].value_counts()
-    race_percentages = (race_counts / len(df)) * 100
-    result = str(race_percentages.to_dict())
-    return result
-
-df_split_results = pd.DataFrame({
-    'train': [df_train.shape[0]],
-    'train race percentages': get_race_distribution(df_train),
-    # 'val': [df_val.shape[0]],
-    # 'val race percentages': get_race_distribution(df_val),
-    'test': [df_test.shape[0]],
-    'test race percentages': get_race_distribution(df_test)
-})
-report.add_data_frame(df_split_results, 'split_results')
-
-# save the datasets
-df_reduced.to_csv(os.path.join(DATA_FOLDER, 'df_reduced.csv'), index=False)
-
-df_train.to_csv( os.path.join(DATA_FOLDER, 'train_dataset.csv'), index=False)
-# df_val.to_csv(os.path.join(DATA_FOLDER, 'test_dataset.csv'), index=False)
-df_test.to_csv(os.path.join(DATA_FOLDER, 'df_reduced_test.csv'), index=False)
-
-report.save()
-=======
-    print(df_x.info())
->>>>>>> 5225dd03b07ded7f4db580af221df49978c62ab7
+    
+    print(df_x.describe())
