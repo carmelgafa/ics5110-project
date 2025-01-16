@@ -1,0 +1,26 @@
+	\begin{tikzpicture}
+		\usetikzlibrary{calc}
+		% Draw the ellipse
+		\draw  (-0,0) circle (2);
+		% Node at the center of the ellipse
+		\node[circle, inner sep=0pt] (v2) at (-0,0) {};
+		% Nodes for the lines
+		\node (v1) at (-5, 2) {$x_1$};
+		\node (v3) at (-5,0) {$x_2$};
+		\node (v4) at (-5,-2) {$x_n$};
+		\node (v7) at (4,0) {$\hat{y}$};
+		% Draw lines stopping at the ellipse
+		\draw[-] (v1) -- ($(v2)!0.37!(v1)$);
+		\draw[-] (v3) -- ($(v2)!0.4!(v3)$);
+		\draw[-] (v4) -- ($(v2)!0.37!(v4)$);
+		\draw[-] (v7) -- ($(v2)!0.5!(v7)$);
+		\node (v5) at (0,2) {};
+		\node (v6) at (0,-2) {};
+		\draw  (v5) edge (v6);
+		\node [font=\tiny] at (-1,0) {$z=\textbf{W}^T\textbf{X}+b$};
+		\node [font=\tiny] (v8) at (1,0) {$\hat{y}=\sigma(z)$};
+		\node at (-3,1.5) {$w_1$};
+		\node at (-3,0.25) {$w_2$};
+		\node at (-3,-1.5) {$w_n$};
+		\node at (-3,-0.5) {$\vdots$};
+\end{tikzpicture}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  9 JAN 2025 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  16 JAN 2025 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -589,40 +589,283 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks27
 \@floatcapt=\box59
 )
-\@quotelevel=\count419
-\@quotereset=\count420
+(C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen186
+\pgfutil@tempdimb=\dimen187
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box60
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.
+tex
+\pgfkeys@tmptoks=\toks31
+))
+\pgf@x=\dimen188
+\pgf@y=\dimen189
+\pgf@xa=\dimen190
+\pgf@ya=\dimen191
+\pgf@xb=\dimen192
+\pgf@yb=\dimen193
+\pgf@xc=\dimen194
+\pgf@yc=\dimen195
+\pgf@xd=\dimen196
+\pgf@yd=\dimen197
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count419
+\c@pgf@countb=\count420
+\c@pgf@countc=\count421
+\c@pgf@countd=\count422
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+\pgf@sys@id@count=\count423
+ (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count424
+\pgfsyssoftpath@bigbuffer@items=\count425
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen198
+\pgfmath@count=\count426
+\pgfmath@box=\box61
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.co
+de.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.
+tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
+cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
+) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count427
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen199
+\pgf@picmaxx=\dimen256
+\pgf@picminy=\dimen257
+\pgf@picmaxy=\dimen258
+\pgf@pathminx=\dimen259
+\pgf@pathmaxx=\dimen260
+\pgf@pathminy=\dimen261
+\pgf@pathmaxy=\dimen262
+\pgf@xx=\dimen263
+\pgf@xy=\dimen264
+\pgf@yx=\dimen265
+\pgf@yy=\dimen266
+\pgf@zx=\dimen267
+\pgf@zy=\dimen268
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
+ex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen269
+\pgf@path@lasty=\dimen270
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen271
+\pgf@shorten@start@additional=\dimen272
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count428
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
+x
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen273
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
+.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen274
+\pgf@pt@y=\dimen275
+\pgf@pt@temp=\dimen276
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.
+tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen277
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen278
+\pgf@sys@shading@range@num=\count429
+\pgf@shadingcount=\count430
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box65
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.te
+x
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box66
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen279
+\pgf@nodesepend=\dimen280
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex))
+(C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen281
+\pgffor@skip=\dimen282
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
+tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count431
+\pgfplotmarksize=\dimen283
+)
+\tikz@lastx=\dimen284
+\tikz@lasty=\dimen285
+\tikz@lastxsaved=\dimen286
+\tikz@lastysaved=\dimen287
+\tikz@lastmovetox=\dimen288
+\tikz@lastmovetoy=\dimen289
+\tikzleveldistance=\dimen290
+\tikzsiblingdistance=\dimen291
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count432
+\tikznumberofchildren=\count433
+\tikznumberofcurrentchild=\count434
+\tikz@fig@count=\count435
+ (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count436
+\pgfmatrixcurrentcolumn=\count437
+\pgf@matrix@numberofcolumns=\count438
+)
+\tikz@expandcount=\count439
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+\@quotelevel=\count440
+\@quotereset=\count441
  (ics5510-asignment.aux)
 \openout1 = `ics5510-asignment.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 -- Lines per column: 56 (exact).
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count421
-\scratchdimen=\dimen186
-\scratchbox=\box60
-\nofMPsegments=\count422
-\nofMParguments=\count423
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count424
-\MPscratchDim=\dimen187
-\MPnumerator=\count425
-\makeMPintoPDFobject=\count426
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count442
+\scratchdimen=\dimen292
+\scratchbox=\box71
+\nofMPsegments=\count443
+\nofMParguments=\count444
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count445
+\MPscratchDim=\dimen293
+\MPnumerator=\count446
+\makeMPintoPDFobject=\count447
+\everyMPtoPDFconversion=\toks41
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -646,32 +889,32 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ics5510-asignment.bbl' found.
 
 (ics5510-asignment.bbl)
-Package biblatex Info: Reference section=0 on input line 20.
-Package biblatex Info: Reference segment=0 on input line 20.
+Package biblatex Info: Reference section=0 on input line 23.
+Package biblatex Info: Reference segment=0 on input line 23.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
-9.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
+2.
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1546) in paragraph at lines 59--60
+Underfull \hbox (badness 1546) in paragraph at lines 62--63
 \OT1/ptm/m/n/10 mer-i-cal value to an in-di-vid-ual's like-li-hood of re-of-fen
 d-
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 59--60
+Underfull \hbox (badness 4872) in paragraph at lines 62--63
 \OT1/ptm/m/n/10 ing. Other im-por-tant fea-tures in-clude the num-ber of
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -681,177 +924,190 @@ m Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 []\OT1/ptm/m/n/10 The file cho-sen for this anal-y-sis is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 \OT1/pcr/b/n/10 compas-scores-two-years.csv\OT1/ptm/m/n/10 , as it pro-vides
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 []\OT1/ptm/m/n/10 Additional fields, in-clud-ing \OT1/pcr/b/n/10 r_charge_\OT1/
 ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 \OT1/pcr/b/n/10 r_offense_\OT1/ptm/m/n/10 , \OT1/pcr/b/n/10 vr_ \OT1/ptm/m/n/10
  fields, \OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 143--144
+Underfull \hbox (badness 2469) in paragraph at lines 146--147
 []\OT1/ptm/m/n/10 The sever-ity of pre-vi-ous charges in-cludes felonies
  []
 
 [2]
-<img/imputation.png, id=14, 867.24pt x 433.62pt>
+<img/imputation.png, id=17, 867.24pt x 433.62pt>
 File: img/imputation.png Graphic file (type png)
 <use img/imputation.png>
-Package pdftex.def Info: img/imputation.png  used on input line 167.
+Package pdftex.def Info: img/imputation.png  used on input line 170.
 (pdftex.def)             Requested size: 226.79846pt x 113.39357pt.
 
-Overfull \hbox (15.28691pt too wide) in paragraph at lines 176--184
+Overfull \hbox (15.28691pt too wide) in paragraph at lines 179--187
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 []\OT1/ptm/m/n/10 One-Hot En-cod-ing on \OT1/pcr/b/n/10 sex\OT1/ptm/m/n/10 , \O
 T1/pcr/b/n/10 race\OT1/ptm/m/n/10 , and
  []
 
-<img/race_percentages_pie.png, id=16, 578.16pt x 578.16pt>
+<img/race_percentages_pie.png, id=19, 578.16pt x 578.16pt>
 File: img/race_percentages_pie.png Graphic file (type png)
 <use img/race_percentages_pie.png>
-Package pdftex.def Info: img/race_percentages_pie.png  used on input line 212.
+Package pdftex.def Info: img/race_percentages_pie.png  used on input line 215.
 (pdftex.def)             Requested size: 176.39923pt x 176.39587pt.
-<img/sex_percentages_pie.png, id=17, 578.16pt x 578.16pt>
+<img/sex_percentages_pie.png, id=20, 578.16pt x 578.16pt>
 File: img/sex_percentages_pie.png Graphic file (type png)
 <use img/sex_percentages_pie.png>
-Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 220.
+Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 223.
 (pdftex.def)             Requested size: 176.39923pt x 176.39587pt.
 [3 <./img/imputation.png> <./img/race_percentages_pie.png>]
 
 LaTeX Warning: Reference `fig:race-sex-breakdown' on page 4 undefined on input 
-line 233.
+line 236.
 
-<img/age_by_race_boxplot.png, id=23, 722.7pt x 433.62pt>
+<img/age_by_race_boxplot.png, id=26, 722.7pt x 433.62pt>
 File: img/age_by_race_boxplot.png Graphic file (type png)
 <use img/age_by_race_boxplot.png>
-Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 243.
+Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 246.
 (pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 257--257
+Underfull \hbox (badness 4940) in paragraph at lines 260--260
 []|\OT1/ptm/m/n/8 Moderately broad spread, with
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 259--259
+Underfull \hbox (badness 1509) in paragraph at lines 262--262
 []|\OT1/ptm/m/n/8 Very tight dis-tri-bu-tion, with all
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 260--260
+Underfull \hbox (badness 1783) in paragraph at lines 263--263
 []|\OT1/ptm/m/n/8 Similar to Cau-casians but with
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 260--260
+Underfull \hbox (badness 1888) in paragraph at lines 263--263
 \OT1/ptm/m/n/8 slightly fewer older in-di-vid-u-als.
  []
 
 
-Overfull \hbox (4.34146pt too wide) in paragraph at lines 252--262
+Overfull \hbox (4.34146pt too wide) in paragraph at lines 255--265
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<img/distribution-plots.png, id=24, 846.66313pt x 930.47626pt>
+<img/distribution-plots.png, id=27, 846.66313pt x 930.47626pt>
 File: img/distribution-plots.png Graphic file (type png)
 <use img/distribution-plots.png>
-Package pdftex.def Info: img/distribution-plots.png  used on input line 291.
+Package pdftex.def Info: img/distribution-plots.png  used on input line 294.
 (pdftex.def)             Requested size: 226.79846pt x 249.24423pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4 <./img/sex_percentages_pie.png> <./img/age_by_race_boxplot.png>]
-<img/correlation_matrix_heatmap.png, id=31, 722.7pt x 578.16pt>
+<img/correlation_matrix_heatmap.png, id=34, 722.7pt x 578.16pt>
 File: img/correlation_matrix_heatmap.png Graphic file (type png)
 <use img/correlation_matrix_heatmap.png>
 Package pdftex.def Info: img/correlation_matrix_heatmap.png  used on input line
- 303.
+ 306.
 (pdftex.def)             Requested size: 176.39923pt x 141.1167pt.
 
-Underfull \hbox (badness 1424) in paragraph at lines 323--324
+Underfull \hbox (badness 1424) in paragraph at lines 326--327
 []\OT1/ptm/m/n/10 Figure 7[] is a pair plot cre-ated to sub-stan-ti-ate these
  []
 
-<img/pair_plot.png, id=32, 1355.0625pt x 1264.725pt>
+<img/pair_plot.png, id=35, 1355.0625pt x 1264.725pt>
 File: img/pair_plot.png Graphic file (type png)
 <use img/pair_plot.png>
-Package pdftex.def Info: img/pair_plot.png  used on input line 327.
+Package pdftex.def Info: img/pair_plot.png  used on input line 330.
 (pdftex.def)             Requested size: 176.39923pt x 164.6323pt.
 [5 <./img/distribution-plots.png> <./img/correlation_matrix_heatmap.png> <./img
 /pair_plot.png>]
-<img/decile_score_by_race_boxplot.png, id=39, 722.7pt x 433.62pt>
+<img/decile_score_by_race_boxplot.png, id=42, 722.7pt x 433.62pt>
 File: img/decile_score_by_race_boxplot.png Graphic file (type png)
 <use img/decile_score_by_race_boxplot.png>
 Package pdftex.def Info: img/decile_score_by_race_boxplot.png  used on input li
-ne 353.
+ne 356.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
-<img/correlation_by_race.png, id=40, 722.7pt x 433.62pt>
+<img/correlation_by_race.png, id=43, 722.7pt x 433.62pt>
 File: img/correlation_by_race.png Graphic file (type png)
 <use img/correlation_by_race.png>
-Package pdftex.def Info: img/correlation_by_race.png  used on input line 366.
+Package pdftex.def Info: img/correlation_by_race.png  used on input line 369.
 (pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 []\OT1/ptm/m/n/10 The cor-re-la-tion be-tween \OT1/pcr/b/n/10 two_year_recid \O
 T1/ptm/m/n/10 and
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 376--377
+Underfull \hbox (badness 1675) in paragraph at lines 379--380
 \OT1/pcr/b/n/10 decile_score \OT1/ptm/m/n/10 for His-pan-ics is 0.22, the low-e
 st
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 376--377
+Underfull \hbox (badness 6792) in paragraph at lines 379--380
 \OT1/ptm/m/n/10 among the groups, sug-gest-ing that for His-panic
  []
 
-<img/decile_score_by_race_hispanic.png, id=41, 722.7pt x 433.62pt>
+<img/decile_score_by_race_hispanic.png, id=44, 722.7pt x 433.62pt>
 File: img/decile_score_by_race_hispanic.png Graphic file (type png)
 <use img/decile_score_by_race_hispanic.png>
 Package pdftex.def Info: img/decile_score_by_race_hispanic.png  used on input l
-ine 383.
+ine 386.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
 
-Underfull \hbox (badness 1783) in paragraph at lines 397--398
+Underfull \hbox (badness 1783) in paragraph at lines 400--401
  \OT1/ptm/m/it/10 1) Anal-y-sis of the African-American sec-tor: [][] \OT1/ptm/
 m/n/10 We cre-
  []
 
-<img/decile_score_by_race_african_american.png, id=42, 722.7pt x 433.62pt>
+<img/decile_score_by_race_african_american.png, id=45, 722.7pt x 433.62pt>
 File: img/decile_score_by_race_african_american.png Graphic file (type png)
 <use img/decile_score_by_race_african_american.png>
 Package pdftex.def Info: img/decile_score_by_race_african_american.png  used on
- input line 401.
+ input line 404.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
 [6 <./img/decile_score_by_race_boxplot.png> <./img/correlation_by_race.png> <./
 img/decile_score_by_race_hispanic.png> <./img/decile_score_by_race_african_amer
 ican.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/b/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 411.
- [7]
-** WARNING: Ignoring useless \section in Appendix (line 463).
+(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 414.
+ (img/logistic_regression.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+Overfull \hbox (18.95074pt too wide) in paragraph at lines 26--472
+ [][] 
+ []
+
+(img/sigmoid.tex
+Missing character: There is no [ in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no ] in font nullfont!
+) [7] [8] [9]
+** WARNING: Ignoring useless \section in Appendix (line 714).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -863,7 +1119,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8
+[10
 
 ] (ics5510-asignment.aux)
  ***********
@@ -874,33 +1130,39 @@ L3 programming layer <2024-03-14>
 
 LaTeX Warning: There were undefined references.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                ics5510-asignment
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 \openout1 = `ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14057 strings out of 474424
- 259301 string characters out of 5751554
- 1951496 words of memory out of 5000000
- 36260 multiletter control sequences out of 15000+600000
- 596986 words of font info for 114 fonts, out of 8000000 for 9000
+ 24483 strings out of 474424
+ 486650 string characters out of 5751554
+ 1959496 words of memory out of 5000000
+ 46471 multiletter control sequences out of 15000+600000
+ 598093 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,15n,81p,881b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
-/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/co
-urier/ucrbo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:
-/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTe
-X/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (8 pages, 1403111 bytes).
+ 84i,17n,87p,881b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/c
+ourier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrbo8a.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiK
+TeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/
+times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ics5510-asignment.pdf (10 pages, 1549947 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 172 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
