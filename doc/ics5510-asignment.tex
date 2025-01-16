@@ -10,7 +10,8 @@
 \usepackage{subcaption}
 \usepackage{float} % Required for [H] option
 \usepackage{tikz}
-
+\usepackage{scrextend}
+\usepackage{paralist}
 
 
 
@@ -457,8 +458,168 @@
 	
 	\section{Predicting \textbf{\texttt{decile\_score}} using linear regression}
 	
+	\subsection{Measurement}
 	
-	\section{Logistic regression}
+	Quantitative measurements numerically represent attributes and are fundamental for evaluating machine learning models by providing an objective means to assess the model's performance. We can analyse the model's effectiveness by comparing model predictions to actual outcomes. Appropriate selection and reporting of measurement methods, including their reliability, validity, and potential biases, are essential to ensure accurate interpretation and meaningful results. This section will look at the measurements used in this study.
+	
+	The function used in machine learning and statistical modelling to quantify the difference between the predicted outputs of a model and the actual target values is called the loss function. It serves as a measure of the model's performance, guiding the optimisation process to improve predictions.
+	
+	For a single prediction:
+	
+	$$\text{Loss}(\hat{y}, y) = f(\hat{y}, y)$$
+	Where:
+	
+	
+	\begin{compactitem}
+		\item [$\hat{y}$]: Predicted value.
+		\item [$y$]: Actual value.
+		\item [$f$]: Specific loss function formula
+	\end{compactitem}
+	
+	\bigskip
+	
+	The aggregation of the loss function across the entire dataset is called the cost function so that;
+	
+	$$
+	\text{Cost}(\hat{y}, y) = \frac{1}{N}\sum_{i=1}^{N} \mathcal{L}(\widehat{y}_i, y_i)
+	$$
+	
+	In the problem we are considering, we will try to predict whether a person will recidivate given information about his or her previous criminal history is a binary classifier problem. A binary classifier is a function that can be applied to features $X$ such as $(x_1, x_2, x_3, \dots, x_n)$ and maps them to an output $Y$, where $Y \in \{0, 1\}$. It is a supervised learning technique; therefore, a test set is extracted from the available data to validate the model before being deployed in production.
+	
+	$$ f(x_1, x_2, x_3, \dots, x_n) = Y \in \{0, 1\}  $$
+	
+	The function will return a value between 0 and 1; therefore, a threshold value is operated to classify the result as true or false. The model will subsequently classify predictions as true or false according to the threshold value.
+	
+	
+	For the classification problem that we have in hand, we will  primarily use the log-likelihood  cost function defined as:
+	
+	$$\mathcal{L}_{\text{log-likelihood}} = - \sum_{i=1}^N \left[ y_i \ln(\hat{y}_i) + (1 - y_i) \ln(1 - \hat{y}_i) \right]$$
+	
+	Negative log-likelihood focuses on the distance between the labels $y_i$ and the predicted probabilities $\hat{y}_i$. If we consider a sample where:
+	
+	\begin{itemize}
+		\item $y_i$ is one and $\hat{y}_i$ is close to 1: $y_i \ln(\hat{y}_i)$ is close to zero, while $(1 - y_i) \ln(1 - \hat{y}_i)$ is zero, so that the resultant loss is close to zero.
+		\item $y_i$ is 1 and $\hat{y}_i$ is far from 1: $y_i \ln(\hat{y}_i)$ is large, while $(1 - y_i) \ln(1 - \hat{y}_i)$ is zero so that the resultant loss is large.
+		\item $y_i$ is zero and $\hat{y}_i$ is close to 0: $y_i \ln(\hat{y}_i)$ is zero, while $(1 - y_i) \ln(1 - \hat{y}_i)$ is also close to zero so that the resultant loss is close to zero.
+		\item $y_i$ is zero and $\hat{y}_i$ is far from 0: $y_i \ln(\hat{y}_i)$ is zero, while $(1 - y_i) \ln(1 - \hat{y}_i)$ is large so that the resultant loss is large.
+	\end{itemize}	
+	
+	In this scenario,  we can obtain four kinds of results:
+	
+	\begin{table}[!ht]
+		\centering
+		\begin{tabular}{|l|l|l|p{2cm}|}
+			\hline
+			Prediction & Classif & Outcome & Description \\ \hline
+			1 & 1 & True Positive (TP) & The model correctly predicted the positive class. \\ \hline
+			1 & 0 & False Positive (FP) & The model incorrectly predicted the positive class (a "false alarm"). \\ \hline
+			0 & 1 & False Negative (FN) & The model incorrectly predicted the negative class (a "miss"). \\ \hline
+			0 & 0 & True Negative (TN) & The model correctly predicted the negative class. \\ \hline
+		\end{tabular}
+	\end{table}
+
+	The number of samples that are TP, TN, FP or FN can be organised in what is known as a confusion matrix, that is shown in Figure \ref{fig:confusionmatrix}. This tool makes it easy to perform calculations that determine the validity of the model at hand.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{img/confusion_matrix}
+		\caption{Confusion matrix and associated equations}
+		\label{fig:confusionmatrix}
+	\end{figure}
+		
+	
+	There are several key performance metrics derived from the confusion matrix, each offering a different perspective on evaluating the effectiveness of a binary classification model.
+	
+	\bigskip
+	
+	The \textbf{accuracy} of a model is a straightforward measure that evaluates the proportion of correct predictions (both True Positives and True Negatives) out of the total number of predictions. It can be mathematically defined as:
+	
+	
+	$$Accuracy=\frac{TP+TN}{TP+FP+TN+FN}$$
+	
+	for a dataset,
+	$$
+	Accuracy = \frac{1}{N} \sum_{i=1}^{N} 1(\hat{y}_i = y_i)
+	$$
+	
+	
+	\textbf{Precision} answers the question: "Out of all the observations predicted to be positive, how many were positive?" In other words, it measures the model's ability to avoid false positives.
+	
+	$$Precision=\frac{TP}{TP+FP}$$
+	
+	
+	\textbf{Recall} or \textbf{sensitivity} measures the model's ability to correctly identify positive cases. It answers the question: "Out of all the actual positive instances, how many did the model correctly identify as positive?"
+	
+	
+	$$Recall=\frac{TP}{TP + FN}$$
+	
+	\textbf{Specificity} measures the model's ability to identify negative cases correctly. It answers the question: "Out of all the actual negative instances, how many did the model correctly identify as negative?"
+	
+	The formula for specificity is:
+	
+	$$Specificity= \frac{TN}{TN + FP}$$
+	
+	The F1-score is the harmonic mean of [precision](model-performance-precision) and [recall](model-performance-recall). It provides a single metric that balances precision and recall, which is useful when there is an uneven class distribution or when false positives and false negatives are important.
+	
+	The formula for the F1 score is:
+	
+	\begin{align*}
+			F1 
+			&= 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\\
+			&= 2\times \frac{TP}{2TP+FN+FP}\\
+	\end{align*}	
+	
+	\bigskip
+
+	The ROC curve is plotted by varying the decision threshold of the classifier and plotting the corresponding values of FPR (on the x-axis) and sensitivity or TPR (on the y-axis). Each point on the ROC curve represents a (FPR, TPR) pair for a particular threshold value.
+	
+	![[img-receiver-operator-characteristic-curve.png]]
+
+	The Area Under the ROC Curve (AUC) is a key indicator of model performance. The value of the AUC ranges from 0 to 1:
+	
+	
+	\begin{itemize}
+		\item A perfect classifier has an AUC of 1, indicating it achieves a TPR of 1 while keeping the FPR at 0.
+		\item A model with an AUC of 0.5 performs no better than random guessing.
+		\item Higher AUC values indicate better overall performance.
+	\end{itemize}	
+
+	The goal of a classifier is to maximise the TPR (correctly predicting positive instances) while minimising the FPR (incorrectly classifying negative instances as positive). Ideally, the ROC curve should approach the top-left corner of the plot, indicating a high TPR with a low FPR.
+	
+	In summary, the ROC curve helps to visualise and compare the trade-offs between true positives and false positives across different thresholds, and the AUC provides a single number summarising the model's ability to discriminate between positive and negative classes.
+	
+	
+	\subsection{Cross-validation}
+	
+	Cross-validation is a technique that can be applied to any ML algorithm that is aimed to reduce overfitting by estimating how well each hypothesis generalizes to unseen data. In practice, a portion of the data is reserved for this purpose.
+	
+	The $K$-fold cross validation technique splits the dataset into $k$ folds, training that model on $k-1$ folds and testing on the remaining one. The test fold is rotated and the process is repeated so that each fold will act as the test set once. Metrics like mean square error are averaged across folds, ensuring a robust estimate.
+	
+	Therefore, if for example, we split the data into 10 folds, so that each fold will have $n/10$ records, we train the model on 9 folds and test on the remaining one. We then rotate the test fold and repeat this process 10 times. The final performance metric is computed as the mean of the metrics across the 10 folds.
+	
+	In stratified $K$-fold cross validation, the folds have the same proportion of the classes as in the original dataset.
+	
+	Other types of cross validation include Leave one out cross-validation, where each data point is used as a test set once.
+	
+	\subsection{Feature scaling}
+	
+	Feature scaling is an important data transformation process. It is a very important aspect of many machine learning algorithms including logistic regression, support vector machines and neural networks, as, the performance of such algorithms is adversely impacted when the numerical features have different scales. The two methods to transform features on the same scale are normalization and rescaling.
+	
+	During normalization or rescaling, values are scaled and shifted so that they are mapped onto the $[0,\space 1]$ interval. This is achieved by applying the following transformation;
+	$$
+	x_{normalized} = \frac{x - x_{min}}{x_{max}-x_{min}}
+	$$
+	Normalization is also sometimes referred to as min-max scaling.
+	
+	Standardization is particularly suited for algorithms that assume Gaussian distributions, like linear regression and logistic regression. It is achieved by first subtracting values from the mean so that the mean of the normalized values is zero, and then dividing by the standard deviation so that the variance of the normalized distribution is one. Thus;
+	$$
+	x_{standardized} = \frac{x - \mu}{\sigma}
+	$$
+	Unlike normalization, the range of standardization is not fixed, and this can sometimes be an issue if a value in the $[0,\space 1]$ interval is expected.  Standardization is however more resilient to the effect of outliers.
+	
+	Tree based machine learning models, like decision trees and random forests do not normally require feature scaling.
+	
+	\subsection{Logistic regression}
 	
 	
 	Logistic regression is a machine learning algorithm commonly used for binary classification tasks.
@@ -486,7 +647,8 @@
 		
 	
 		\item Sigmoid function. A function as shown in Figure \ref{fig:sigmoid}, $\sigma(z) = \frac{1}{1 + e^{-z}}$, which maps any real number $z$ to the range $(0,1)$. This function is used to ensure that the predicted probability $\hat{y}$ is always between 0 and 1.
-		\begin{figure}
+		
+		\begin{figure}[H]
 			\centering
 			\input{img/sigmoid}
 			\caption{Sigmoid activation function}
@@ -496,10 +658,9 @@
 		\item Output. The predicted probability $\hat{y}$ is computed as $\hat{y} = \sigma(z) = \sigma(\textbf{W}^{T}\textbf{X} + b)$.
 	\end{itemize}
 	
+	\bigskip
 	
-	\subsection{Logits}
-		
-	Logistic regression models the probability $P(y = 1 \mid X)$, of the binary dependent variable $Y$ given the predictor variables $\textbf{X} = \{x_1, x_2, \dots, x_n\}$. The goal is to find a relationship between $P(y=1)$, and the predictors $\textbf{X}$.
+	A term that is often encountered in this scenario is the log-odds ratio or logit. Logistic regression models the probability $P(y = 1 \mid X)$, of the binary dependent variable $Y$ given the predictor variables $\textbf{X} = \{x_1, x_2, \dots, x_n\}$. The goal is to find a relationship between $P(y=1)$, and the predictors $\textbf{X}$.
 	
 	The probability is modelled using the sigmoid function:
 	$$P(y = 1 \mid X) = \frac{1}{1 + e^{-\eta}}$$
@@ -511,11 +672,12 @@
 	
 	$$\text{Odds} = \frac{P(y = 1)}{1 - P(y = 1)}$$
 	
-	Taking the natural logarithm of the odds gives the [[log-odds-ratio]] or logit:
+	Taking the natural logarithm of the odds gives the 
+	[log-odds-ratio]] or logit:
 	
 	$$\text{Log-Odds} = \ln\left(\frac{P(y = 1)}{1 - P(y = 1)}\right)$$
 	
-	From the sigmoid function, we can derive the relationship between the probability and the [[log-odds-ratio]]:
+	From the sigmoid function, we can derive the relationship between the probability and the log-odds-ratio:
 	
 	$$P(y = 1) = \frac{1}{1 + e^{-\eta}}$$
 	$$1 - P(y = 1) = 1 - \frac{1}{1 + e^{-\eta}} = \frac{e^{-\eta}}{1 + e^{-\eta}}$$
@@ -534,10 +696,9 @@
 		\ln\left(\frac{P(y = 1)}{1 - P(y = 1)}\right) = \eta = b + w_1 x_1 + w_2 x_2 + \dots + w_n x_n
 	\end{equation}
 	
+	\bigskip
 	
-	\subsection{Learning}
-	
-	The weight vector $\textbf{W}$ and the bias term $b$ are learned from a labelled training set by minimizing a suitable loss function using techniques such as gradient descent or its variants. Once trained, the logistic regression model can be used to predict the probability of the binary output variable for new input examples.
+	We conclude this overview of logistic regression by looking at how they work and learn.	The weight vector $\textbf{W}$ and the bias term $b$ are learned from a labelled training set by minimizing a suitable loss function using techniques such as gradient descent or its variants. Once trained, the logistic regression model can be used to predict the probability of the binary output variable for new input examples.
 	
 			
 	The \textbf{feedforward process} for logistic regression can be described as follows:
@@ -548,7 +709,7 @@
 			z= \textbf{W}^{T}\textbf{X} + b
 		\end{equation}
 		
-		\item Pass $z$ through the [sigmoid function](neural-network-activation-functions-sigmoid.md)  to map the log-odds $z$ to a probability $\hat{y} = P(y = 1 \mid X)$, ensuring the output is between 0 and 1: 
+		\item Pass $z$ through the sigmoid function to map the log-odds $z$ to a probability $\hat{y} = P(y = 1 \mid X)$, ensuring the output is between 0 and 1: 
 		\begin{equation}
 			\hat{y} = \sigma(z) = \frac{1}{1 + e^{-z}}
 		\end{equation}
@@ -563,9 +724,9 @@
 	
 	\bigskip
 	
-	We now look at \textbf{feedback process} for logistic regression. To optimize the weight vector $\textbf{W}$, one standard method is to compute the derivatives of the loss function with respect to each weight and the bias term and use these derivatives to update the weights in the opposite direction of the gradient. This is known as gradient descent.
+	We now look at \textbf{feedback process} for logistic regression. To optimize the weight vector $\textbf{W}$, we compute the derivatives of the loss function with respect to each weight and the bias term and use these derivatives to update the weights in the opposite direction of the gradient. This is known as gradient descent.
 	
-	To compute the derivatives, we use the chain rule of derivatives:
+	To compute the derivatives, we use the chain rule:
 	
 	$$
 	\frac{\partial\mathcal{L}}{\partial w_i} =
@@ -612,12 +773,12 @@
 	$$\frac{d \space (ln (x))}{dx}  = \frac{1}{x}$$we get:
 	$$\frac{\partial \mathcal{L}}{\partial \hat{y}} = - \left( \frac{y}{\hat{y}} - \frac{1-y}{1-\hat{y}} \right) $$
 	
-	The derivative of the predicted output $\hat{y}$ with respect to $z$ is solved using the quotient rule that is 
+	The derivative of the predicted output $\hat{y}$ with respect to $z$ is solved using the quotient rule, that is 
 	$$
 	\frac{d}{dx} \left( \frac{f(x)}{g(x)} \right) = \frac{f'(x)g(x) - g'(x)f(x)}{g^2(x)}
 	$$
 	
-	If we let
+	So, if we let
 	
 	\begin{table}[!ht]
 		\centering
@@ -628,8 +789,7 @@
 			\end{tabular}
 	\end{table}
 
-	using the derivative quotient rule,
-	
+		
 	\begin{align*}
 		\frac{\partial\hat{y}}{\partial z} 
 		& = \frac{\partial}{\partial z} \left( \frac{1}{1 + e^{-z}} \right) \\
@@ -655,15 +815,15 @@
 	
 	Similarly,
 
-	
-\begin{equation}
-	\begin{split}
-		\frac{\partial z}{\partial b} 
-		&= \frac{\partial}{\partial b} \textbf{W}^T \textbf{X} + b\\
-		&= 	\frac{\partial}{\partial b} (w_1 x_1 + \dots + w_ix_i+\dots+w_nx_n + b)\\
-		&= 1\\
-	\end{split}	
-\end{equation}	
+		
+	\begin{equation}
+		\begin{split}
+			\frac{\partial z}{\partial b} 
+			&= \frac{\partial}{\partial b} \textbf{W}^T \textbf{X} + b\\
+			&= 	\frac{\partial}{\partial b} (w_1 x_1 + \dots + w_ix_i+\dots+w_nx_n + b)\\
+			&= 1\\
+		\end{split}	
+	\end{equation}	
 	
 	Therefore
 	
