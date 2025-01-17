@@ -24,12 +24,29 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 y_pred = logistic_pipeline.predict(X_test)
 y_pred_proba = logistic_pipeline.predict_proba(X_test)[:, 1]
 
+
+
+# save y_pred_preda and y_test in csv
+
+y_test.to_csv('results/logistic_regression_y_test.csv', index=False)
+pd.DataFrame(y_pred_proba).to_csv('results/logistic_regression_y_pred_proba.csv', index=False)
+
+
+
+
+
+
 # Evaluate metrics
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred)
 roc_auc = roc_auc_score(y_test, y_pred_proba)
+
+
+
+
+
 
 # Print metrics
 print(f"Accuracy: {accuracy:.4f}")
