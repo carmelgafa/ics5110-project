@@ -1,13 +1,19 @@
 import joblib
 import pandas as pd
 
-# Load the pipeline
-pipeline_path = 'models/logistic_pipeline.pkl'
-logistic_pipeline = joblib.load(pipeline_path)
+# Load the neural network pipeline
+pipeline_path = 'models/nn_pipeline.pkl'
+try:
+    nn_pipeline = joblib.load(pipeline_path)
+    print(f"Pipeline loaded successfully from {pipeline_path}.")
+except FileNotFoundError:
+    raise FileNotFoundError(f"Pipeline file not found at {pipeline_path}. Ensure the model is trained and saved.")
 
-def predict_single(raw_data: dict):
+def predict_single_nn(raw_data: dict):
     """
-    Predicts the outcome for a single input row of raw data.
+    Predicts the outcome for a single input row of raw data using the neural network.
+    Args:
+        raw_data (dict): A dictionary representing a single row of input data.
     Returns:
         dict: The predicted class and probabilities.
     """
@@ -15,8 +21,8 @@ def predict_single(raw_data: dict):
     input_df = pd.DataFrame([raw_data])
     
     # Make predictions
-    predicted_class = logistic_pipeline.predict(input_df)[0]
-    predicted_proba = logistic_pipeline.predict_proba(input_df)[0]
+    predicted_class = nn_pipeline.predict(input_df)[0]
+    predicted_proba = nn_pipeline.predict_proba(input_df)[0]
     
     return {
         "predicted_class": predicted_class,
@@ -25,11 +31,13 @@ def predict_single(raw_data: dict):
             "class_1": predicted_proba[1]
         }
     }
-    
 
-def predict_multiple(input_data: pd.DataFrame) -> pd.DataFrame:
+
+
+# Define a function to preprocess and predict
+def predict_multiple_nn(input_data: pd.DataFrame) -> pd.DataFrame:
     """
-    Predict using the trained logistic regression pipeline.
+    Predict using the trained neural network pipeline.
     
     Parameters:
         input_data (pd.DataFrame): Raw input data.
@@ -42,8 +50,8 @@ def predict_multiple(input_data: pd.DataFrame) -> pd.DataFrame:
         raise ValueError("Input data must be a Pandas DataFrame.")
 
     # Make predictions
-    probabilities = logistic_pipeline.predict_proba(input_data)
-    predictions = logistic_pipeline.predict(input_data)
+    probabilities = nn_pipeline.predict_proba(input_data)
+    predictions = nn_pipeline.predict(input_data)
 
     # Create output DataFrame
     output = input_data.copy()
@@ -53,8 +61,12 @@ def predict_multiple(input_data: pd.DataFrame) -> pd.DataFrame:
 
     return output
 
+
+
+
 # Example usage
 if __name__ == "__main__":
+    # Example input data
     data_line = {
         "age": 25,
         "sex": "Male",
@@ -71,7 +83,8 @@ if __name__ == "__main__":
         "out_custody": "2020-01-02 00:00:00"
     }
 
-    result = predict_single(data_line)
+    # Predict using the neural network pipeline
+    result = predict_single_nn(data_line)
     print("Prediction Result:", result)
 
 
@@ -124,5 +137,5 @@ if __name__ == "__main__":
         }
     ])
     
-    result = predict_multiple(test_data)
+    result = predict_multiple_nn(test_data)
     print("Prediction Result:", result)

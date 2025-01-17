@@ -1,9 +1,10 @@
 import pandas as pd
 from models.logistic_regression import logistic_pipeline
 
+
 # Load train and test data
-train_data = pd.read_csv('data/train/train_df_reduced.csv')
-test_data = pd.read_csv('data/test/test_df_reduced.csv')
+train_data = pd.read_csv('data/train/train_compas-scores-two-years.csv')
+test_data = pd.read_csv('data/test/test_compas-scores-two-years.csv')
 
 # Separate features and target
 X_train = train_data.drop(columns=['two_year_recid'])  # Adjust to your target column

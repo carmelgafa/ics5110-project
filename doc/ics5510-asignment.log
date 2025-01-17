@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  16 JAN 2025 23:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  17 JAN 2025 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1228,8 +1228,34 @@ Missing character: There is no ] in font nullfont!
 Package paralist Warning: Incorrect label; no or multiple counters.
 (paralist)                The label is:  on input line 706.
 
-[10] [11]
-** WARNING: Ignoring useless \section in Appendix (line 874).
+[10] (img/pipeline.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geom
+etric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen296
+)))
+Overfull \hbox (119.12663pt too wide) in paragraph at lines 43--869
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 113.5571pt on input line 871.
+
+[11] [12
+
+]
+** WARNING: Ignoring useless \section in Appendix (line 880).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1241,7 +1267,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[12
+[13
 
 ] (ics5510-asignment.aux)
  ***********
@@ -1257,13 +1283,13 @@ Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25491 strings out of 474424
- 505888 string characters out of 5751554
- 1958496 words of memory out of 5000000
- 47455 multiletter control sequences out of 15000+600000
+ 26656 strings out of 474424
+ 535397 string characters out of 5751554
+ 1965496 words of memory out of 5000000
+ 48604 multiletter control sequences out of 15000+600000
  599171 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,17n,107p,881b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,881b,1483s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
 m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type
@@ -1282,9 +1308,9 @@ ourier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrbo8a.pfb>
 <C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiK
 TeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/
 times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (12 pages, 1628102 bytes).
+Output written on ics5510-asignment.pdf (13 pages, 1631755 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
+ 183 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

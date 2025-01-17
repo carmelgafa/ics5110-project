@@ -14,11 +14,11 @@ def feature_engineering(df):
     '''
 
     # keep only relevant cols
-    columns_to_keep = [ "sex", "age", "race", "juv_fel_count", "decile_score",
+    columns_to_keep = [ "sex", "age", "race", "juv_fel_count",
                 "juv_misd_count", "juv_other_count", "priors_count",
-                "days_b_screening_arrest", "c_jail_in", "c_jail_out",
-                "c_days_from_compas", "c_charge_degree",
-                "in_custody", "out_custody", "event", "two_year_recid" ]
+                "c_jail_in", "c_jail_out",
+                "c_charge_degree",
+                "in_custody", "out_custody"]
 
     df_reduced = df[columns_to_keep].copy()
 
@@ -44,17 +44,24 @@ def feature_engineering(df):
     remove_columns = ['in_custody', 'out_custody']
     df_reduced = df_reduced.drop(remove_columns, axis=1)
 
+
+    save_folder = 'data/processed'
+    save_name = 'df_features_reduced.csv'
+    
+    if not os.path.exists(save_folder):
+        os.makedirs(save_folder)
+
+    save_file_path = os.path.join(save_folder, save_name)
+    df_reduced.to_csv(save_file_path, index=False)
+
     return df_reduced
 
 # Wrap the function in a FunctionTransformer
 feature_engineering_transformer = FunctionTransformer(feature_engineering, validate=False)
 
 
-def feature_engineer_data(data_folder, file_name, save_folder, save_name):
+def feature_engineer_data(data_folder, file_name):
     '''preprocess of dataset and save'''
-
-    if not os.path.exists(save_folder):
-        os.makedirs(save_folder)
 
     data_file_path = os.path.join(data_folder, file_name)
     df = pd.read_csv(data_file_path)
@@ -63,13 +70,10 @@ def feature_engineer_data(data_folder, file_name, save_folder, save_name):
 
     print(df_reduced.info())
 
-    save_file_path = os.path.join(save_folder, save_name)
-    df_reduced.to_csv(save_file_path, index=False)
 
 
 if __name__ == '__main__':
     data_folder = 'data/raw'
     file_name = 'compas-scores-two-years.csv'
-    save_folder = 'data/processed'
-    save_name = 'df_reduced.csv'
-    feature_engineer_data(data_folder, file_name, save_folder, save_name)
+
+    feature_engineer_data(data_folder, file_name)

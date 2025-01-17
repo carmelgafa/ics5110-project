@@ -28,8 +28,10 @@ def split_train_test(data_folder, file_name, train_folder, test_folder, test_siz
     
 if __name__ == "__main__":
     
-    data_folder = 'data/processed'
-    file_name = 'df_reduced.csv'
+    # data_folder = 'data/processed'
+    # file_name = 'df_reduced.csv'
+    data_folder = 'data/raw'
+    file_name = 'compas-scores-two-years.csv'
     train_folder = 'data/train'
     test_folder = 'data/test'
 

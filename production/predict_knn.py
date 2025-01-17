@@ -1,23 +1,14 @@
 import joblib
 import pandas as pd
 
-# Load the pipeline
-pipeline_path = 'models/logistic_pipeline.pkl'
-logistic_pipeline = joblib.load(pipeline_path)
+pipeline_path = 'models/knn_pipeline.pkl'
+knn_pipeline = joblib.load(pipeline_path)
+
 
 def predict_single(raw_data: dict):
-    """
-    Predicts the outcome for a single input row of raw data.
-    Returns:
-        dict: The predicted class and probabilities.
-    """
-    # Convert raw data to a DataFrame
     input_df = pd.DataFrame([raw_data])
-    
-    # Make predictions
-    predicted_class = logistic_pipeline.predict(input_df)[0]
-    predicted_proba = logistic_pipeline.predict_proba(input_df)[0]
-    
+    predicted_class = knn_pipeline.predict(input_df)[0]
+    predicted_proba = knn_pipeline.predict_proba(input_df)[0]
     return {
         "predicted_class": predicted_class,
         "probabilities": {
@@ -26,35 +17,20 @@ def predict_single(raw_data: dict):
         }
     }
     
-
-def predict_multiple(input_data: pd.DataFrame) -> pd.DataFrame:
-    """
-    Predict using the trained logistic regression pipeline.
-    
-    Parameters:
-        input_data (pd.DataFrame): Raw input data.
-        
-    Returns:
-        pd.DataFrame: Predictions with class probabilities.
-    """
-    # Ensure input_data is a DataFrame
-    if not isinstance(input_data, pd.DataFrame):
-        raise ValueError("Input data must be a Pandas DataFrame.")
-
-    # Make predictions
-    probabilities = logistic_pipeline.predict_proba(input_data)
-    predictions = logistic_pipeline.predict(input_data)
-
-    # Create output DataFrame
-    output = input_data.copy()
+def predict_multiple(raw_data: pd.DataFrame):
+    probabilities = knn_pipeline.predict_proba(raw_data)
+    predictions = knn_pipeline.predict(raw_data)
+    output = raw_data.copy()
     output['Predicted Class'] = predictions
     output['Probability Yes'] = probabilities[:, 1]
     output['Probability No'] = probabilities[:, 0]
-
     return output
+    
+
 
 # Example usage
 if __name__ == "__main__":
+    # Example input data
     data_line = {
         "age": 25,
         "sex": "Male",
@@ -71,6 +47,7 @@ if __name__ == "__main__":
         "out_custody": "2020-01-02 00:00:00"
     }
 
+    # Predict using the neural network pipeline
     result = predict_single(data_line)
     print("Prediction Result:", result)
 
