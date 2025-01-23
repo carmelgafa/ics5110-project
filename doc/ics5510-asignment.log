@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  17 JAN 2025 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  23 JAN 2025 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,330 +932,193 @@ Package caption Info: scrextend package is loaded.
 \caption@addmargin@hsize=\dimen294
 \caption@addmargin@linewidth=\dimen295
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
-3.
- (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \hbox (badness 1546) in paragraph at lines 63--64
-\OT1/ptm/m/n/10 mer-i-cal value to an in-di-vid-ual's like-li-hood of re-of-fen
-d-
- []
+ (background.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
 
-
-Underfull \hbox (badness 4872) in paragraph at lines 63--64
-\OT1/ptm/m/n/10 ing. Other im-por-tant fea-tures in-clude the num-ber of
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/carme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Progra
-m Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-[]\OT1/ptm/m/n/10 The file cho-sen for this anal-y-sis is
+)
+Underfull \hbox (badness 1540) in paragraph at lines 23--24
+[]\OT1/ptm/m/n/10 Each in-put fea-ture dif-fer-ently in-flu-ences the out-put
  []
 
+<img/img-perceptron.jpg, id=4, 336.25626pt x 425.59pt>
+File: img/img-perceptron.jpg Graphic file (type jpg)
+<use img/img-perceptron.jpg>
+Package pdftex.def Info: img/img-perceptron.jpg  used on input line 45.
+(pdftex.def)             Requested size: 126.0pt x 159.47246pt.
+<img/img-multilayer-perceptron.jpg, id=5, 482.80376pt x 314.17375pt>
+File: img/img-multilayer-perceptron.jpg Graphic file (type jpg)
+<use img/img-multilayer-perceptron.jpg>
+Package pdftex.def Info: img/img-multilayer-perceptron.jpg  used on input line 
+70.
+(pdftex.def)             Requested size: 176.39923pt x 114.78511pt.
+[1{C:/Users/carme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program 
+Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-\OT1/pcr/b/n/10 compas-scores-two-years.csv\OT1/ptm/m/n/10 , as it pro-vides
+
+ <./img/img-perceptron.jpg> <./img/img-multilayer-perceptron.jpg>]
+<img/img-neural-network-activation-functions-sigmoid.png, id=21, 578.16pt x 394
+.47375pt>
+File: img/img-neural-network-activation-functions-sigmoid.png Graphic file (typ
+e png)
+<use img/img-neural-network-activation-functions-sigmoid.png>
+Package pdftex.def Info: img/img-neural-network-activation-functions-sigmoid.pn
+g  used on input line 111.
+(pdftex.def)             Requested size: 75.60077pt x 51.57832pt.
+<img/img-neural-network-activation-functions-tanh.png, id=23, 273.27094pt x 145
+.29282pt>
+File: img/img-neural-network-activation-functions-tanh.png Graphic file (type p
+ng)
+<use img/img-neural-network-activation-functions-tanh.png>
+Package pdftex.def Info: img/img-neural-network-activation-functions-tanh.png  
+used on input line 115.
+(pdftex.def)             Requested size: 75.60077pt x 40.19397pt.
+<img/img-neural-network-activation-functions-leaky-relu.png, id=24, 396.48125pt
+ x 190.7125pt>
+File: img/img-neural-network-activation-functions-leaky-relu.png Graphic file (
+type png)
+<use img/img-neural-network-activation-functions-leaky-relu.png>
+Package pdftex.def Info: img/img-neural-network-activation-functions-leaky-relu
+.png  used on input line 119.
+(pdftex.def)             Requested size: 75.60077pt x 36.36378pt.
+<img/img-neural-network-activation-functions-relu.png, id=25, 282.30469pt x 152
+.06813pt>
+File: img/img-neural-network-activation-functions-relu.png Graphic file (type p
+ng)
+<use img/img-neural-network-activation-functions-relu.png>
+Package pdftex.def Info: img/img-neural-network-activation-functions-relu.png  
+used on input line 123.
+(pdftex.def)             Requested size: 75.60077pt x 40.72247pt.
+ [2 <./img/img-neural-network-activation-functions-sigmoid.png> <./img/img-neur
+al-network-activation-functions-tanh.png> <./img/img-neural-network-activation-
+functions-leaky-relu.png> <./img/img-neural-network-activation-functions-relu.p
+ng>] [3]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+24.
+
+(C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Underfull \hbox (badness 4872) in paragraph at lines 382--383
+[]\OT1/ptm/m/n/10 Sergey Ioffe and Chris-tian Szegedy pro-pose batch-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-[]\OT1/ptm/m/n/10 Additional fields, in-clud-ing \OT1/pcr/b/n/10 r_charge_\OT1/
-ptm/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-\OT1/pcr/b/n/10 r_offense_\OT1/ptm/m/n/10 , \OT1/pcr/b/n/10 vr_ \OT1/ptm/m/n/10
- fields, \OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 147--148
-[]\OT1/ptm/m/n/10 The sever-ity of pre-vi-ous charges in-cludes felonies
- []
-
-[2]
-<img/imputation.png, id=17, 867.24pt x 433.62pt>
-File: img/imputation.png Graphic file (type png)
-<use img/imputation.png>
-Package pdftex.def Info: img/imputation.png  used on input line 171.
-(pdftex.def)             Requested size: 226.79846pt x 113.39357pt.
-
-Overfull \hbox (15.28691pt too wide) in paragraph at lines 180--188
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-[]\OT1/ptm/m/n/10 One-Hot En-cod-ing on \OT1/pcr/b/n/10 sex\OT1/ptm/m/n/10 , \O
-T1/pcr/b/n/10 race\OT1/ptm/m/n/10 , and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-\OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 , trans-form-ing them into bi-na
-ry
- []
-
-<img/race_percentages_pie.png, id=19, 578.16pt x 578.16pt>
-File: img/race_percentages_pie.png Graphic file (type png)
-<use img/race_percentages_pie.png>
-Package pdftex.def Info: img/race_percentages_pie.png  used on input line 216.
-(pdftex.def)             Requested size: 176.39923pt x 176.39587pt.
-<img/sex_percentages_pie.png, id=20, 578.16pt x 578.16pt>
-File: img/sex_percentages_pie.png Graphic file (type png)
-<use img/sex_percentages_pie.png>
-Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 224.
-(pdftex.def)             Requested size: 176.39923pt x 176.39587pt.
-[3 <./img/imputation.png> <./img/race_percentages_pie.png>]
-
-LaTeX Warning: Reference `fig:race-sex-breakdown' on page 4 undefined on input 
-line 237.
-
-<img/age_by_race_boxplot.png, id=26, 722.7pt x 433.62pt>
-File: img/age_by_race_boxplot.png Graphic file (type png)
-<use img/age_by_race_boxplot.png>
-Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 247.
-(pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
-
-Underfull \hbox (badness 4940) in paragraph at lines 261--261
-[]|\OT1/ptm/m/n/8 Moderately broad spread, with
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 263--263
-[]|\OT1/ptm/m/n/8 Very tight dis-tri-bu-tion, with all
- []
-
-
-Underfull \hbox (badness 1783) in paragraph at lines 264--264
-[]|\OT1/ptm/m/n/8 Similar to Cau-casians but with
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 264--264
-\OT1/ptm/m/n/8 slightly fewer older in-di-vid-u-als.
- []
-
-
-Overfull \hbox (4.34146pt too wide) in paragraph at lines 256--266
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<img/distribution-plots.png, id=27, 846.66313pt x 930.47626pt>
-File: img/distribution-plots.png Graphic file (type png)
-<use img/distribution-plots.png>
-Package pdftex.def Info: img/distribution-plots.png  used on input line 295.
-(pdftex.def)             Requested size: 226.79846pt x 249.24423pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./img/sex_percentages_pie.png> <./img/age_by_race_boxplot.png>]
-<img/correlation_matrix_heatmap.png, id=34, 722.7pt x 578.16pt>
-File: img/correlation_matrix_heatmap.png Graphic file (type png)
-<use img/correlation_matrix_heatmap.png>
-Package pdftex.def Info: img/correlation_matrix_heatmap.png  used on input line
- 307.
-(pdftex.def)             Requested size: 176.39923pt x 141.1167pt.
-
-Underfull \hbox (badness 1424) in paragraph at lines 327--328
-[]\OT1/ptm/m/n/10 Figure 7[] is a pair plot cre-ated to sub-stan-ti-ate these
- []
-
-<img/pair_plot.png, id=35, 1355.0625pt x 1264.725pt>
-File: img/pair_plot.png Graphic file (type png)
-<use img/pair_plot.png>
-Package pdftex.def Info: img/pair_plot.png  used on input line 331.
-(pdftex.def)             Requested size: 176.39923pt x 164.6323pt.
-[5 <./img/distribution-plots.png> <./img/correlation_matrix_heatmap.png> <./img
-/pair_plot.png>]
-<img/decile_score_by_race_boxplot.png, id=42, 722.7pt x 433.62pt>
-File: img/decile_score_by_race_boxplot.png Graphic file (type png)
-<use img/decile_score_by_race_boxplot.png>
-Package pdftex.def Info: img/decile_score_by_race_boxplot.png  used on input li
-ne 357.
-(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
-<img/correlation_by_race.png, id=43, 722.7pt x 433.62pt>
-File: img/correlation_by_race.png Graphic file (type png)
-<use img/correlation_by_race.png>
-Package pdftex.def Info: img/correlation_by_race.png  used on input line 370.
-(pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
-[]\OT1/ptm/m/n/10 The cor-re-la-tion be-tween \OT1/pcr/b/n/10 two_year_recid \O
-T1/ptm/m/n/10 and
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 380--381
-\OT1/pcr/b/n/10 decile_score \OT1/ptm/m/n/10 for His-pan-ics is 0.22, the low-e
-st
- []
-
-
-Underfull \hbox (badness 6859) in paragraph at lines 380--381
-\OT1/ptm/m/n/10 among the groups, sug-gest-ing that for His-panic
- []
-
-<img/decile_score_by_race_hispanic.png, id=44, 722.7pt x 433.62pt>
-File: img/decile_score_by_race_hispanic.png Graphic file (type png)
-<use img/decile_score_by_race_hispanic.png>
-Package pdftex.def Info: img/decile_score_by_race_hispanic.png  used on input l
-ine 387.
-(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
-
-Underfull \hbox (badness 1783) in paragraph at lines 401--402
- \OT1/ptm/m/it/10 1) Anal-y-sis of the African-American sec-tor: [][] \OT1/ptm/
-m/n/10 We cre-
- []
-
-<img/decile_score_by_race_african_american.png, id=45, 722.7pt x 433.62pt>
-File: img/decile_score_by_race_african_american.png Graphic file (type png)
-<use img/decile_score_by_race_african_american.png>
-Package pdftex.def Info: img/decile_score_by_race_african_american.png  used on
- input line 405.
-(pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
-[6 <./img/decile_score_by_race_boxplot.png> <./img/correlation_by_race.png> <./
-img/decile_score_by_race_hispanic.png> <./img/decile_score_by_race_african_amer
-ican.png>]
-LaTeX Font Info:    Font shape `OT1/pcr/b/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 415.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
-[]|\OT1/ptm/m/n/8 The model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
-\OT1/ptm/m/n/8 cor-rectly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
-\OT1/ptm/m/n/8 pre-dicted the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
-[]|\OT1/ptm/m/n/8 The model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
-\OT1/ptm/m/n/8 in-cor-rectly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
-\OT1/ptm/m/n/8 pre-dicted the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--516
-[]|\OT1/ptm/m/n/8 The model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--516
-\OT1/ptm/m/n/8 in-cor-rectly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--516
-\OT1/ptm/m/n/8 pre-dicted the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
-[]|\OT1/ptm/m/n/8 The model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
-\OT1/ptm/m/n/8 cor-rectly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
-\OT1/ptm/m/n/8 pre-dicted the
- []
-
-<img/confusion_matrix.jpg, id=64, 824.07875pt x 834.11626pt>
-File: img/confusion_matrix.jpg Graphic file (type jpg)
-<use img/confusion_matrix.jpg>
-Package pdftex.def Info: img/confusion_matrix.jpg  used on input line 525.
-(pdftex.def)             Requested size: 226.79846pt x 229.5545pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
-\OT1/ptm/m/n/10 performance-precision) and [recall](model-performance-
- []
-
-[8 <./img/confusion_matrix.jpg>] (img/logistic_regression.tex
+<img/img-ioffeBatchNormalizationAccelerating2015-1.png, id=40, 515.9275pt x 412
+.54124pt>
+File: img/img-ioffeBatchNormalizationAccelerating2015-1.png Graphic file (type 
+png)
+<use img/img-ioffeBatchNormalizationAccelerating2015-1.png>
+Package pdftex.def Info: img/img-ioffeBatchNormalizationAccelerating2015-1.png 
+ used on input line 386.
+(pdftex.def)             Requested size: 176.39923pt x 141.04903pt.
+[4 <./img/img-ioffeBatchNormalizationAccelerating2015-1.png>]
+(img/logistic_regression.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 rycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-Overfull \hbox (18.95074pt too wide) in paragraph at lines 26--633
+Overfull \hbox (18.95074pt too wide) in paragraph at lines 26--461
  [][] 
  []
 
-[9] (img/sigmoid.tex
+(img/sigmoid.tex
 Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
-)
+) [5]
 
 Package paralist Warning: Incorrect label; no or multiple counters.
-(paralist)                The label is:  on input line 706.
+(paralist)                The label is:  on input line 546.
 
-[10] (img/pipeline.tex
-(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
-ryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geom
-etric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
-ryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen296
-)))
-Overfull \hbox (119.12663pt too wide) in paragraph at lines 43--869
- [][] 
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 806--806
+[]|\OT1/ptm/m/n/8 The model
  []
 
 
-LaTeX Warning: Float too large for page by 113.5571pt on input line 871.
+Underfull \hbox (badness 10000) in paragraph at lines 806--806
+\OT1/ptm/m/n/8 cor-rectly
+ []
 
-[11] [12
 
-]
-** WARNING: Ignoring useless \section in Appendix (line 880).
+Underfull \hbox (badness 10000) in paragraph at lines 806--806
+\OT1/ptm/m/n/8 pre-dicted the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
+[]|\OT1/ptm/m/n/8 The model
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
+\OT1/ptm/m/n/8 in-cor-rectly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
+\OT1/ptm/m/n/8 pre-dicted the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 808--808
+[]|\OT1/ptm/m/n/8 The model
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 808--808
+\OT1/ptm/m/n/8 in-cor-rectly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 808--808
+\OT1/ptm/m/n/8 pre-dicted the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
+[]|\OT1/ptm/m/n/8 The model
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
+\OT1/ptm/m/n/8 cor-rectly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
+\OT1/ptm/m/n/8 pre-dicted the
+ []
+
+<img/confusion_matrix.jpg, id=60, 824.07875pt x 834.11626pt>
+File: img/confusion_matrix.jpg Graphic file (type jpg)
+<use img/confusion_matrix.jpg>
+Package pdftex.def Info: img/confusion_matrix.jpg  used on input line 817.
+(pdftex.def)             Requested size: 226.79846pt x 229.5545pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
+\OT1/ptm/m/n/10 performance-precision) and [recall](model-performance-
+ []
+
+[8 <./img/confusion_matrix.jpg>]
+<img/img-receiver-operator-characteristic-curve.png, id=64, 1418.29875pt x 1105
+.12875pt>
+File: img/img-receiver-operator-characteristic-curve.png Graphic file (type png
+)
+<use img/img-receiver-operator-characteristic-curve.png>
+Package pdftex.def Info: img/img-receiver-operator-characteristic-curve.png  us
+ed on input line 870.
+(pdftex.def)             Requested size: 176.39923pt x 137.44937pt.
+) [9 <./img/img-receiver-operator-characteristic-curve.png (PNG copy)>]
+** WARNING: Ignoring useless \section in Appendix (line 98).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1267,29 +1130,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[13
+[10
 
 ] (ics5510-asignment.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 \openout1 = `ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26656 strings out of 474424
- 535397 string characters out of 5751554
- 1965496 words of memory out of 5000000
- 48604 multiletter control sequences out of 15000+600000
- 599171 words of font info for 116 fonts, out of 8000000 for 9000
+ 25475 strings out of 474424
+ 507041 string characters out of 5751554
+ 1956496 words of memory out of 5000000
+ 47439 multiletter control sequences out of 15000+600000
+ 597664 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,17n,107p,881b,1483s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,692b,1624s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
 m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type
@@ -1297,20 +1156,21 @@ eX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type
 onts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/c
-ourier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrbo8a.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiK
-TeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/
-times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (13 pages, 1631755 bytes).
+eX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrb8a.
+pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1
+/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pf
+b><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ics5510-asignment.pdf (10 pages, 572407 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
+ 167 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

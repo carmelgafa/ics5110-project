@@ -19,41 +19,57 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{barocas2023fairness}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=cb55e045fbd37698b0b60a60b567ab83}{%
-           family={Barocas},
-           familyi={B\bibinitperiod},
-           given={Solon},
+    \entry{ioffe2015batch}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5543e82359e26b035efc009cb3efff9d}{%
+           family={Ioffe},
+           familyi={I\bibinitperiod},
+           given={Sergey},
            giveni={S\bibinitperiod}}}%
-        {{hash=e771760b6d0d33f8b4dfd907d8d57ac2}{%
-           family={Hardt},
-           familyi={H\bibinitperiod},
-           given={Moritz},
-           giveni={M\bibinitperiod}}}%
-        {{hash=95dc795a2be14c50fb6a924acc135ff8}{%
-           family={Narayanan},
-           familyi={N\bibinitperiod},
-           given={Arvind},
-           giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {MIT press}%
-      }
-      \strng{namehash}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{fullhash}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{fullhashraw}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{bibnamehash}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{authorbibnamehash}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{authornamehash}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{authorfullhash}{f6daa5fbad9e518e58da0fbc508936ba}
-      \strng{authorfullhashraw}{f6daa5fbad9e518e58da0fbc508936ba}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \strng{namehash}{5543e82359e26b035efc009cb3efff9d}
+      \strng{fullhash}{5543e82359e26b035efc009cb3efff9d}
+      \strng{fullhashraw}{5543e82359e26b035efc009cb3efff9d}
+      \strng{bibnamehash}{5543e82359e26b035efc009cb3efff9d}
+      \strng{authorbibnamehash}{5543e82359e26b035efc009cb3efff9d}
+      \strng{authornamehash}{5543e82359e26b035efc009cb3efff9d}
+      \strng{authorfullhash}{5543e82359e26b035efc009cb3efff9d}
+      \strng{authorfullhashraw}{5543e82359e26b035efc009cb3efff9d}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Fairness and machine learning: Limitations and opportunities}
-      \field{year}{2023}
+      \field{journaltitle}{arXiv preprint arXiv:1502.03167}
+      \field{title}{Batch normalization: Accelerating deep network training by reducing internal covariate shift}
+      \field{year}{2015}
+    \endentry
+    \entry{wu2017introduction}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5859faec0505aedcd37cd60aab5ac500}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jianxin},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{fullhash}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{fullhashraw}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{bibnamehash}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{authorbibnamehash}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{authornamehash}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{authorfullhash}{5859faec0505aedcd37cd60aab5ac500}
+      \strng{authorfullhashraw}{5859faec0505aedcd37cd60aab5ac500}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{National Key Lab for Novel Software Technology. Nanjing University. China}
+      \field{number}{23}
+      \field{title}{Introduction to convolutional neural networks}
+      \field{volume}{5}
+      \field{year}{2017}
+      \field{pages}{495}
+      \range{pages}{1}
     \endentry
   \enddatalist
 \endrefsection
