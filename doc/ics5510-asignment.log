@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  23 JAN 2025 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  24 JAN 2025 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,32 +933,32 @@ Package caption Info: scrextend package is loaded.
 \caption@addmargin@linewidth=\dimen295
 Package caption Info: End \AtBeginDocument code.
  (background.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1540) in paragraph at lines 23--24
+Underfull \hbox (badness 1540) in paragraph at lines 28--29
 []\OT1/ptm/m/n/10 Each in-put fea-ture dif-fer-ently in-flu-ences the out-put
  []
 
 <img/img-perceptron.jpg, id=4, 336.25626pt x 425.59pt>
 File: img/img-perceptron.jpg Graphic file (type jpg)
 <use img/img-perceptron.jpg>
-Package pdftex.def Info: img/img-perceptron.jpg  used on input line 45.
+Package pdftex.def Info: img/img-perceptron.jpg  used on input line 50.
 (pdftex.def)             Requested size: 126.0pt x 159.47246pt.
 <img/img-multilayer-perceptron.jpg, id=5, 482.80376pt x 314.17375pt>
 File: img/img-multilayer-perceptron.jpg Graphic file (type jpg)
 <use img/img-multilayer-perceptron.jpg>
 Package pdftex.def Info: img/img-multilayer-perceptron.jpg  used on input line 
-70.
+75.
 (pdftex.def)             Requested size: 176.39923pt x 114.78511pt.
 [1{C:/Users/carme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program 
 Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
@@ -971,7 +971,7 @@ File: img/img-neural-network-activation-functions-sigmoid.png Graphic file (typ
 e png)
 <use img/img-neural-network-activation-functions-sigmoid.png>
 Package pdftex.def Info: img/img-neural-network-activation-functions-sigmoid.pn
-g  used on input line 111.
+g  used on input line 114.
 (pdftex.def)             Requested size: 75.60077pt x 51.57832pt.
 <img/img-neural-network-activation-functions-tanh.png, id=23, 273.27094pt x 145
 .29282pt>
@@ -979,7 +979,7 @@ File: img/img-neural-network-activation-functions-tanh.png Graphic file (type p
 ng)
 <use img/img-neural-network-activation-functions-tanh.png>
 Package pdftex.def Info: img/img-neural-network-activation-functions-tanh.png  
-used on input line 115.
+used on input line 118.
 (pdftex.def)             Requested size: 75.60077pt x 40.19397pt.
 <img/img-neural-network-activation-functions-leaky-relu.png, id=24, 396.48125pt
  x 190.7125pt>
@@ -987,7 +987,7 @@ File: img/img-neural-network-activation-functions-leaky-relu.png Graphic file (
 type png)
 <use img/img-neural-network-activation-functions-leaky-relu.png>
 Package pdftex.def Info: img/img-neural-network-activation-functions-leaky-relu
-.png  used on input line 119.
+.png  used on input line 122.
 (pdftex.def)             Requested size: 75.60077pt x 36.36378pt.
 <img/img-neural-network-activation-functions-relu.png, id=25, 282.30469pt x 152
 .06813pt>
@@ -995,19 +995,19 @@ File: img/img-neural-network-activation-functions-relu.png Graphic file (type p
 ng)
 <use img/img-neural-network-activation-functions-relu.png>
 Package pdftex.def Info: img/img-neural-network-activation-functions-relu.png  
-used on input line 123.
+used on input line 126.
 (pdftex.def)             Requested size: 75.60077pt x 40.72247pt.
  [2 <./img/img-neural-network-activation-functions-sigmoid.png> <./img/img-neur
 al-network-activation-functions-tanh.png> <./img/img-neural-network-activation-
 functions-leaky-relu.png> <./img/img-neural-network-activation-functions-relu.p
 ng>] [3]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
-24.
+23.
 
 (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 4872) in paragraph at lines 382--383
+Underfull \hbox (badness 4872) in paragraph at lines 381--382
 []\OT1/ptm/m/n/10 Sergey Ioffe and Chris-tian Szegedy pro-pose batch-
  []
 
@@ -1017,7 +1017,7 @@ File: img/img-ioffeBatchNormalizationAccelerating2015-1.png Graphic file (type
 png)
 <use img/img-ioffeBatchNormalizationAccelerating2015-1.png>
 Package pdftex.def Info: img/img-ioffeBatchNormalizationAccelerating2015-1.png 
- used on input line 386.
+ used on input line 385.
 (pdftex.def)             Requested size: 176.39923pt x 141.04903pt.
 [4 <./img/img-ioffeBatchNormalizationAccelerating2015-1.png>]
 (img/logistic_regression.tex
@@ -1038,86 +1038,90 @@ Missing character: There is no ] in font nullfont!
 Package paralist Warning: Incorrect label; no or multiple counters.
 (paralist)                The label is:  on input line 546.
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 806--806
+[6]
+Overfull \hbox (8.28043pt too wide) detected at line 748
+[]
+ []
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--806
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
 \OT1/ptm/m/n/8 cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--806
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--807
+Underfull \hbox (badness 10000) in paragraph at lines 944--944
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--807
+Underfull \hbox (badness 10000) in paragraph at lines 944--944
 \OT1/ptm/m/n/8 in-cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--807
+Underfull \hbox (badness 10000) in paragraph at lines 944--944
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--808
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--808
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
 \OT1/ptm/m/n/8 in-cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--808
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--809
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--809
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 \OT1/ptm/m/n/8 cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--809
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
-<img/confusion_matrix.jpg, id=60, 824.07875pt x 834.11626pt>
+<img/confusion_matrix.jpg, id=63, 824.07875pt x 834.11626pt>
 File: img/confusion_matrix.jpg Graphic file (type jpg)
 <use img/confusion_matrix.jpg>
-Package pdftex.def Info: img/confusion_matrix.jpg  used on input line 817.
+Package pdftex.def Info: img/confusion_matrix.jpg  used on input line 954.
 (pdftex.def)             Requested size: 226.79846pt x 229.5545pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--855
+[9 <./img/confusion_matrix.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 991--992
 \OT1/ptm/m/n/10 performance-precision) and [recall](model-performance-
  []
 
-[8 <./img/confusion_matrix.jpg>]
-<img/img-receiver-operator-characteristic-curve.png, id=64, 1418.29875pt x 1105
+<img/img-receiver-operator-characteristic-curve.png, id=67, 1418.29875pt x 1105
 .12875pt>
 File: img/img-receiver-operator-characteristic-curve.png Graphic file (type png
 )
 <use img/img-receiver-operator-characteristic-curve.png>
 Package pdftex.def Info: img/img-receiver-operator-characteristic-curve.png  us
-ed on input line 870.
+ed on input line 1007.
 (pdftex.def)             Requested size: 176.39923pt x 137.44937pt.
-) [9 <./img/img-receiver-operator-characteristic-curve.png (PNG copy)>]
+) [10 <./img/img-receiver-operator-characteristic-curve.png (PNG copy)>]
 ** WARNING: Ignoring useless \section in Appendix (line 98).
 
 ** Conference Paper **
@@ -1130,7 +1134,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10
+[11
 
 ] (ics5510-asignment.aux)
  ***********
@@ -1148,7 +1152,7 @@ Here is how much of TeX's memory you used:
  47439 multiletter control sequences out of 15000+600000
  597664 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,17n,107p,692b,1624s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,695b,1624s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
 m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type
@@ -1168,9 +1172,9 @@ pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Fil
 es/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1
 /urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pf
 b><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (10 pages, 572407 bytes).
+Output written on ics5510-asignment.pdf (11 pages, 583199 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
+ 170 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

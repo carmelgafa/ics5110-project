@@ -4,6 +4,11 @@
 	% ---------------------------
 
 
+
+	%% neural network
+	%% --------------
+	
+	
 	\subsection{Machine learning technique - Neural network}
 
 		
@@ -71,9 +76,7 @@
 			\caption{A multilayer perceptron with a single hidden layer}
 			\label{fig:img-multilayer-perceptron}
 		\end{figure}
-		
-		
-		
+		\bigskip
 		
 		\begin{enumerate}
 			\item Forward propagation involves feeding feature information to the input layer, passing it through all hidden layers, and finally to the output layer to generate a predicted output. A linear transformation followed by a non-linear activation generates the output for every node at each layer. Forward propagation is comprised of the following steps:
@@ -101,37 +104,33 @@
 				$$
 				This introduces non-linearity to the model. A list of some common activation functions can be seen in the Table \ref{tab:activation_functions}.
 				
-			\begin{table}[H]
-				\centering
-				\begin{tabular}{|l|c|c|}
-					\hline
-					\textbf{Function} & \textbf{Equation} & \textbf{Diagram} \\ \hline\hline
-					Sigmoid & 
-					$\sigma(x) = \frac{1}{1+e^{-x}}$ & 
-					\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-sigmoid} \\ \hline\\
-					
-					Tanh & 
-					$tanh(x)$ & 
-					\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-tanh} \\ \hline \\
-					
-					Leaky Relu & 
-					$max(0.2x, x)$ & 
-					\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-leaky-relu} \\ \hline \\
-					
-					Relu & 
-					$max(0, x)$ & 
-					\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-relu} \\ \hline 
-				\end{tabular}
-				\caption{Activation Functions}
-				\label{tab:activation_functions}
-			\end{table}
-				
-				
-				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|l|c|c|}
+						\hline
+						\textbf{Function} & \textbf{Equation} & \textbf{Diagram} \\ \hline\hline
+						Sigmoid & 
+						$\sigma(x) = \frac{1}{1+e^{-x}}$ & 
+						\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-sigmoid} \\ \hline\\
+						
+						Tanh & 
+						$tanh(x)$ & 
+						\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-tanh} \\ \hline \\
+						
+						Leaky Relu & 
+						$max(0.2x, x)$ & 
+						\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-leaky-relu} \\ \hline \\
+						
+						Relu & 
+						$max(0, x)$ & 
+						\includegraphics[width=0.3\linewidth]{img/img-neural-network-activation-functions-relu} \\ \hline 
+					\end{tabular}
+					\caption{Activation Functions}
+					\label{tab:activation_functions}
+				\end{table}
 			\end{enumerate}
-			
-			
 			\bigskip
+
 			\item The predicted output is compared to the actual output using a loss function to compute the loss. A loss function measures the difference between the actual target values and the model's predicted results. For a single prediction:
 			$$
 			\text{Loss}(\hat{y}, y) = f(\hat{y}, y)
@@ -444,7 +443,8 @@
 
 
 
-
+	%% logistic regression
+	%% -------------------
 
 	\bigskip
 	\subsection{Machine learning technique - Logistic regression}
@@ -703,6 +703,143 @@
 			\right)
 		\end{equation}
 		
+
+	%% knn
+	%% ---
+	
+	\bigskip
+	\subsection{Machine learning technique - K-nearest neighbours algorithm}
+	
+	K-nearest neighbours is simple yet robust for datasets with well-structured local relationships. It is particularly effective for non-linear decision boundaries and finds applications in anomaly detection, pattern recognition, and recommendation systems.
+	
+	The k-nearest neighbours algorithm is non-parametric, that is, it does not make assumptions about the underlying distribution or functional form of the data; instance-based, that is, it does not explicitly learn a model during a training phase, but it relies on the raw training data to make predictions at query time, unlike parametric models, which "learn" a set of fixed parameters (e.g., coefficients in linear regression) during training,   learning method used for classification and regression tasks. It predicts the output of a query point based on the labels or values of its $k$-nearest neighbours in feature space.
+	
+	KNN does not assume a specific functional form for the data. Instead, it relies on the local structure of the dataset. For a given query point $x$, the algorithm uses a distance metric to identify its $k$-nearest neighbours and infers the prediction by aggregating their outcomes. Typical distance metrics include:
+	\begin{enumerate}
+		\item Euclidean Distance
+		$$
+		d(x, x') = \sqrt{\sum_{i=1}^{n} (x_i - x'_i)^2}
+		$$
+		
+		\item Manhattan Distance
+		$$
+		d(x, x') = \sum_{i=1}^{n} |x_i - x'_i|
+		$$
+		
+		\item Minkowski Distance. Note that for $p = 2$, this reduces to the Euclidean distance; for $p = 1$, it becomes the Manhattan distance.
+			$$
+			d(x, x') = \left( \sum_{i=1}^{n} |x_i - x'_i|^p \right)^{1/p}
+			$$
+		\end{enumerate}
+		
+		
+		In classification tasks, the predicted class  $\hat{y}$ for a query point $x$ is determined by majority voting among its  $k$-nearest neighbours. If we let $N_k(x)$ represent the set of the $k$-nearest neighbours,he predicted class is given by:
+		
+		$$
+		\hat{y} = \text{argmax}_c \sum_{x' \in N_k(x)} \mathbb{I}(y(x') = c)
+		$$
+		
+		Where:
+		$$
+		\begin{array}{ll}
+			\text{argmax}_c & \parbox[t]{0.4\textwidth}{Identifies the class $c$ with the highest count among the neighbours.} \\
+			\mathbb{I}(\cdot) & \parbox[t]{0.4\textwidth}{The indicator function, which equals  1 if  $y(x') = c$,  and 0 otherwise.}
+		\end{array}
+		$$
+
+		
+		The parameter $k$ determines the number of neighbours considered.
+		
+		\begin{itemize}
+			\item A small $k$ (e.g., $k = 1$) makes the model sensitive to noise, as predictions rely heavily on individual points.
+			\item A large $k$ smooths the decision boundary but may lead to underfitting.
+		\end{itemize}
+				
+		Finding the optimal value for $k$ is one of the main challenges in the k-nearest neighbour. Cross-validation is typically employed to find a value using the following procedure:
+		
+		\bigskip
+		\begin{enumerate}
+			\item Iterate Over Candidate Values of $k$
+			\begin{itemize}
+				\item Choose a range of potential $k$ values, for example, $k = 1, 2, \dots, 20$.
+			\end{itemize}
+			
+			\item Evaluate Performance for Each $k$
+			\begin{itemize}
+				\item For each $k$, use $K$-fold cross-validation:
+				\begin{itemize}
+					\item Train the KNN model using $K-1$ folds.
+					\item Validate it on the remaining fold.
+					\item Compute the average performance metric across all $K$ folds.
+				\end{itemize}
+			\end{itemize}
+			
+			\item Select $k$ with the Best Performance
+			\begin{itemize}
+				\item After evaluating all $k$ values, choose the $k$ that maximizes the performance metric (e.g., accuracy) or minimizes the error.
+			\end{itemize}
+		\end{enumerate}
+		\bigskip
+		
+		The $k$-nearest neighbour algorithm is, therefore, as follows;
+		
+		\bigskip
+		\subsubsection{Input}
+		\begin{itemize}
+			\item Dataset: $D = \{(x_1, y_1), (x_2, y_2), \dots, (x_N, y_N)\}$, where $x_i$ is the feature vector, and $y_i$ is the corresponding label or value.
+			\item Query point: $x_{query}$, the data point for which the prediction is required.
+			\item Number of neighbours: $k$, the number of nearest neighbours to consider.
+			\item Distance metric: $d(x, x')$ (e.g., Euclidean distance).
+		\end{itemize}
+		
+		\subsubsection{Steps:}
+			\begin{enumerate}
+			
+			\item Calculate Distance. For the query point $x_{query}$, compute the distance to every point $x_i$ in the dataset $D$ using the chosen distance metric. For Euclidean distance:
+			$$
+			d(x_{query}, x_i) = \sqrt{\sum_{j=1}^{n} (x_{query_j} - x_{i_j})^2},
+			$$
+			$$
+			\quad \forall i \in \{1, 2, \dots, N\}.
+			$$
+			
+			\item Sort Neighbours. Rank all data points $x_i$ in $D$ by their distance to $x_{query}$ in ascending order. Let this sorted set be $D_{sorted}$.
+			
+			\item Select $k$-Nearest Neighbours. Extract the top $k$ data points from $D_{sorted}$. Denote this set as $N_k(x_{query})$.
+			
+			\item Aggregate Neighbours' Outputs.
+			\begin{itemize}
+				\item For \textbf{classification}: Perform majority voting among the labels $y_i$ of the $k$-nearest neighbours:
+				$$
+				\hat{y} = \text{argmax}_c \sum_{x_i \in N_k(x_{query})} \mathbb{I}(y_i = c),
+				$$
+				where $\mathbb{I}(y_i = c)$ is an indicator function that equals $1$ if $y_i = c$, and $0$ otherwise.
+				
+				
+			\end{itemize}
+			
+			\item \textbf{Output Prediction:}
+			Return $\hat{y}$ as the predicted label (for classification) or value (for regression) for $x_{query}$.
+			
+		\end{enumerate}
+		
+		\subsubsection{Output:}
+		The predicted label or value $\hat{y}$ for the query point $x_{query}$.
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+
+
+
+
 
 	% rescaling and optimization
 	% --------------------------
