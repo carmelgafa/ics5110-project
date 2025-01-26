@@ -826,19 +826,6 @@
 		\subsubsection{Output:}
 		The predicted label or value $\hat{y}$ for the query point $x_{query}$.
 		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-
-
-
 
 
 	% rescaling and optimization
@@ -879,8 +866,93 @@
 		Other types of cross validation include Leave one out cross-validation, where each data point is used as a test set once.
 	
 	
-	% dimentionality reduction and feature selection
-	% ----------------------------------------------
+	% dimentionality reduction 
+	% ------------------------
+	
+	
+	% feature selection
+	% -----------------
+	
+	
+	\subsection{Feature Selection}
+	
+	Feature selection identifies and retains the most relevant features in a dataset to improve model performance and reduce complexity. It involves reducing the dimensionality of the original problem by selecting a subset of features. For example:
+	
+	$$
+	\begin{array}{c}
+		\text{Original problem (with } n \text{ dimensions):} \\
+		\text{A facial image represented by } 32 \text{ facial action units.}
+	\end{array}
+	\quad \longrightarrow \quad
+	\begin{array}{c}
+		\text{Reduced problem (with } k < n \text{ dimensions):} \\
+		\text{A facial image represented by } 12 \text{ facial action units.}
+	\end{array}
+	$$
+	
+	In feature selection, $k$ features are selected out of $N$ to minimize the learner error. This process can be mathematically represented as:
+	
+	$$
+	\begin{bmatrix} 
+		x_1 \\ x_2 \\ \vdots \\ x_N 
+	\end{bmatrix} 
+	\quad
+	\xrightarrow{\text{Feature Selection}} 
+	\quad 
+	\begin{bmatrix} 
+		x_{i_1} \\ x_{i_2} \\ \vdots \\ x_{i_k} 
+	\end{bmatrix}.
+	$$
+	
+	Feature selection is essential for several reasons:
+	\begin{itemize}
+		\item Curse of Dimensionality. High-dimensional datasets often lead to models requiring more data and computation and are prone to poor generalization.
+		\item Overfitting. Excessive features can cause a model to fit noise in the data, leading to overfitting.
+		\item Visualization. Reduced dimensionality makes it possible to visualize data in two or three dimensions.
+	\end{itemize}
+	
+	
+	Filter-based feature selection is a method that selects features based on statistical measures of their relevance to the target variable, independently of any machine learning model.
+	
+	Filter-based feature selection has two primary aims:
+	\begin{enumerate}
+		\item Select features that are independent of each other, ensuring that each feature contributes new information.
+		\item Select features that are highly dependent on the target variable, avoiding features that do not improve model performance.
+	\end{enumerate}
+	
+	Types of filter-based feature selection methods include:
+	\begin{itemize}
+		\item For small numbers of features:
+		\begin{itemize}
+			\item Use scatterplots to visually assess relationships between features and the target variable.
+		\end{itemize}
+		\item For analyzing relationships:
+		\begin{itemize}
+			\item Use Pearson correlation to measure the linear correlation between features and the target variable.
+			
+		The Pearson correlation is a normalized version of covariance\cite{penny2008mathematics} and measures the degree of linear correlation between two variables.
+			
+			
+			\begin{align*}
+				r &= \frac{\sigma_{xy}}{\sigma_x\sigma_y}\\
+				  &= \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y}) }{\sqrt{\sum (X_i - \bar{X})^2 \sum (Y_i - \bar{Y})^2}}
+			\end{align*}
+			
+			
+			
+			where:
+			\begin{description}
+				\item[$X_i$, $Y_i$:] The individual data points.
+				\item[$\bar{X}$, $\bar{Y}$:] The means of the variables $X$ and $Y$.
+			\end{description}
+			
+			$r$ is unitless, meaning it has no associated units of measurement.
+			
+			
+		\end{itemize}
+	\end{itemize}
+	
+	
 	
 	
 	% quantitative measurements

@@ -43,6 +43,29 @@
       \field{title}{Batch normalization: Accelerating deep network training by reducing internal covariate shift}
       \field{year}{2015}
     \endentry
+    \entry{penny2008mathematics}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=efc1a0a2a37a32eeb2983584039acbaf}{%
+           family={Penny},
+           familyi={P\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{fullhash}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{fullhashraw}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{bibnamehash}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{authorbibnamehash}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{authornamehash}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{authorfullhash}{efc1a0a2a37a32eeb2983584039acbaf}
+      \strng{authorfullhashraw}{efc1a0a2a37a32eeb2983584039acbaf}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematics for Brain Imaging}
+      \field{year}{2008}
+    \endentry
     \entry{wu2017introduction}{article}{}{}
       \name{author}{1}{}{%
         {{hash=5859faec0505aedcd37cd60aab5ac500}{%

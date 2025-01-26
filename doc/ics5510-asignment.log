@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  24 JAN 2025 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  24 JAN 2025 22:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1043,73 +1043,78 @@ Overfull \hbox (8.28043pt too wide) detected at line 748
 []
  []
 
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+[7]
+Overfull \hbox (242.38286pt too wide) detected at line 891
+[]  [][]\OMS/cmsy/m/n/10 !  []
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1015
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1015
 \OT1/ptm/m/n/8 cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1015
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
 \OT1/ptm/m/n/8 in-cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--945
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--945
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
 \OT1/ptm/m/n/8 in-cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--945
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
 []|\OT1/ptm/m/n/8 The model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
 \OT1/ptm/m/n/8 cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
 \OT1/ptm/m/n/8 pre-dicted the
  []
 
 <img/confusion_matrix.jpg, id=63, 824.07875pt x 834.11626pt>
 File: img/confusion_matrix.jpg Graphic file (type jpg)
 <use img/confusion_matrix.jpg>
-Package pdftex.def Info: img/confusion_matrix.jpg  used on input line 954.
+Package pdftex.def Info: img/confusion_matrix.jpg  used on input line 1026.
 (pdftex.def)             Requested size: 226.79846pt x 229.5545pt.
-[9 <./img/confusion_matrix.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 991--992
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
 \OT1/ptm/m/n/10 performance-precision) and [recall](model-performance-
  []
 
@@ -1119,9 +1124,17 @@ File: img/img-receiver-operator-characteristic-curve.png Graphic file (type png
 )
 <use img/img-receiver-operator-characteristic-curve.png>
 Package pdftex.def Info: img/img-receiver-operator-characteristic-curve.png  us
-ed on input line 1007.
+ed on input line 1079.
 (pdftex.def)             Requested size: 176.39923pt x 137.44937pt.
-) [10 <./img/img-receiver-operator-characteristic-curve.png (PNG copy)>]
+[10 <./img/confusion_matrix.jpg> <./img/img-receiver-operator-characteristic-cu
+rve.png (PNG copy)>])
+Underfull \hbox (badness 1708) in paragraph at lines 94--94
+[]\OT1/ptm/m/n/10 Will Penny. ``Math-e-mat-ics for Brain Imag-ing''. In:
+ []
+
+[11
+
+]
 ** WARNING: Ignoring useless \section in Appendix (line 98).
 
 ** Conference Paper **
@@ -1134,7 +1147,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
+[12
 
 ] (ics5510-asignment.aux)
  ***********
@@ -1146,10 +1159,10 @@ Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25475 strings out of 474424
- 507041 string characters out of 5751554
+ 25478 strings out of 474424
+ 507205 string characters out of 5751554
  1956496 words of memory out of 5000000
- 47439 multiletter control sequences out of 15000+600000
+ 47442 multiletter control sequences out of 15000+600000
  597664 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,107p,695b,1624s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1172,9 +1185,9 @@ pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Fil
 es/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1
 /urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pf
 b><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (11 pages, 583199 bytes).
+Output written on ics5510-asignment.pdf (12 pages, 587084 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
+ 173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
