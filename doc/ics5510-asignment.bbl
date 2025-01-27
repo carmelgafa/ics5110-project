@@ -94,6 +94,35 @@
       \field{pages}{495}
       \range{pages}{1}
     \endentry
+    \entry{zhang2011momentum}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=cc6bcf0555a4946b3cf90db73f794156}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Naimin},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{fullhash}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{fullhashraw}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{bibnamehash}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{authorbibnamehash}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{authornamehash}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{authorfullhash}{cc6bcf0555a4946b3cf90db73f794156}
+      \strng{authorfullhashraw}{cc6bcf0555a4946b3cf90db73f794156}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 2nd International Conference on Artificial Intelligence, Management Science and Electronic Commerce (AIMSEC)}
+      \field{title}{Momentum algorithms in neural networks and the applications in numerical algebra}
+      \field{year}{2011}
+      \field{pages}{2192\bibrangedash 2195}
+      \range{pages}{4}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -1,5 +1,10 @@
 \section{background}
 
+
+	In this section, we will review the key techniques employed in this study, providing an explanation of their principles to establish a solid foundation for the work presented.
+
+
+
 	% machine learning techniques
 	% ---------------------------
 
@@ -12,13 +17,13 @@
 	\subsection{Machine learning technique - Neural network}
 
 		
-		Neural networks are machine learning models inspired by biological neural networks. They comprise layers of interconnected nodes (neurons) that transform input data into meaningful outputs through weights and activation functions. Neural networks are widely used for classification, regression, and generative modelling tasks. This section will look at the important aspects of neural networks.
+		Neural networks are machine learning models inspired by biological neural networks. They comprise layers of interconnected nodes (neurons) that transform input data into meaningful outputs through weights and activation functions. Neural networks are widely used for classification, regression, and generative modelling tasks. This section will look at the important aspects related to neural networks.
 		
 		
 		\bigskip
 		\subsubsection{The perceptron}
 				
-		A perceptron is a basic architecture that consists of a layer of input nodes that is fully connected with a layer of output nodes and, therefore, does not have any hidden nodes. Perceptrons can only represent linearly separable functions and are used only for binary classification.
+		A perceptron is a basic architecture that consists of a layer of input nodes that is fully connected with an output node and, therefore, does not have any hidden nodes. Perceptrons can only represent linearly separable functions and are used only for binary classification.
 		
 		The building blocks of a perceptron are the following:
 		
@@ -59,13 +64,13 @@
 		\bigskip
 		\subsubsection{Multilayer perceptron}
 		
-		A multilayer perceptron is made up of fully connected layers. It contains an input layer, a number of hidden layers, and an output layer. This structure allows us to model more complex relationships when compared to the simpler perceptron. 
+		The neural network architecture we use in this work are multilayer perceptrons. A multilayer perceptron is made up of fully connected layers. It contains an input layer, a number of hidden layers, and an output layer. This structure allows us to model more complex relationships when compared to the simpler perceptron. 
 		
 		The building blocks of a perceptron are the following:
 		
 		\begin{itemize}
 			\item Each input feature is connected directly to an input neuron to forward the features into the network.
-			\item One, or more than one, hidden layers, each having a designated number of nodes, follow. These layers transform the feature information at each level.
+			\item One or more hidden layers, each having a designated number of nodes, follow. These layers transform the feature information at each level.
 			\item Finally, an output layer consisting of one node (if the task is regression or binary classification) or more nodes (if the task is multi-class classification) gives us the result of the network.
 		\end{itemize}
 		\bigskip
@@ -78,7 +83,7 @@
 		\end{figure}
 		\bigskip
 		
-		\begin{enumerate}
+		\begin{enumerate}[label=\Roman*.]
 			\item Forward propagation involves feeding feature information to the input layer, passing it through all hidden layers, and finally to the output layer to generate a predicted output. A linear transformation followed by a non-linear activation generates the output for every node at each layer. Forward propagation is comprised of the following steps:
 			
 			\bigskip
@@ -133,7 +138,7 @@
 
 			\item The predicted output is compared to the actual output using a loss function to compute the loss. A loss function measures the difference between the actual target values and the model's predicted results. For a single prediction:
 			$$
-			\text{Loss}(\hat{y}, y) = f(\hat{y}, y)
+			\mathcal{L}(\hat{y}, y) = f(\hat{y}, y)
 			$$
 			Where:
 			\begin{description}
@@ -182,7 +187,7 @@
 			\bigskip
 			\begin{enumerate}
 				\item The gradient of the loss with respect to each weight and bias in every node is calculated, starting from the output layer and moving backwards to the input layer.
-				\item The gradient for any layer builds on the gradient of the subsequent (later) layers.
+				\item The gradient for any layer builds on the gradient of the subsequent (later) layers using the chain rule of differentiation.
 				\item The network's parameters for any node are adjusted in the direction opposite to the respective gradient using optimization algorithms like stochastic gradient descent (SGD) or variants such as the Adam optimizer.
 			\end{enumerate}
 		\end{enumerate}
@@ -207,7 +212,7 @@
 		\]
 		\bigskip
 		
-		As Wu noted\cite{wu2017introduction}, the loss, $z$ is a supervision signal that guides any modifications that should take place on the parameters. The stochastic gradient descent method of such modification is as follows:
+		The loss, $z$ is a supervision signal that guides any modifications that should take place on the parameters\cite{wu2017introduction}. The stochastic gradient descent method of such modification is as follows:
 		
 		$$
 		\theta^i\leftarrow \theta^i - \eta \frac{\partial z}{\partial \theta^i}
@@ -235,20 +240,21 @@
 		\subsubsection{Momentum}
 		\label{section:momentum}
 		
-		Momentum is a technique used in training neural networks to accelerate optimization. This accelerated optimization is achieved by considering also the values of previous gradients for each parameter. Momentum can, in this way, mitigate oscillations in the optimization path and speed up learning.
+		Momentum is a technique used in training neural networks to accelerate optimization. This accelerated optimization is achieved by considering also the values of previous gradients for each parameter. Momentum can, in this way, mitigate oscillations in the optimization path and speed up learning\cite{zhang2011momentum}.
 		
 		Momentum acts on the update rule of gradient descent by adding a portion of the update from the previous step to the current step. This approach allows the optimizer to maintain a directional memory, or velocity, effectively smoothing out updates and reducing oscillations.
 		
-		Momentum is commonly integrated with optimization algorithms like SGD and is a key component of advanced optimizers like Adam optimizer in Section \ref{section:adam}.
+		Momentum is commonly integrated with optimization algorithms like stochastic gradient descent and is a key component of advanced optimizers like Adam optimizer in Section \ref{section:adam}.
 		
 		The momentum update rule is given by:
 		
-		$$
-		v^i_t = \beta v^i_{t-1} + (1 - \beta)\frac{\partial z}{\partial \theta^i_{t}}
-		$$
-		$$
-		\theta^i_{t+1} = \theta^i_t - \eta v^i_t
-		$$
+		\begin{equation}
+			v^i_t = \beta v^i_{t-1} + (1 - \beta)\frac{\partial z}{\partial \theta^i_{t}}	
+		\end{equation}
+		
+		\begin{equation}
+			\theta^i_{t+1} = \theta^i_t - \eta v^i_t
+		\end{equation}
 		
 		Where:
 		\begin{description}
@@ -273,7 +279,7 @@
 		
 		RMSProp adjusts the learning rate for each parameter based on the average of recent squared gradients. In this way, the optimizer adapts to the scale of the gradients, preventing large updates that could destabilize training.  
 		
-		The algorithm is similar to [[neural-network-momentum]], but here it introduces a running average of squared gradients to normalize parameter updates.
+		The algorithm is similar to momentum, but here it introduces a running average of squared gradients to normalize parameter updates.
 		
 		The RMSProp update rule is given by:
 		
@@ -286,7 +292,7 @@
 		\begin{description}
 			\item[$S^i_t$] Exponentially weighted moving average of squared gradients at step $t$ for the parameters at layer index $i$.
 			\item[$\beta$] Decay rate for the moving average (commonly set to $0.9$).
-			\item[$\left( \frac{\partial z}{\partial \theta^i_{t}} \right)^2$] Gradient of the loss function $z$ with respect to parameters $\theta^i_t$ at step $t$ and layer index $i$.
+			\item[$`\frac{\partial z}{\partial \theta^i_{t}}$] Gradient of the loss function $z$ with respect to parameters $\theta^i_t$ at step $t$ and layer index $i$.
 		\end{description}
 		\bigskip
 		
@@ -330,7 +336,7 @@
 		
 		The Adam-optimizer update rule is given by the following steps:
 		\bigskip
-		\begin{enumerate}
+		\begin{enumerate}[label=\Roman*.]
 			\item First, calculate the first moment estimate, or the Momentum that we discussed in Section \ref{section:momentum}, which is the exponentially weighted moving average of the gradients. This is done to smooth gradient updates over time by including past gradients and thus maintaining a directional memory:
 			$$
 			m^i_t = \beta_1 m^i_{t-1} + (1 - \beta_1)\frac{\partial z}{\partial \theta^i_{t}}
@@ -361,7 +367,7 @@
 		
 		Batch normalization is used to control the statistics of the activations in the neural networks. It is commonly used in neural network architectures, and it is usually found after layers that have multiplications, like linear or convolutional layers 
 		
-		Let us consider a hidden state neural net node
+		If we consider a hidden state neural net node
 		
 		We have basically a pre-activation value, that is the result of 
 		
@@ -380,7 +386,7 @@
 		
 		Sergey Ioffe and Christian Szegedy propose batch-normalization \cite{ioffe2015batch} to take the hidden states and normalize them to be Gaussian.
 		
-		\begin{figure}
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\linewidth]{img/img-ioffeBatchNormalizationAccelerating2015-1}
 			\caption{Batch normalization algorithm, from \cite{ioffe2015batch}}
@@ -404,9 +410,9 @@
 		\bigskip
 		\subsubsection{Regularization}
 		
-		Regularization are techniques used to prevent overfitting in machine learning. This is achieved by adding a penalty term to the [[loss-function]], that discourage the model from assigning larger weights to features.
+		Regularization are techniques used to prevent overfitting in machine learning. This is achieved by adding a penalty term to the loss function, that discourage the model from assigning larger weights to features.
 		
-		L1 regularization or Lasso Regularization adds the sum of the absolute values of the weights to the [[loss-function]]:
+		L1 regularization or Lasso Regularization adds the sum of the absolute values of the weights to the loss function:
 		
 		\begin{equation}
 			\mathcal{L}_{L1} = \mathcal{L} + \lambda \sum_{i=1}^n |w_i|
@@ -423,7 +429,7 @@
 		
 		L1 regularization drives some weights to zero, thus encouraging sparsity in the network. Since L1 penalizes large weights, it promotes simpler networks with improved generalization.
 		
-		L2 or Ridge regularization adds the sum of the squared values of the weights to the [[loss-function]]:
+		L2 or Ridge regularization adds the sum of the squared values of the weights to the loss function:
 		
 
 		\begin{equation}
@@ -564,7 +570,8 @@
 		
 		\bigskip
 		
-		We now look at \textbf{feedback process} for logistic regression. To optimize the weight vector $\textbf{W}$, we compute the derivatives of the loss function with respect to each weight and the bias term and use these derivatives to update the weights in the opposite direction of the gradient. This is known as gradient descent.
+		We now look at \textbf{feedback process} for logistic regression. To optimize the weight vector $\textbf{W}$, we compute the derivatives of the loss function with respect to each weight and the bias term and use these derivatives to update the weights in the opposite direction of the gradient, that is 
+		 gradient descent.
 		
 		To compute the derivatives, we use the chain rule:
 		
@@ -869,6 +876,81 @@
 	% dimentionality reduction 
 	% ------------------------
 	
+	\subsection{Principal Component Analysis (PCA)}
+	
+		Principal Component Analysis is a statistical method for dimensionality reduction that transforms high-dimensional data into a lower-dimensional space while maintaining as much variance as possible. It achieves this by identifying directions in the data, called principal components, which maximize the variance. PCA is widely used in data compression, noise reduction, and visualization applications. 
+		
+		PCA relies on variance, which measures data spread, and covariance, which shows how features change together. It transforms the data into a new coordinate system defined by the eigenvectors of the covariance matrix, ordered by their corresponding eigenvalues. These eigenvalues quantify the variance captured by each principal component.
+		
+		The following steps are carried out in order to determine the principal components of a dataset:
+		
+		Given a dataset  $X$ with  $n$ samples and  $d$ features, represented as an  $n \times d$ matrix:
+		
+		$$
+		X = 
+		\begin{bmatrix}
+			x_{11} & x_{12} & \cdots & x_{1d} \\
+			x_{21} & x_{22} & \cdots & x_{2d} \\
+			\vdots & \vdots & \ddots & \vdots \\
+			x_{n1} & x_{n2} & \cdots & x_{nd}
+		\end{bmatrix}
+		$$
+		
+		
+		\begin{itemize}
+			\item We start by centring the data. Centering ensures the dataset is zero-centred by subtracting the mean of each feature:
+			
+			$$
+			X_{\text{centered}} = X - \mu
+			$$
+			
+			where  $\mu$ is the mean vector:
+			
+			$$
+			\mu = \frac{1}{n} \sum_{i=1}^n X_i
+			$$
+			
+			\item We then compute the covariance matrix $\Sigma$ which is calculated as:
+			
+			$$
+			\Sigma = \frac{1}{n-1} X_{\text{centered}}^T X_{\text{centered}}
+			$$
+			
+			\item And then solve the eigenvalue equation for the covariance matrix:
+			
+			$$
+			\Sigma v = \lambda v
+			$$
+			
+			where:
+			\begin{description}
+				\item[$\lambda$:] Eigenvalue (variance explained by the principal component).
+				\item[$v$:] Eigenvector (direction of the principal component).
+			\end{description}
+			
+			
+			\item We sort the eigenvalues in descending order and select the top  $k$ eigenvectors to obtain the principal components:
+			
+			$$
+			V_k = [v_1, v_2, \dots, v_k]
+			$$
+			
+			
+			\item We then transform the data into the new  $k$-dimensional space:
+			
+			$$
+			X_{\text{reduced}} = X_{\text{centered}} V_k
+			$$
+			
+			\item The explained variance ratio quantifies the proportion of variance retained by each principal component:
+			
+			$$
+			\text{Explained Variance Ratio} = \frac{\lambda_i}{\sum_{j=1}^d \lambda_j}
+			$$
+			
+			where  $\lambda_i$ is the eigenvalue of the  $i$-th principal component.
+		\end{itemize}
+	
 	
 	% feature selection
 	% -----------------
@@ -880,13 +962,13 @@
 	
 	$$
 	\begin{array}{c}
-		\text{Original problem (with } n \text{ dimensions):} \\
-		\text{A facial image represented by } 32 \text{ facial action units.}
+		\text{Original problem (with }\\
+		n \text{ dimensions):}
 	\end{array}
 	\quad \longrightarrow \quad
 	\begin{array}{c}
-		\text{Reduced problem (with } k < n \text{ dimensions):} \\
-		\text{A facial image represented by } 12 \text{ facial action units.}
+		\text{Reduced problem (with }\\
+		 k < n \text{ dimensions):}
 	\end{array}
 	$$
 	
@@ -926,6 +1008,15 @@
 		\begin{itemize}
 			\item Use scatterplots to visually assess relationships between features and the target variable.
 		\end{itemize}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{img/img-scatter-plot}
+			\caption{Scatter plot analysis of a simple dataset with few features. Taken from lecture notes by Dr. Konstantinos Makantasis.}
+			\label{fig:img-scatter-plot}
+		\end{figure}
+		
+		
 		\item For analyzing relationships:
 		\begin{itemize}
 			\item Use Pearson correlation to measure the linear correlation between features and the target variable.

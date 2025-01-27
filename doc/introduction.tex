@@ -1,16 +1,17 @@
-	\section{Introduction}
+\section{Introduction}
+	This exercise explores the well-known COMPAS dataset using several machine learning techniques, where we will also examine the ethical implications of predictive risk assessment models. In this study, we will apply techniques discussed in ICS5110, such as imputation and encoding, to assist in data preparation. Additionally, we trained a neural network, logistic regressor, and k-nearest neighbours model on the dataset to predict whether a person is likely to recidivate within two years.
+	
+	The selected dataset is particularly interesting because, in addition to the \textbf{\texttt{two\_year\_recid}} label—which indicates whether an individual has reoffended within two years of an initial charge, it also includes the COMPAS \textbf{\texttt{decile\_score}}, a risk rating predicting the likelihood of recidivism. This allows us to compare our findings with the COMPAS system and analyze the nuances of applying different techniques.
 
-This exercise will explore the well-known COMPAS dataset using several machine-learning techniques. We will also look into the ethical implications of predictive risk assessment models. We have taken the opportunity of this study to implement some of the techniques discussed in ICS5510, like imputation and encoding, to help in data preparation, linear regression, neural networks and others as the tools used for prediction.
 
-Wherever possible, we preferred the manual implementation of some of the steps over the functionality available in popular Python libraries to appreciate the techniques implemented more thoroughly.
 
 \subsection{History of the COMPAS tool}
 
-The COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) dataset and tool have a controversial history rooted in its use for assessing the likelihood of recidivism among criminal defendants. Developed by Northpointe, COMPAS gained widespread adoption in the U.S. judicial system for pretrial risk assessments and sentencing decisions. This tool is helpful in various stages of the criminal justice process, including bail, sentencing, and parole decisions.
-
-However, in 2016, an investigative report by ProPublica revealed significant racial biases in the tool's predictions. The report found that COMPAS disproportionately labelled Black defendants as high risk for reoffending while underestimating the risk for white defendants, even when both groups had similar criminal histories. This revelation sparked a broader debate about using algorithmic tools in criminal justice and their transparency and fairness. 
-
-The COMPAS tool has not been directly the subject of lawsuits, but its use in judicial decisions has led to legal challenges. For instance, in State v. Loomis (2016), the Wisconsin Supreme Court upheld using COMPAS in sentencing. However, judges must be informed about its limitations, particularly its proprietary nature and potential biases. The case highlighted the broader tension between the utility of predictive algorithms and their application's need for accountability and fairness.
+	The COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) dataset and tool have a controversial history rooted in its use for assessing the likelihood of recidivism among criminal defendants. Developed by Northpointe, COMPAS gained widespread adoption in the U.S. judicial system for pretrial risk assessments and sentencing decisions. This tool is helpful in various stages of the criminal justice process, including bail, sentencing, and parole decisions.
+	
+	However, in 2016, an investigative report by ProPublica revealed significant racial biases in the tool's predictions. The report found that COMPAS disproportionately labelled Black defendants as high risk for reoffending while underestimating the risk for white defendants, even when both groups had similar criminal histories. This revelation sparked a broader debate about using algorithmic tools in criminal justice and their transparency and fairness. 
+	
+	The COMPAS tool has not been directly the subject of lawsuits, but its use in judicial decisions has led to legal challenges. For instance, in State v. Loomis (2016), the Wisconsin Supreme Court upheld using COMPAS in sentencing. However, judges must be informed about its limitations, particularly its proprietary nature and potential biases. The case highlighted the broader tension between the utility of predictive algorithms and their application's need for accountability and fairness.
 
 \subsection{The COMPAS dataset}
 
@@ -42,11 +43,11 @@ The criticism of the COMPAS tool emphasises the challenges of deploying machine 
 
 \subsection{Objectives of this work}
 
-The main objectives of this study are:
+The objective of this project is to assess the accuracy and fairness of predictive models compared to the COMPAS system. We will in this investigation.
 
 \begin{itemize}[]
 	\item Analyse the COMPAS dataset and its predictions.
 	\item Prepare the dataset for machine learning through cleaning, transformation, and feature engineering.
-	\item Train and evaluate machine learning models for ethical analysis.
+	\item Train and evaluate a neural network, a logistic regressor and use a k-nearest neighbour to obtain our recidivism risk.
 	\item Investigate potential biases and ethical implications in predictions.
 \end{itemize}

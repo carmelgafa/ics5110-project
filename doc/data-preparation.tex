@@ -1,6 +1,6 @@
 
 
-\section{Downloading and first look at the dataset}
+\section{Data preparation}
 
 The COMPAS dataset used in this study is publicly available through ProPublica's GitHub repository. This repository contains the dataset and other assets used by ProPublica to investigate the biases present in the COMPAS risk assessment tool.
 
@@ -31,30 +31,30 @@ The dataset includes important information about individuals. Following an initi
 	
 \end{itemize}
 
-Suppose that we observe the following data:
+%Suppose that we observe the following data:
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|l|l|}
-		\hline
-		Field & Value \\ \hline
-		\textbf{\texttt{priors\_count}} & 5 \\ \hline
-		\textbf{\texttt{juv\_felony\_count}} & 2 \\ \hline
-		\textbf{\texttt{juv\_misdemeanor\_count}} & 3 \\ \hline
-		\textbf{\texttt{r\_charge\_degree}} & Felony \\ \hline
-	\end{tabular}
-\end{table}
+%\begin{table}[!ht]
+%	\centering
+%	\begin{tabular}{|l|l|}
+%		\hline
+%		Field & Value \\ \hline
+%		\textbf{\texttt{priors\_count}} & 5 \\ \hline
+%		\textbf{\texttt{juv\_felony\_count}} & 2 \\ \hline
+%		\textbf{\texttt{juv\_misdemeanor\_count}} & 3 \\ \hline
+%		\textbf{\texttt{r\_charge\_degree}} & Felony \\ \hline
+%	\end{tabular}
+%\end{table}
 
-We can interpret this as an individual who has five total prior charges, including:
+%We can interpret this as an individual who has five total prior charges, including:
 
-\begin{itemize}
-	\item 2 juvenile felonies
-	\item 3 juvenile misdemeanours
-	\item The severity of previous charges includes felonies (\textbf{\texttt{r\_charge\_degree}}).
-\end{itemize}
+%\begin{itemize}
+%	\item 2 juvenile felonies
+%	\item 3 juvenile misdemeanours
+%	\item The severity of previous charges includes felonies (\textbf{\texttt{r\_charge\_degree}}).
+%\end{itemize}
 
 
-\section{Preparing the data for further analysis and training}
+\subsection{Preparing the data for further analysis and training}
 
 Before we can perform any analysis or apply machine learning techniques, it is important to pre-process and prepare the dataset so that we can handle missing values, encode categorical features, and split the data into training, testing, and validation sets. This step will produce a clean dataset for building accurate and unbiased models. The following steps outline the procedures to prepare the dataset for further analysis and training.
 
@@ -86,7 +86,7 @@ At this stage, the dataset contains four categorical features that need encoding
 	\begin{tabular}{|l|l|l|}
 		\hline
 		Feature & Description & Unique Values \\ \hline\hline
-		\textbf{\texttt{sex}} & Gender of the individual & \shortstack{[l]Male\\Female} \\ \hline
+		\textbf{\texttt{sex}} & Gender of the individual & \shortstack{Male\\Female} \\ \hline
 		\textbf{\texttt{race}} & Race of the individual & \shortstack[l]{African-American\\Caucasian\\Hispanic\\Asian\\Native American\\Other} \\ \hline
 		\textbf{\texttt{age\_cat}} & Age category & \shortstack[l]{Less than 25\\25 - 45\\Greater than 45} \\ \hline
 		\textbf{\texttt{c\_charge\_degree}} & Degree of the criminal charge & \shortstack[l]{F (Felony)\\M (Misdemeanor)} \\ \hline
