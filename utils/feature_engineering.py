@@ -41,6 +41,10 @@ def feature_engineering(df):
     df_reduced['days_in_custody'] = abs(
         (df_reduced['out_custody'] - df_reduced['in_custody']).dt.days)
 
+
+    df_reduced['days_in_jail'] = df_reduced['days_in_jail'].fillna(0)
+    df_reduced['days_in_custody'] = df_reduced['days_in_custody'].fillna(0)
+
     remove_columns = ['in_custody', 'out_custody']
     df_reduced = df_reduced.drop(remove_columns, axis=1)
 

@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
-from models.neural_network import CompasNeuralNetworkClassifier
-from utils.preprocessing_pipeline import preprocessor
+from models.neural_network import nn_pipeline
 from sklearn.pipeline import Pipeline
 
 # Load train data
@@ -11,25 +10,16 @@ y_train = train_data['two_year_recid']
 
 # Define parameter grid for grid search
 param_grid = {
-    'classifier__epochs': [10, 20],          # Number of training epochs
+    'classifier__epochs': [10, 20, 50, 100],          # Number of training epochs
     'classifier__batch_size': [16, 32, 64], # Batch sizes
     'classifier__learning_rate': [0.001, 0.01, 0.1]  # Learning rates
 }
 
-# Define the PyTorch classifier
-input_dim = preprocessor.fit_transform(X_train).shape[1]  # Infer input dimensions after preprocessing
-pytorch_classifier = CompasNeuralNetworkClassifier(input_dim=input_dim)
-
-# Define the pipeline
-nn_pipeline = Pipeline(steps=[
-    ('preprocessing', preprocessor),
-    ('classifier', pytorch_classifier)
-])
 
 # Grid search with StratifiedKFold
-cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+cross_val = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
-grid_search = GridSearchCV(estimator=nn_pipeline, param_grid=param_grid, cv=cv, scoring='accuracy', verbose=1, n_jobs=-1)
+grid_search = GridSearchCV(estimator=nn_pipeline, param_grid=param_grid, cv=cross_val, scoring='accuracy', verbose=1, n_jobs=-1)
 
 # Perform grid search
 print("Starting grid search...")

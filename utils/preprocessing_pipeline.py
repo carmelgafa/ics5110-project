@@ -6,8 +6,8 @@ from utils.feature_engineering import feature_engineering_transformer
 
 
 
-numerical_features = ['age', 'juv_fel_count', 'juv_misd_count', 'juv_other_count', 'priors_count']
-categorical_features = ['sex', 'race', 'c_charge_degree']
+numerical_features = ['age', 'juv_fel_count', 'juv_misd_count', 'juv_other_count', 'priors_count', 'days_in_jail', 'days_in_custody']
+categorical_features = ['sex', 'c_charge_degree']
 
 numerical_transformer = Pipeline(steps=[
     ('scaler', StandardScaler()),

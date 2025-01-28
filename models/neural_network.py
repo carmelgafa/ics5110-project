@@ -9,24 +9,25 @@ from sklearn.pipeline import Pipeline
 from utils.preprocessing_pipeline import preprocessor
 
 
+
+LAYER_1 = 128
+LAYER_2 = 64
+
 class CompasNeuralNetwork(nn.Module):
     def __init__(self, input_dim):
         super(CompasNeuralNetwork, self).__init__()
-        self.hidden1 = nn.Linear(input_dim, 128)  # Hidden layer 1 with 128 neurons
-        self.bn1 = nn.BatchNorm1d(128)           # Batch normalization for hidden layer 1
-        self.hidden2 = nn.Linear(128, 64)        # Hidden layer 2 with 64 neurons
-        self.bn2 = nn.BatchNorm1d(64)            # Batch normalization for hidden layer 2
-        self.output = nn.Linear(64, 2)           # Output layer with 2 neurons for classification
-        self.softmax = nn.Softmax(dim=1)         # Softmax activation for output
+        self.hidden1 = nn.Linear(input_dim, LAYER_1)
+        self.bn1 = nn.BatchNorm1d(LAYER_1)
+        self.hidden2 = nn.Linear(LAYER_1, LAYER_2)
+        self.bn2 = nn.BatchNorm1d(LAYER_2)
+        self.output = nn.Linear(LAYER_2, 2)
+        self.softmax = nn.Softmax(dim=1)
+
 
     def forward(self, x):
-        # Hidden layer 1
         x = torch.relu(self.bn1(self.hidden1(x)))
-        # Hidden layer 2
         x = torch.relu(self.bn2(self.hidden2(x)))
-        # Output layer (logits)
         x = self.output(x)
-        # Apply softmax to get probabilities
         x = self.softmax(x)
         return x
 
@@ -38,7 +39,9 @@ class CompasNeuralNetworkClassifier(BaseEstimator, ClassifierMixin):
         self.batch_size = batch_size
         self.learning_rate = learning_rate
         self.model = CompasNeuralNetwork(input_dim)
-        self.criterion = nn.CrossEntropyLoss()
+        # self.criterion = nn.CrossEntropyLoss()
+        # self.criterion = nn.MSELoss()
+        self.criterion = nn.BCELoss()
 
     def fit(self, X, y):
 
@@ -64,9 +67,17 @@ class CompasNeuralNetworkClassifier(BaseEstimator, ClassifierMixin):
             for batch_X, batch_y in dataloader:
                 optimizer.zero_grad()
                 outputs = self.model(batch_X)
-                loss = self.criterion(outputs, batch_y)
+                
+                # for mse loss
+                y_one_hot = torch.nn.functional.one_hot(batch_y, num_classes=2).float()  # Shape: (batch_size, 2)
+
+                # loss = self.criterion(outputs, batch_y)
+                #use for mse
+                loss = self.criterion(outputs, y_one_hot)
+                
                 loss.backward()
                 optimizer.step()
+                print (f"Epoch {epoch+1}/{self.epochs}, Loss: {loss.item():.4f}")
 
         return self
 

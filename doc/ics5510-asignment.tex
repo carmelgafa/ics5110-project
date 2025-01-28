@@ -13,8 +13,7 @@
 \usepackage{scrextend}
 \usepackage{paralist}
 \usepackage{enumitem} % for enumerate roman
-
-
+\usepackage{subcaption} % 
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -96,53 +95,53 @@
 \onecolumn
 \pagebreak
 \appendix 
-\section{COMPAS dataset fields}
-
-	\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|l|l|l|l|l|}
-		\hline
-		Field Name	&	Description	&	Type	&	Options (if Categorical)	&	Used \\ \hline\hline
-		\textbf{\texttt{id}}	&	Unique identifier for each individual.	&	Numeric	&	N/A	&	No \\ \hline
-		\textbf{\texttt{name}}	&	Full name of the defendant	&	Text	&	N/A	&	No \\ \hline
-		\textbf{\texttt{first}}	&	First name of the defendant (anonymized).	&	Text	&	N/A	&	No \\ \hline
-		\textbf{\texttt{last}}	&	Last name of the defendant (anonymized).	&	Text	&	N/A	&	No \\ \hline
-		\textbf{\texttt{compas\_screening\_date}}	&	Date of the COMPAS assessment.	&	Date	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{sex}}	&	Gender of the defendant.	&	Categorical	&	Male, Female	&	Yes \\ \hline
-		\textbf{\texttt{dob}}	&	Date of birth of the defendant.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{age}}	&	Age of the defendant at the time of assessment.	&	Numeric	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{age\_cat}}	&	Age category of the defendant.	&	Categorical	&	\makecell[l]{Less than 25\\25 - 45\\Greater than 45}	&	Yes \\ \hline
-		\textbf{\texttt{race}}	&	Race of the defendant.	&	Categorical	&	\makecell[l]{African-American\\Caucasian\\Hispanic\\Asian\\Native American\\Other}	&	Yes \\ \hline
-		\textbf{\texttt{juv\_fel\_count}}	&	Number of juvenile felony offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{juv\_misd\_count}}	&	Number of juvenile misdemeanor offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{juv\_other\_count}}	&	Number of other juvenile offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{priors\_count}}	&	Number of prior offenses (adult and juvenile).	&	Numeric	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{days\_b\_screening\_arrest}}	&	Days between arrest and COMPAS screening.	&	Numeric	&	N/A	&	Yes \\ \hline
-		\textbf{\texttt{c\_jail\_in}}	&	Jail booking date for the charge.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{c\_jail\_out}}	&	Jail release date for the charge.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{c\_case\_number}}	&	Case number associated with the charge.	&	Text	&	N/A	&	No \\ \hline
-		\textbf{\texttt{c\_offense\_date}}	&	Date of the alleged offense.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{c\_arrest\_date}}	&	Arrest date for the charge.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{c\_charge\_degree}}	&	Degree of the charge.	&	Categorical	&	\makecell[l]{F (Felony)\\M (Misdemeanor)}	&	Yes \\ \hline
-		\textbf{\texttt{c\_charge\_desc}}	&	Description of the charge.	&	Text	&	Free text	&	No \\ \hline
-		\textbf{\texttt{is\_recid}}	&	reoffended after COMPAS screening.	&	Binary	&	0 (No), 1 (Yes)	&	No \\ \hline
-		\textbf{\texttt{r\_case\_number}}	&	Case number for the re-offense.	&	Text	&	N/A	&	No \\ \hline
-		\textbf{\texttt{r\_charge\_degree}}	&	Degree of the re-offense charge.	&	Categorical	&	\makecell[l]{F (Felony)\\M (Misdemeanor)}	&	No \\ \hline
-		\textbf{\texttt{r\_charge\_desc}}	&	Description of the re-offense charge.	&	Text	&	Free text	&	No \\ \hline
-		\textbf{\texttt{r\_jail\_in}}	&	Jail booking date for the re-offense.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{r\_jail\_out}}	&	Jail release date for the re-offense.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{two\_year\_recid}}	&	Label: offense within two years.	&	Binary	&	0 (No), 1 (Yes)	&	Yes \\ \hline
-		\textbf{\texttt{decile\_score}}	&	COMPAS risk score (1-10).	&	Numeric	&	1–10	&	Yes \\ \hline
-		\textbf{\texttt{score\_text}}	&	Risk category for general recidivism.	&	Categorical	&	Low, Medium, High	&	Yes \\ \hline
-		\textbf{\texttt{v\_type\_of\_assessment}}	&	Type of COMPAS assessment conducted.	&	Text	&	Risk of Recidivism	&	No \\ \hline
-		\textbf{\texttt{v\_decile\_score}}	&	Violent recidivism COMPAS score (1-10).	&	Numeric	&	1–10	&	No \\ \hline
-		\textbf{\texttt{v\_score\_text}}	&	Risk category for violent recidivism.	&	Categorical	&	Low, Medium, High	&	No \\ \hline
-		\textbf{\texttt{start}}	&	Start date of the two-year recidivism period.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{end}}	&	End date of the two-year recidivism period.	&	Date	&	N/A	&	No \\ \hline
-		\textbf{\texttt{event}}	&	offense during the two-year period.	&	Binary	&	0 (No), 1 (Yes)	&	No \\ \hline
-	\end{tabular}
-\end{table}
-
+%\section{COMPAS dataset fields}
+%
+%	\begin{table}[!ht]
+%	\centering
+%	\begin{tabular}{|l|l|l|l|l|}
+%		\hline
+%		Field Name	&	Description	&	Type	&	Options (if Categorical)	&	Used \\ \hline\hline
+%		\textbf{\texttt{id}}	&	Unique identifier for each individual.	&	Numeric	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{name}}	&	Full name of the defendant	&	Text	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{first}}	&	First name of the defendant (anonymized).	&	Text	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{last}}	&	Last name of the defendant (anonymized).	&	Text	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{compas\_screening\_date}}	&	Date of the COMPAS assessment.	&	Date	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{sex}}	&	Gender of the defendant.	&	Categorical	&	Male, Female	&	Yes \\ \hline
+%		\textbf{\texttt{dob}}	&	Date of birth of the defendant.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{age}}	&	Age of the defendant at the time of assessment.	&	Numeric	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{age\_cat}}	&	Age category of the defendant.	&	Categorical	&	\makecell[l]{Less than 25\\25 - 45\\Greater than 45}	&	Yes \\ \hline
+%		\textbf{\texttt{race}}	&	Race of the defendant.	&	Categorical	&	\makecell[l]{African-American\\Caucasian\\Hispanic\\Asian\\Native American\\Other}	&	Yes \\ \hline
+%		\textbf{\texttt{juv\_fel\_count}}	&	Number of juvenile felony offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{juv\_misd\_count}}	&	Number of juvenile misdemeanor offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{juv\_other\_count}}	&	Number of other juvenile offenses.	&	Numeric	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{priors\_count}}	&	Number of prior offenses (adult and juvenile).	&	Numeric	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{days\_b\_screening\_arrest}}	&	Days between arrest and COMPAS screening.	&	Numeric	&	N/A	&	Yes \\ \hline
+%		\textbf{\texttt{c\_jail\_in}}	&	Jail booking date for the charge.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{c\_jail\_out}}	&	Jail release date for the charge.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{c\_case\_number}}	&	Case number associated with the charge.	&	Text	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{c\_offense\_date}}	&	Date of the alleged offense.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{c\_arrest\_date}}	&	Arrest date for the charge.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{c\_charge\_degree}}	&	Degree of the charge.	&	Categorical	&	\makecell[l]{F (Felony)\\M (Misdemeanor)}	&	Yes \\ \hline
+%		\textbf{\texttt{c\_charge\_desc}}	&	Description of the charge.	&	Text	&	Free text	&	No \\ \hline
+%		\textbf{\texttt{is\_recid}}	&	reoffended after COMPAS screening.	&	Binary	&	0 (No), 1 (Yes)	&	No \\ \hline
+%		\textbf{\texttt{r\_case\_number}}	&	Case number for the re-offense.	&	Text	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{r\_charge\_degree}}	&	Degree of the re-offense charge.	&	Categorical	&	\makecell[l]{F (Felony)\\M (Misdemeanor)}	&	No \\ \hline
+%		\textbf{\texttt{r\_charge\_desc}}	&	Description of the re-offense charge.	&	Text	&	Free text	&	No \\ \hline
+%		\textbf{\texttt{r\_jail\_in}}	&	Jail booking date for the re-offense.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{r\_jail\_out}}	&	Jail release date for the re-offense.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{two\_year\_recid}}	&	Label: offense within two years.	&	Binary	&	0 (No), 1 (Yes)	&	Yes \\ \hline
+%		\textbf{\texttt{decile\_score}}	&	COMPAS risk score (1-10).	&	Numeric	&	1–10	&	Yes \\ \hline
+%		\textbf{\texttt{score\_text}}	&	Risk category for general recidivism.	&	Categorical	&	Low, Medium, High	&	Yes \\ \hline
+%		\textbf{\texttt{v\_type\_of\_assessment}}	&	Type of COMPAS assessment conducted.	&	Text	&	Risk of Recidivism	&	No \\ \hline
+%		\textbf{\texttt{v\_decile\_score}}	&	Violent recidivism COMPAS score (1-10).	&	Numeric	&	1–10	&	No \\ \hline
+%		\textbf{\texttt{v\_score\_text}}	&	Risk category for violent recidivism.	&	Categorical	&	Low, Medium, High	&	No \\ \hline
+%		\textbf{\texttt{start}}	&	Start date of the two-year recidivism period.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{end}}	&	End date of the two-year recidivism period.	&	Date	&	N/A	&	No \\ \hline
+%		\textbf{\texttt{event}}	&	offense during the two-year period.	&	Binary	&	0 (No), 1 (Yes)	&	No \\ \hline
+%	\end{tabular}
+%\end{table}
+%
 
 
 

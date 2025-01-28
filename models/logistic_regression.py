@@ -5,8 +5,8 @@ from sklearn.pipeline import Pipeline
 
 from utils.preprocessing_pipeline import preprocessor
 
-logistic_pipeline = None
 
+logistic_pipeline = None
 
 parameters_path = 'results/logistic_regression_best_params.txt'
 if os.path.exists(parameters_path):
@@ -20,9 +20,11 @@ if os.path.exists(parameters_path):
             print("Using best parameters:", stripped_params)
             logistic_pipeline = Pipeline(steps=[
                 ('preprocessing', preprocessor),
-                ('classifier', LogisticRegression(**stripped_params))
-            ])
-
+                ('classifier', LogisticRegression(**stripped_params, ))
+                # ('classifier', LogisticRegression(    
+                #     class_weight='balanced',
+                #     random_state=42))
+            ])  
 
 if logistic_pipeline is None:
     logistic_pipeline = Pipeline(steps=[
