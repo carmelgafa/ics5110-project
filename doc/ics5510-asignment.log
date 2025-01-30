@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  30 JAN 2025 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  30 JAN 2025 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -941,11 +941,16 @@ Package caption Info: scrextend package is loaded.
 \caption@addmargin@hsize=\dimen295
 \caption@addmargin@linewidth=\dimen296
 Package caption Info: End \AtBeginDocument code.
- (introduction.tex
+
+Underfull \hbox (badness 3058) in paragraph at lines 40--42
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Machine Learn-ing, Re-cidi-vism 
+Pre-dic-tion,
+ []
+
+(introduction.tex
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
 .
-
-(C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+ (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 1546) in paragraph at lines 22--23
@@ -1025,6 +1030,11 @@ used on input line 131.
 functions-sigmoid.png> <./img/img-neural-network-activation-functions-tanh.png>
  <./img/img-neural-network-activation-functions-leaky-relu.png> <./img/img-neur
 al-network-activation-functions-relu.png>]
+Underfull \hbox (badness 4505) in paragraph at lines 278--279
+ \OT1/ptm/m/it/10 5) RM-SProp: [][] \OT1/ptm/m/n/10 Root Mean Square Prop-a-ga-
+tion (RM-
+ []
+
 [4]
 Underfull \hbox (badness 4872) in paragraph at lines 387--388
 []\OT1/ptm/m/n/10 Sergey Ioffe and Chris-tian Szegedy pro-pose batch-
@@ -1068,6 +1078,12 @@ File: img/img-scatter-plot.png Graphic file (type png)
 Package pdftex.def Info: img/img-scatter-plot.png  used on input line 1014.
 (pdftex.def)             Requested size: 176.39923pt x 100.76785pt.
 [10]
+Underfull \hbox (badness 1596) in paragraph at lines 1054--1055
+[]\OT1/ptm/m/n/10 Quantitative mea-sure-ments[5] nu-mer-i-cally rep-re-sent at-
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
 []|\OT1/ptm/m/n/8 The model
  []
@@ -1140,50 +1156,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 1154--1155
 \OT1/ptm/m/n/10 performance-precision) and [recall](model-performance-
  []
 
-<img/img-receiver-operator-characteristic-curve.png, id=76, 1418.29875pt x 1105
+[12 <./img/confusion_matrix.jpg>]
+<img/img-receiver-operator-characteristic-curve.png, id=79, 1418.29875pt x 1105
 .12875pt>
 File: img/img-receiver-operator-characteristic-curve.png Graphic file (type png
 )
 <use img/img-receiver-operator-characteristic-curve.png>
 Package pdftex.def Info: img/img-receiver-operator-characteristic-curve.png  us
-ed on input line 1170.
+ed on input line 1186.
 (pdftex.def)             Requested size: 176.39923pt x 137.44937pt.
-[12 <./img/confusion_matrix.jpg> <./img/img-receiver-operator-characteristic-cu
-rve.png (PNG copy)>]) (data-preparation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+) (data-preparation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 []\OT1/ptm/m/n/10 The file cho-sen for this anal-y-sis is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 \OT1/pcr/b/n/10 compas-scores-two-years.csv\OT1/ptm/m/n/10 , as it pro-vides
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 []\OT1/ptm/m/n/10 Additional fields, in-clud-ing \OT1/pcr/b/n/10 r_charge_\OT1/
 ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 \OT1/pcr/b/n/10 r_offense_\OT1/ptm/m/n/10 , \OT1/pcr/b/n/10 vr_ \OT1/ptm/m/n/10
  fields, \OT1/pcr/b/n/10 c_charge_degree\OT1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 67--68
+Underfull \hbox (badness 2042) in paragraph at lines 66--67
 \OT1/ptm/m/n/10 la-bels and ad-di-tional re-cidi-vism in-for-ma-tion apart from
 
  []
 
-<img/imputation.png, id=80, 867.24pt x 433.62pt>
+[13 <./img/img-receiver-operator-characteristic-curve.png (PNG copy)>]
+<img/imputation.png, id=84, 867.24pt x 433.62pt>
 File: img/imputation.png Graphic file (type png)
 <use img/imputation.png>
-Package pdftex.def Info: img/imputation.png  used on input line 78.
+Package pdftex.def Info: img/imputation.png  used on input line 77.
 (pdftex.def)             Requested size: 226.79846pt x 113.39357pt.
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 []\OT1/ptm/m/n/10 One-Hot En-cod-ing on \OT1/pcr/b/n/10 sex\OT1/ptm/m/n/10 , \O
 T1/pcr/b/n/10 race\OT1/ptm/m/n/10 , and
  []
@@ -1192,263 +1209,285 @@ T1/pcr/b/n/10 race\OT1/ptm/m/n/10 , and
 <img/race_percentages_pie.png, id=85, 578.16pt x 578.16pt>
 File: img/race_percentages_pie.png Graphic file (type png)
 <use img/race_percentages_pie.png>
-Package pdftex.def Info: img/race_percentages_pie.png  used on input line 18.
+Package pdftex.def Info: img/race_percentages_pie.png  used on input line 19.
 (pdftex.def)             Requested size: 113.39923pt x 113.39798pt.
 <img/sex_percentages_pie.png, id=86, 578.16pt x 578.16pt>
 File: img/sex_percentages_pie.png Graphic file (type png)
 <use img/sex_percentages_pie.png>
-Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 24.
+Package pdftex.def Info: img/sex_percentages_pie.png  used on input line 25.
 (pdftex.def)             Requested size: 113.39923pt x 113.39798pt.
-<img/age_by_race_boxplot.png, id=87, 722.7pt x 433.62pt>
+ [14 <./img/imputation.png> <./img/race_percentages_pie.png> <./img/sex_percent
+ages_pie.png>]
+<img/age_by_race_boxplot.png, id=93, 722.7pt x 433.62pt>
 File: img/age_by_race_boxplot.png Graphic file (type png)
 <use img/age_by_race_boxplot.png>
-Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 65.
+Package pdftex.def Info: img/age_by_race_boxplot.png  used on input line 66.
 (pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 79--79
+Underfull \hbox (badness 4940) in paragraph at lines 80--80
 []|\OT1/ptm/m/n/8 Moderately broad spread, with
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 81--81
+Underfull \hbox (badness 1509) in paragraph at lines 82--82
 []|\OT1/ptm/m/n/8 Very tight dis-tri-bu-tion, with all
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 82--82
+Underfull \hbox (badness 1783) in paragraph at lines 83--83
 []|\OT1/ptm/m/n/8 Similar to Cau-casians but with
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 82--82
+Underfull \hbox (badness 1888) in paragraph at lines 83--83
 \OT1/ptm/m/n/8 slightly fewer older in-di-vid-u-als.
  []
 
 
-Overfull \hbox (4.34146pt too wide) in paragraph at lines 74--84
+Overfull \hbox (4.34146pt too wide) in paragraph at lines 75--85
  [][] 
  []
 
-[14 <./img/imputation.png> <./img/race_percentages_pie.png> <./img/sex_percenta
-ges_pie.png> <./img/age_by_race_boxplot.png>]
-<img/distribution-plots.png, id=95, 846.66313pt x 930.47626pt>
+<img/distribution-plots.png, id=94, 846.66313pt x 930.47626pt>
 File: img/distribution-plots.png Graphic file (type png)
 <use img/distribution-plots.png>
-Package pdftex.def Info: img/distribution-plots.png  used on input line 113.
+Package pdftex.def Info: img/distribution-plots.png  used on input line 114.
 (pdftex.def)             Requested size: 226.79846pt x 249.24423pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<img/correlation_matrix_heatmap.png, id=96, 722.7pt x 578.16pt>
+<img/correlation_matrix_heatmap.png, id=95, 722.7pt x 578.16pt>
 File: img/correlation_matrix_heatmap.png Graphic file (type png)
 <use img/correlation_matrix_heatmap.png>
 Package pdftex.def Info: img/correlation_matrix_heatmap.png  used on input line
- 125.
+ 126.
 (pdftex.def)             Requested size: 176.39923pt x 141.1167pt.
- [15 <./img/distribution-plots.png> <./img/correlation_matrix_heatmap.png>]
-<img/pair_plot.png, id=102, 1355.0625pt x 1264.725pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./img/age_by_race_boxplot.png> <./img/distribution-plots.png>]
+<img/pair_plot.png, id=101, 1355.0625pt x 1264.725pt>
 File: img/pair_plot.png Graphic file (type png)
 <use img/pair_plot.png>
-Package pdftex.def Info: img/pair_plot.png  used on input line 149.
+Package pdftex.def Info: img/pair_plot.png  used on input line 150.
 (pdftex.def)             Requested size: 176.39923pt x 164.6323pt.
-<img/decile_score_by_race_boxplot.png, id=103, 722.7pt x 433.62pt>
+<img/decile_score_by_race_boxplot.png, id=102, 722.7pt x 433.62pt>
 File: img/decile_score_by_race_boxplot.png Graphic file (type png)
 <use img/decile_score_by_race_boxplot.png>
 Package pdftex.def Info: img/decile_score_by_race_boxplot.png  used on input li
-ne 175.
+ne 176.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
-<img/correlation_by_race.png, id=104, 722.7pt x 433.62pt>
+<img/correlation_by_race.png, id=103, 722.7pt x 433.62pt>
 File: img/correlation_by_race.png Graphic file (type png)
 <use img/correlation_by_race.png>
-Package pdftex.def Info: img/correlation_by_race.png  used on input line 188.
+Package pdftex.def Info: img/correlation_by_race.png  used on input line 189.
 (pdftex.def)             Requested size: 226.79846pt x 136.07494pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+[]\OT1/ptm/m/n/10 Fig. 16: |Cor-re-la-tion of \OT1/pcr/b/n/10 decile_score \OT1
+/ptm/m/n/10 with
+ []
+
+[16 <./img/correlation_matrix_heatmap.png> <./img/pair_plot.png> <./img/decile_
+score_by_race_boxplot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 []\OT1/ptm/m/n/10 The cor-re-la-tion be-tween \OT1/pcr/b/n/10 two_year_recid \O
 T1/ptm/m/n/10 and
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 198--199
+Underfull \hbox (badness 1701) in paragraph at lines 199--200
 \OT1/pcr/b/n/10 decile_score \OT1/ptm/m/n/10 for His-pan-ics is 0.22, the low-e
 st
  []
 
 
-Underfull \hbox (badness 6859) in paragraph at lines 198--199
+Underfull \hbox (badness 6859) in paragraph at lines 199--200
 \OT1/ptm/m/n/10 among the groups, sug-gest-ing that for His-panic
  []
 
-[16 <./img/pair_plot.png> <./img/correlation_by_race.png> <./img/decile_score_b
-y_race_boxplot.png>]
-<img/decile_score_by_race_hispanic.png, id=111, 722.7pt x 433.62pt>
+<img/decile_score_by_race_hispanic.png, id=110, 722.7pt x 433.62pt>
 File: img/decile_score_by_race_hispanic.png Graphic file (type png)
 <use img/decile_score_by_race_hispanic.png>
 Package pdftex.def Info: img/decile_score_by_race_hispanic.png  used on input l
-ine 205.
+ine 206.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
 
-Underfull \hbox (badness 1783) in paragraph at lines 219--220
+Underfull \hbox (badness 1783) in paragraph at lines 220--221
  \OT1/ptm/m/it/10 1) Anal-y-sis of the African-American sec-tor: [][] \OT1/ptm/
 m/n/10 We cre-
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 221.
+               Default added (so using `tbp') on input line 222.
 
-<img/decile_score_by_race_african_american.png, id=112, 722.7pt x 433.62pt>
+<img/decile_score_by_race_african_american.png, id=111, 722.7pt x 433.62pt>
 File: img/decile_score_by_race_african_american.png Graphic file (type png)
 <use img/decile_score_by_race_african_american.png>
 Package pdftex.def Info: img/decile_score_by_race_african_american.png  used on
- input line 223.
+ input line 224.
 (pdftex.def)             Requested size: 176.39923pt x 105.83752pt.
 LaTeX Font Info:    Font shape `OT1/pcr/b/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 233.
-[17 <./img/decile_score_by_race_african_american.png> <./img/decile_score_by_ra
-ce_hispanic.png>]) (experiments.tex
+(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 234.
+[17 <./img/correlation_by_race.png> <./img/decile_score_by_race_hispanic.png> <
+./img/decile_score_by_race_african_american.png>]) (experiments.tex
 <img/pipeline.jpg, id=119, 778.91pt x 332.24126pt>
 File: img/pipeline.jpg Graphic file (type jpg)
 <use img/pipeline.jpg>
-Package pdftex.def Info: img/pipeline.jpg  used on input line 35.
+Package pdftex.def Info: img/pipeline.jpg  used on input line 36.
 (pdftex.def)             Requested size: 176.39923pt x 75.23773pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+ [18 <./img/pipeline.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 []\OT1/ptm/m/n/10 Following the anal-y-sis phase, a sub-set of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 \OT1/ptm/m/n/10 dataset's fea-tures was iden-ti-fied as rel-e-vant for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 \OT1/ptm/m/n/10 train-ing and sub-se-quent anal-y-sis. These in-clude
  []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 53--54
+Underfull \hbox (badness 1400) in paragraph at lines 54--55
 \OT1/ptm/m/n/10 crim-i-nal his-tory (\OT1/pcr/m/n/10 priors_count\OT1/ptm/m/n/1
 0 ), ju-ve-nile of-fense
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 \OT1/ptm/m/n/10 counts (\OT1/pcr/m/n/10 juv_fel_count\OT1/ptm/m/n/10 , \OT1/pcr
 /m/n/10 juv_misd_count\OT1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 \OT1/pcr/m/n/10 juv_other_count\OT1/ptm/m/n/10 ), and times-tamps re-lated to
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 59--60
+Underfull \hbox (badness 1527) in paragraph at lines 60--61
 []\OT1/pcr/b/n/10 days_in_jail\OT1/ptm/m/n/10 : Cal-cu-lated as the ab-so-lute 
 dif-
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 59--60
+Underfull \hbox (badness 4279) in paragraph at lines 60--61
 \OT1/ptm/m/n/10 fer-ence in days be-tween the \OT1/pcr/m/n/10 c_jail_in \OT1/pt
 m/m/n/10 and
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 60--61
+Underfull \hbox (badness 2269) in paragraph at lines 61--62
 \OT1/ptm/m/n/10 fer-ence in days be-tween the \OT1/pcr/m/n/10 in_custody \OT1/p
 tm/m/n/10 and
  []
 
-[18 <./img/pipeline.jpg>]
-Underfull \hbox (badness 2486) in paragraph at lines 65--67
+
+Underfull \hbox (badness 2486) in paragraph at lines 66--68
 []\OT1/ptm/m/n/10 The fi-nal pro-cessed dataset con-tains the fol-low-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 []\OT1/ptm/b/n/10 Juvenile Of-fense Counts\OT1/ptm/m/n/10 : \OT1/pcr/m/n/10 juv
 _fel_count\OT1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 []\OT1/ptm/b/n/10 Derived Fea-tures\OT1/ptm/m/n/10 : \OT1/pcr/m/n/10 days_in_ja
 il\OT1/ptm/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 91--92
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 92--93
 \OT1/ptm/m/n/10 u-lar de-sign, pow-ered by Scikit-learn's \OT1/pcr/m/n/10 Pipel
 ine \OT1/ptm/m/n/10 and
  []
-
-
-Underfull \vbox (badness 7451) has occurred while \output is active []
 
 <img/logistic_regression_roc.png, id=123, 462.528pt x 346.896pt>
 File: img/logistic_regression_roc.png Graphic file (type png)
 <use img/logistic_regression_roc.png>
 Package pdftex.def Info: img/logistic_regression_roc.png  used on input line 10
-4.
+5.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
-<img/logistic_regression_cm.png, id=124, 462.528pt x 346.896pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+<img/logistic_regression_cm.png, id=128, 462.528pt x 346.896pt>
 File: img/logistic_regression_cm.png Graphic file (type png)
 <use img/logistic_regression_cm.png>
-Package pdftex.def Info: img/logistic_regression_cm.png  used on input line 114
+Package pdftex.def Info: img/logistic_regression_cm.png  used on input line 115
 .
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19 <./img/logistic_regression_roc.png>]
-<img/knn_roc.png, id=130, 462.528pt x 346.896pt>
+<img/knn_roc.png, id=129, 462.528pt x 346.896pt>
 File: img/knn_roc.png Graphic file (type png)
 <use img/knn_roc.png>
-Package pdftex.def Info: img/knn_roc.png  used on input line 135.
+Package pdftex.def Info: img/knn_roc.png  used on input line 136.
+(pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
+<img/knn_cm.png, id=130, 462.528pt x 346.896pt>
+File: img/knn_cm.png Graphic file (type png)
+<use img/knn_cm.png>
+Package pdftex.def Info: img/knn_cm.png  used on input line 148.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<img/knn_cm.png, id=131, 462.528pt x 346.896pt>
-File: img/knn_cm.png Graphic file (type png)
-<use img/knn_cm.png>
-Package pdftex.def Info: img/knn_cm.png  used on input line 147.
-(pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
-<img/knn_roc_distance.png, id=132, 462.528pt x 346.896pt>
+ [20 <./img/logistic_regression_roc.png> <./img/logistic_regression_cm.png> <./
+img/knn_roc.png>]
+<img/knn_roc_distance.png, id=137, 462.528pt x 346.896pt>
 File: img/knn_roc_distance.png Graphic file (type png)
 <use img/knn_roc_distance.png>
-Package pdftex.def Info: img/knn_roc_distance.png  used on input line 158.
+Package pdftex.def Info: img/knn_roc_distance.png  used on input line 159.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
- [20 <./img/logistic_regression_cm.png> <./img/knn_roc.png> <./img/knn_cm.png>]
-<img/knn_cm_distance.png, id=139, 462.528pt x 346.896pt>
+<img/knn_cm_distance.png, id=138, 462.528pt x 346.896pt>
 File: img/knn_cm_distance.png Graphic file (type png)
 <use img/knn_cm_distance.png>
 Package pdftex.def Info: img/knn_cm_distance.png  used on input line 167.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
-<img/nn_cm.png, id=140, 462.528pt x 346.896pt>
+<img/nn_cm.png, id=139, 462.528pt x 346.896pt>
 File: img/nn_cm.png Graphic file (type png)
 <use img/nn_cm.png>
 Package pdftex.def Info: img/nn_cm.png  used on input line 182.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
-<img/nn_roc.png, id=141, 462.528pt x 346.896pt>
+<img/nn_roc.png, id=140, 462.528pt x 346.896pt>
 File: img/nn_roc.png Graphic file (type png)
 <use img/nn_roc.png>
 Package pdftex.def Info: img/nn_roc.png  used on input line 189.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
- [21 <./img/knn_roc_distance.png> <./img/knn_cm_distance.png> <./img/nn_cm.png>
- <./img/nn_roc.png>]) (ethical-review.tex) (web-portal.tex [22]
+ [21 <./img/knn_cm.png> <./img/knn_roc_distance.png> <./img/knn_cm_distance.png
+> <./img/nn_cm.png> <./img/nn_roc.png>]) (ethical-review.tex)
+(web-portal.tex [22]
 <F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png, id=152, 11
 67.36125pt x 99.87312pt>
 File: F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png Graphi
 c file (type png)
 <use F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png>
 Package pdftex.def Info: F:/work/masters-ai/ics5510-project/doc/img/gradio-app-
-deployed.png  used on input line 17.
+deployed.png  used on input line 11.
 (pdftex.def)             Requested size: 226.79846pt x 19.40279pt.
+<img/gradio-github-page.png, id=153, 287.57437pt x 214.30063pt>
+File: img/gradio-github-page.png Graphic file (type png)
+<use img/gradio-github-page.png>
+Package pdftex.def Info: img/gradio-github-page.png  used on input line 21.
+(pdftex.def)             Requested size: 176.39923pt x 131.45566pt.
+<img/gradio-app-page.png, id=154, 1126.70938pt x 952.05687pt>
+File: img/gradio-app-page.png Graphic file (type png)
+<use img/gradio-app-page.png>
+Package pdftex.def Info: img/gradio-app-page.png  used on input line 31.
+(pdftex.def)             Requested size: 176.39923pt x 149.04906pt.
 )
+Underfull \hbox (badness 2205) in paragraph at lines 60--60
+[]\OT1/ptm/m/n/10 Aur[]elien G[]eron. \OT1/ptm/m/it/10 Hands-on ma-chine learn-
+ing with
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1460,32 +1499,21 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[23
-
- <F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png>]
-(ics5510-asignment.aux)
+[23 <F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png> <./img
+/gradio-github-page.png> <./img/gradio-app-page.png>] (ics5510-asignment.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                ics5510-asignment
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 \openout1 = `ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26118 strings out of 474424
- 522240 string characters out of 5751554
+ 26179 strings out of 474424
+ 524549 string characters out of 5751554
  1956496 words of memory out of 5000000
- 48057 multiletter control sequences out of 15000+600000
+ 48118 multiletter control sequences out of 15000+600000
  598810 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,107p,890b,1620s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1509,9 +1537,9 @@ les/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a
 .pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
 s/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (23 pages, 2266569 bytes).
+Output written on ics5510-asignment.pdf (23 pages, 2368088 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
+ 260 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,7 +13,7 @@
 \usepackage{scrextend}
 \usepackage{paralist}
 \usepackage{enumitem} % for enumerate roman
-%\usepackage{subfigure} % images side by sid
+
 
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -34,11 +34,11 @@
 	\maketitle
 	
 	\begin{abstract}
-	TODO: abstract here
+	This study investigates the COMPAS dataset, a widely used risk assessment tool in the U.S. criminal justice system, to evaluate the accuracy, fairness, and ethical implications of predictive machine learning models. We apply logistic regression, k-nearest neighbors (KNN), and neural networks to predict recidivism and compare their performance against the COMPAS scoring system. The study includes extensive data preprocessing, feature engineering, and dimensionality reduction techniques such as PCA to optimize model performance. Evaluation metrics, including accuracy, precision, recall, and ROC AUC, reveal that some techniques outperform COMPAS in classification accuracy but we also raise concerns about potential overfitting. Finally, we deploy a web-based interface using the Gradio framework to interactively demonstrate model predictions. 
 	\end{abstract}
 	
 	\begin{IEEEkeywords}
-		TODO: keywords
+		 Machine Learning, Recidivism Prediction, COMPAS, Logistic Regression, KNN, Neural Networks.
 	\end{IEEEkeywords}
 	
 	
@@ -56,6 +56,7 @@
 	
 	\input{web-portal.tex}
 	
+	\printbibliography
 	
 \end{document}
 	

@@ -17,7 +17,7 @@
 	\subsection{Machine learning technique - Neural network}
 
 		
-		Neural networks are machine learning models inspired by biological neural networks. They comprise layers of interconnected nodes (neurons) that transform input data into meaningful outputs through weights and activation functions. Neural networks are widely used for classification, regression, and generative modelling tasks. This section will look at the important aspects related to neural networks.
+		Neural networks\cite{geron2022hands} are machine learning models inspired by biological neural networks. They comprise layers of interconnected nodes (neurons) that transform input data into meaningful outputs through weights and activation functions. Neural networks are widely used for classification, regression, and generative modelling tasks. This section will look at the important aspects related to neural networks.
 		
 		
 		\bigskip
@@ -246,7 +246,7 @@
 		
 		Momentum is commonly integrated with optimization algorithms like stochastic gradient descent and is a key component of advanced optimizers like Adam optimizer in Section \ref{section:adam}.
 		
-		The momentum update rule is given by:
+		The momentum update rule is given by\cite{joshi2019performance}:
 		
 		\begin{equation}
 			v^i_t = \beta v^i_{t-1} + (1 - \beta)\frac{\partial z}{\partial \theta^i_{t}}	
@@ -275,7 +275,7 @@
 		\subsubsection{RMSProp}
 		\label{section:RMSProp}
 		
-		Root Mean Square Propagation (RMSProp) is an adaptive learning rate optimization algorithm designed to improve the training of neural networks. Its main function is to address challenges such as inconsistent or large gradient magnitudes. RMSProp helps stabilize convergence during optimization due to its effectiveness in dealing with noisy gradients.
+		Root Mean Square Propagation (RMSProp)\cite{joshi2019performance} is an adaptive learning rate optimization algorithm designed to improve the training of neural networks. Its main function is to address challenges such as inconsistent or large gradient magnitudes. RMSProp helps stabilize convergence during optimization due to its effectiveness in dealing with noisy gradients.
 		
 		RMSProp adjusts the learning rate for each parameter based on the average of recent squared gradients. In this way, the optimizer adapts to the scale of the gradients, preventing large updates that could destabilize training.  
 		
@@ -320,7 +320,7 @@
 		\subsubsection{Adam optimizer}
 		\label{section:adam}
 		
-		The Adam Optimizer (Adaptive Moment Estimation) is a widely used optimization algorithm for training deep learning models. It combines the benefits of momentum and rmsprop to provide an efficient, robust, and adaptable optimizer. Adam is particularly effective for problems with sparse gradients and non-stationary objectives.
+		The Adam Optimizer (Adaptive Moment Estimation)\cite{joshi2019performance} is a widely used optimization algorithm for training deep learning models. It combines the benefits of momentum and rmsprop to provide an efficient, robust, and adaptable optimizer. Adam is particularly effective for problems with sparse gradients and non-stationary objectives.
 		
 		
 		Adam optimizer had a number of hyper parameters:
@@ -456,7 +456,7 @@
 	\subsection{Machine learning technique - Logistic regression}
 
 		
-		Logistic regression is a machine learning algorithm commonly used for binary classification tasks.
+		Logistic regression\cite{geron2022hands} is a machine learning algorithm commonly used for binary classification tasks.
 		
 		Given a feature vector $X \in \mathbb{R}^{n_x}$, the goal of logistic regression is to predict the probability $\hat{y}$ that a binary output variable $y$ takes the value 1, given $X$, that is $\hat{y} = P(y=1|X)$, $0\le y\le1$. 
 		For example, in the case of image classification, logistic regression can be used to predict the probability that an image contains a cat.
@@ -717,7 +717,7 @@
 	\bigskip
 	\subsection{Machine learning technique - K-nearest neighbours algorithm}
 	
-	K-nearest neighbours is simple yet robust for datasets with well-structured local relationships. It is particularly effective for non-linear decision boundaries and finds applications in anomaly detection, pattern recognition, and recommendation systems.
+	K-nearest neighbours\cite{geron2022hands} is simple yet robust for datasets with well-structured local relationships. It is particularly effective for non-linear decision boundaries and finds applications in anomaly detection, pattern recognition, and recommendation systems.
 	
 	The k-nearest neighbours algorithm is non-parametric, that is, it does not make assumptions about the underlying distribution or functional form of the data; instance-based, that is, it does not explicitly learn a model during a training phase, but it relies on the raw training data to make predictions at query time, unlike parametric models, which "learn" a set of fixed parameters (e.g., coefficients in linear regression) during training,   learning method used for classification and regression tasks. It predicts the output of a query point based on the labels or values of its $k$-nearest neighbours in feature space.
 	
@@ -840,7 +840,7 @@
 
 	\subsection{Feature scaling}
 
-		Feature scaling is an important data transformation process. It is a very important aspect of many machine learning algorithms including logistic regression, support vector machines and neural networks, as, the performance of such algorithms is adversely impacted when the numerical features have different scales. The two methods to transform features on the same scale are normalization and rescaling.
+		Feature scaling\cite{geron2022hands} is an important data transformation process. It is a very important aspect of many machine learning algorithms including logistic regression, support vector machines and neural networks, as, the performance of such algorithms is adversely impacted when the numerical features have different scales. The two methods to transform features on the same scale are normalization and rescaling.
 		
 		During normalization or rescaling, values are scaled and shifted so that they are mapped onto the $[0,\space 1]$ interval. This is achieved by applying the following transformation;
 		$$
@@ -862,7 +862,7 @@
 	
 	\subsection{Cross-validation}
 	
-		Cross-validation is a technique that can be applied to any ML algorithm that is aimed to reduce overfitting by estimating how well each hypothesis generalizes to unseen data. In practice, a portion of the data is reserved for this purpose.
+		Cross-validation\cite{geron2022hands} is a technique that can be applied to any ML algorithm that is aimed to reduce overfitting by estimating how well each hypothesis generalizes to unseen data. In practice, a portion of the data is reserved for this purpose.
 		
 		The $K$-fold cross validation technique splits the dataset into $k$ folds, training that model on $k-1$ folds and testing on the remaining one. The test fold is rotated and the process is repeated so that each fold will act as the test set once. Metrics like mean square error are averaged across folds, ensuring a robust estimate.
 		
@@ -878,7 +878,7 @@
 	
 	\subsection{Principal Component Analysis (PCA)}
 	
-		Principal Component Analysis is a statistical method for dimensionality reduction that transforms high-dimensional data into a lower-dimensional space while maintaining as much variance as possible. It achieves this by identifying directions in the data, called principal components, which maximize the variance. PCA is widely used in data compression, noise reduction, and visualization applications. 
+		Principal Component Analysis\cite{shlens2014tutorial} is a statistical method for dimensionality reduction that transforms high-dimensional data into a lower-dimensional space while maintaining as much variance as possible. It achieves this by identifying directions in the data, called principal components, which maximize the variance. PCA is widely used in data compression, noise reduction, and visualization applications. 
 		
 		PCA relies on variance, which measures data spread, and covariance, which shows how features change together. It transforms the data into a new coordinate system defined by the eigenvectors of the covariance matrix, ordered by their corresponding eigenvalues. These eigenvalues quantify the variance captured by each principal component.
 		
@@ -1051,7 +1051,7 @@
 	
 	\subsection{Measurement}
 	
-		Quantitative measurements numerically represent attributes and are fundamental for evaluating machine learning models by providing an objective means to assess the model's performance. We can analyse the model's effectiveness by comparing model predictions to actual outcomes. Appropriate selection and reporting of measurement methods, including their reliability, validity, and potential biases, are essential to ensure accurate interpretation and meaningful results. This section will look at the measurements used in this study.
+		Quantitative measurements\cite{james2013introduction} numerically represent attributes and are fundamental for evaluating machine learning models by providing an objective means to assess the model's performance. We can analyse the model's effectiveness by comparing model predictions to actual outcomes. Appropriate selection and reporting of measurement methods, including their reliability, validity, and potential biases, are essential to ensure accurate interpretation and meaningful results. This section will look at the measurements used in this study.
 		
 		The function used in machine learning and statistical modelling to quantify the difference between the predicted outputs of a model and the actual target values is called the loss function. It serves as a measure of the model's performance, guiding the optimisation process to improve predictions.
 		
@@ -1161,9 +1161,25 @@
 			&= 2\times \frac{TP}{2TP+FN+FP}\\
 		\end{align*}	
 		
-		\bigskip
+		In imbalanced datasets, computing separate F1-scores for the minority and majority classes is important because a single overall F1-score can mask poor performance on the minority class. While the majority class may achieve a high F1-score due to its dominance, the minority class often suffers from low recall, leading to a much lower F1-score. Thus, the F1-score for the majority class (negative class) is:
 		
-		As can be seen in Figure \ref{fig:img-receiver-operator-characteristic-curve}, the ROC curve is plotted by varying the decision threshold of the classifier and plotting the corresponding values of FPR (on the x-axis) and sensitivity or TPR (on the y-axis). Each point on the ROC curve represents a (FPR, TPR) pair for a particular threshold value.
+		$$F1_{\text{majority}} = 2 \times \frac{TN}{2TN + FN + FP}$$ 
+		
+		
+		The macro F1-score calculates the F1-score for each class separately and then takes the average, giving equal weight to both classes regardless of class imbalance.
+		
+		$$F1_{\text{macro}} = \frac{F1_{\text{minority}} + F1_{\text{majority}}}{2}$$
+		
+		
+		The weighted F1-score takes class imbalance into account by weighting the F1-score of each class according to its support (i.e., the number of instances in that class). It is computed as:
+		
+		$$F1_{\text{weighted}} = \frac{N_{\text{minority}} \cdot F1_{\text{minority}} + N_{\text{majority}} \cdot F1_{\text{majority}}}{N_{\text{total}}}$$
+		
+		
+		
+		\bigskip
+
+		As can be seen in Figure \ref{fig:img-receiver-operator-characteristic-curve}, the Receiver Operator Characteristic (ROC) curve is plotted by varying the decision threshold of the classifier and plotting the corresponding values of FPR (on the x-axis) and sensitivity or TPR (on the y-axis). Each point on the ROC curve represents a (FPR, TPR) pair for a particular threshold value.
 		
 		\begin{figure}[H]
 			\centering

@@ -1,5 +1,6 @@
 
 \section{Experiments}
+\label{secn:experiments}
 
 We start this investigation by explaining very shortly the project structure for this exercise. Unlike analysis where notebooks were used, Python files were used to create the models, tune them and carry out experiments. 
 
@@ -128,7 +129,7 @@ This result is a clear indicator of the ethical and societal implications of opt
 \bigskip
 \subsubsection{K-nearest neighbour experiments}
 
-The k-Nearest Neighbors (kNN) model achieved a test accuracy of 73.46\% and a ROC AUC of 0.80 as can be seen in Figure \ref{fig:knnroc}, which are notable improvements over the COMPAS results and slightly better than the logistic regression model. The precision and recall metrics for class 1 are 0.73 and 0.60, respectively, resulting in an F1-score of 0.66. This performance demonstrates that kNN is more effective at balancing the prediction of both classes, with a better trade-off between precision and recall compared to logistic regression and COMPAS. The ROC AUC score of 0.8 highlights the model’s strong ability to differentiate between the two classes.
+The KNN model outperformed both logistic regression and COMPAS, achieving a test accuracy of 73.46\% and a ROC AUC of 0.80. With an F1-score of 0.66 for the minority class, KNN demonstrated a better balance between precision and recall, improving classification fairness. Its strong discrimination ability (AUC = 0.80) suggests that KNN is more effective in distinguishing between recidivists and non-recidivists.
 
 \begin{figure}[H]
 	\centering
@@ -151,7 +152,7 @@ In practical terms, the improved performance of kNN translates to more accurate 
 
 
 
-The k-Nearest Neighbors (kNN) model configured with \texttt{weights='distance'} demonstrated exceptional performance, achieving a test accuracy of 98\% and a near-perfect ROC AUC score of 0.9991 as can be seen in Figure \ref{fig:knnrocdistance}. By weighting closer neighbors more heavily, the model effectively used local information to make better predictions. According to the classification report, the model achieved a precision of 0.97, recall of 1.00, and F1-score of 0.98 for class 0, and a precision of 1.00, recall of 0.95, and F1-score of 0.98 for class 1. This indicates balanced and superior performance across both classes. As can be seen in Figure \ref{fig:knncmdistance}, the confusion matrix further highlights this improvement, with only 30 misclassified instances.
+The KNN model with \texttt{weights='distance'} achieved an AUC of 0.9991, suggesting extreme overfitting. While precision and recall were near-perfect, the model likely memorized the training data rather than learning generalizable patterns. This raises fairness concerns, as overfitting could amplify dataset biases. Future work should explore regularization techniques to improve model robustness.
 
 \begin{figure}[H]
 	\centering
@@ -160,7 +161,6 @@ The k-Nearest Neighbors (kNN) model configured with \texttt{weights='distance'} 
 	\label{fig:knnrocdistance}
 \end{figure}
 
-While these results are impressive, they also raise important considerations. The dramatic improvement in performance indicate that the model may be overfitting to the training data, particularly since the dataset is relatively small. The use of \texttt{weights='distance'} could amplify biases present in the dataset, as the model prioritizes local data points, which may reflect inequalities. In applications such as recidivism prediction, this could lead to overly confident predictions that disproportionately impact certain groups, raising concerns about fairness and accountability. Thus, while the improved performance looks promising, careful validation is necessary to ensure the model's robustness and equitable application.
 
 \begin{figure}[H]
 	\centering
@@ -174,7 +174,7 @@ While these results are impressive, they also raise important considerations. Th
 
 The neural network implemented in exercise consists of an input layer, followed by two fully connected hidden layers. The first hidden layer contains 128 neurons, and the second contains 64 neurons, each followed by batch normalization and a ReLU activation function. The output layer consists of 2 neurons with a softmax activation function. The model is trained using the cross-entropy loss function, optimized with the Adam optimizer, and employs a mini-batch training strategy with a default batch size of 32 and 20 epochs.
 
-The neural network achieved a test accuracy of 70\% and a ROC AUC score of 0.75, reflecting moderate performance in distinguishing between the two classes. The model attained a precision of 0.75, recall of 0.71, and F1-score of 0.73 for class 0, while for class 1, the precision was 0.64, recall was 0.69, and F1-score was 0.66. These metrics highlight that the model performs slightly better for the majority class but still maintains a balanced recall across both classes, which is important in scenarios like this with potential imbalance. The confusion matrix shows 242 false positives and 191 false negatives, indicating that the model correctly predicts most instances, although there is room for improvement.
+The neural network achieved a test accuracy of 70\% and an AUC of 0.75, demonstrating moderate classification performance. While recall for the minority class improved (0.69), the model still exhibited a higher misclassification rate compared to KNN. The confusion matrix revealed 242 false positives and 191 false negatives, indicating room for further optimization.
 
 
 \begin{figure}[H]

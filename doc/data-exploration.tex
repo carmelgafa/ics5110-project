@@ -1,4 +1,5 @@
 \section{Data exploration and visualisation}
+\label{secn:data-exploration}
 
 Here we will examine the dataset in more detail to understand the patterns, distributions, and relationships. In this exercise, we will use more of the visual tools available through several Python libraries to identify potential biases, explore correlations between variables, and uncover insights that may influence the outcomes of predictive models. 
 
@@ -120,10 +121,10 @@ Next, we plotted the distributions of all the features in our dataset; this is d
 
 The correlation matrix heatmap shown in Figure \ref{fig:correlationmatrixheatmap} was created to gather more insights and identify the areas of high correlation. This plot raises a number of interesting observations, namely:
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/correlation_matrix_heatmap}
-	\caption{}
+	\caption{Correlation matrix heatmap.}
 	\label{fig:correlationmatrixheatmap}
 \end{figure}
 
@@ -147,7 +148,7 @@ Figure \ref{fig:pairplot} is a pair plot created to substantiate these observati
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/pair_plot}
-	\caption{}
+	\caption{Pair plot for important features}
 	\label{fig:pairplot}
 \end{figure}
 
@@ -183,10 +184,10 @@ From this plot, we notice that African Americans have higher median scores and b
 
 We then investigated the correlation of \textbf{\texttt{decile\_score}} with \textbf{\texttt{two\_year\_recid}} by race:
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{img/correlation_by_race}
-	\caption{}
+	\caption{Correlation of \textbf{\texttt{decile\_score}} with \textbf{\texttt{two\_year\_recid}} by race}
 	\label{fig:correlationbyrace}
 \end{figure}
 

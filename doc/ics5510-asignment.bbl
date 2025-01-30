@@ -19,6 +19,95 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{wikipediaCOMPAS}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e2ceeea38f8620383cfbd3e99c5c0cd8}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhashraw}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{bibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhashraw}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, The Free Encyclopedia}
+      \field{note}{Accessed: 30-Jan-2025}
+      \field{title}{COMPAS (software)}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/COMPAS_(software)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/COMPAS_(software)
+      \endverb
+    \endentry
+    \entry{geron2022hands}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhashraw}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhashraw}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow}
+      \field{year}{2022}
+    \endentry
+    \entry{harvard2017loomis}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ec4584ae0b522d33893d860dc5cf903a}{%
+           family={{Harvard Law Review}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{fullhash}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{fullhashraw}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{bibnamehash}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{authorbibnamehash}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{authornamehash}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{authorfullhash}{ec4584ae0b522d33893d860dc5cf903a}
+      \strng{authorfullhashraw}{ec4584ae0b522d33893d860dc5cf903a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Harvard Law Review}
+      \field{number}{5}
+      \field{title}{State v. Loomis: Wisconsin Supreme Court Requires Warning Before Use of Algorithmic Risk Assessments in Sentencing}
+      \field{volume}{130}
+      \field{year}{2017}
+      \field{pages}{1530\bibrangedash 1537}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://harvardlawreview.org/print/vol-130/state-v-loomis/
+      \endverb
+      \verb{url}
+      \verb https://harvardlawreview.org/print/vol-130/state-v-loomis/
+      \endverb
+    \endentry
     \entry{ioffe2015batch}{article}{}{}
       \name{author}{1}{}{%
         {{hash=5543e82359e26b035efc009cb3efff9d}{%
@@ -43,6 +132,149 @@
       \field{title}{Batch normalization: Accelerating deep network training by reducing internal covariate shift}
       \field{year}{2015}
     \endentry
+    \entry{james2013introduction}{book}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=df184c5fa522ac8a515ec4de13aef234}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={Gareth},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1ab16961e0de50711fa6bd9425f9b4a6}{%
+           family={Witten},
+           familyi={W\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{fullhash}{090ee61edbbe9615b0c4f61c335a60f9}
+      \strng{fullhashraw}{090ee61edbbe9615b0c4f61c335a60f9}
+      \strng{bibnamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authorbibnamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authornamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authorfullhash}{090ee61edbbe9615b0c4f61c335a60f9}
+      \strng{authorfullhashraw}{090ee61edbbe9615b0c4f61c335a60f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An introduction to statistical learning}
+      \field{volume}{112}
+      \field{year}{2013}
+    \endentry
+    \entry{joshi2019performance}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=2b1e418a89b99a938b60cf146b5d8871}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Ishita},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d792fdcaf86a52963a8114a750f3d199}{%
+           family={Desai},
+           familyi={D\bibinitperiod},
+           given={Milauni},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e99029e31d19596d2fceb78dff32e717}{%
+           family={Bookseller},
+           familyi={B\bibinitperiod},
+           given={Sannidhi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7531821314c4be3e8e5e51c4d82a7453}{%
+           family={Mohod},
+           familyi={M\bibinitperiod},
+           given={Rucha},
+           giveni={R\bibinitperiod}}}%
+        {{hash=636d96bed50eabd6a290330c8c1a5c30}{%
+           family={Paunwala},
+           familyi={P\bibinitperiod},
+           given={Chirag\bibnamedelima N},
+           giveni={C\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=8e571b8dddadfb6371c07304fa5f0392}{%
+           family={Vaidya},
+           familyi={V\bibinitperiod},
+           given={Bhaumik},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ecdbb3df1ebd9cdd8de0521d370a8544}
+      \strng{fullhash}{824195bf6d3065385108d9e7ee41d256}
+      \strng{fullhashraw}{824195bf6d3065385108d9e7ee41d256}
+      \strng{bibnamehash}{ecdbb3df1ebd9cdd8de0521d370a8544}
+      \strng{authorbibnamehash}{ecdbb3df1ebd9cdd8de0521d370a8544}
+      \strng{authornamehash}{ecdbb3df1ebd9cdd8de0521d370a8544}
+      \strng{authorfullhash}{824195bf6d3065385108d9e7ee41d256}
+      \strng{authorfullhashraw}{824195bf6d3065385108d9e7ee41d256}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 10th International Conference on Computing, Communication and Networking Technologies (ICCCNT)}
+      \field{title}{Performance of Different Optimizers for Traffic Sign Classification}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+    \entry{larson2016compas}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d6cdd970807360d93b4b80fb5eaf286c}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c38031bb93ecf7c704bd8e91fcf7d68e}{%
+           family={Mattu},
+           familyi={M\bibinitperiod},
+           given={Surya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2839b86b8666c075c9d0a7fa27fcada6}{%
+           family={Kirchner},
+           familyi={K\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod}}}%
+        {{hash=48c46dd28c4e658ea1ad97ba6caec416}{%
+           family={Angwin},
+           familyi={A\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9f5314b890f1ab84b136cb5f5d56ad6}
+      \strng{fullhash}{7636ffda0d3c40732bd10c92c9f0eb58}
+      \strng{fullhashraw}{7636ffda0d3c40732bd10c92c9f0eb58}
+      \strng{bibnamehash}{a9f5314b890f1ab84b136cb5f5d56ad6}
+      \strng{authorbibnamehash}{a9f5314b890f1ab84b136cb5f5d56ad6}
+      \strng{authornamehash}{a9f5314b890f1ab84b136cb5f5d56ad6}
+      \strng{authorfullhash}{7636ffda0d3c40732bd10c92c9f0eb58}
+      \strng{authorfullhashraw}{7636ffda0d3c40732bd10c92c9f0eb58}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ProPublica}
+      \field{title}{How We Analyzed the COMPAS Recidivism Algorithm}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm
+      \endverb
+      \verb{url}
+      \verb https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm
+      \endverb
+    \endentry
     \entry{penny2008mathematics}{article}{}{}
       \name{author}{1}{}{%
         {{hash=efc1a0a2a37a32eeb2983584039acbaf}{%
@@ -65,6 +297,30 @@
       \field{labeltitlesource}{title}
       \field{title}{Mathematics for Brain Imaging}
       \field{year}{2008}
+    \endentry
+    \entry{shlens2014tutorial}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8f128e70084608a2c29c497ebd794f87}{%
+           family={Shlens},
+           familyi={S\bibinitperiod},
+           given={Jonathon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f128e70084608a2c29c497ebd794f87}
+      \strng{fullhash}{8f128e70084608a2c29c497ebd794f87}
+      \strng{fullhashraw}{8f128e70084608a2c29c497ebd794f87}
+      \strng{bibnamehash}{8f128e70084608a2c29c497ebd794f87}
+      \strng{authorbibnamehash}{8f128e70084608a2c29c497ebd794f87}
+      \strng{authornamehash}{8f128e70084608a2c29c497ebd794f87}
+      \strng{authorfullhash}{8f128e70084608a2c29c497ebd794f87}
+      \strng{authorfullhashraw}{8f128e70084608a2c29c497ebd794f87}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1404.1100}
+      \field{title}{A tutorial on principal component analysis}
+      \field{year}{2014}
     \endentry
     \entry{wu2017introduction}{article}{}{}
       \name{author}{1}{}{%
