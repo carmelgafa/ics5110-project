@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  30 JAN 2025 07:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.5.24)  30 JAN 2025 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1439,7 +1439,16 @@ File: img/nn_roc.png Graphic file (type png)
 Package pdftex.def Info: img/nn_roc.png  used on input line 189.
 (pdftex.def)             Requested size: 176.39923pt x 132.29823pt.
  [21 <./img/knn_roc_distance.png> <./img/knn_cm_distance.png> <./img/nn_cm.png>
- <./img/nn_roc.png>]) (ethical-review.tex)
+ <./img/nn_roc.png>]) (ethical-review.tex) (web-portal.tex [22]
+<F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png, id=152, 11
+67.36125pt x 99.87312pt>
+File: F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png Graphi
+c file (type png)
+<use F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png>
+Package pdftex.def Info: F:/work/masters-ai/ics5510-project/doc/img/gradio-app-
+deployed.png  used on input line 17.
+(pdftex.def)             Requested size: 226.79846pt x 19.40279pt.
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1451,7 +1460,10 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[22] (ics5510-asignment.aux)
+[23
+
+ <F:/work/masters-ai/ics5510-project/doc/img/gradio-app-deployed.png>]
+(ics5510-asignment.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1470,10 +1482,10 @@ Package logreq Info: Writing requests to 'ics5510-asignment.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26100 strings out of 474424
- 521281 string characters out of 5751554
+ 26118 strings out of 474424
+ 522240 string characters out of 5751554
  1956496 words of memory out of 5000000
- 48042 multiletter control sequences out of 15000+600000
+ 48057 multiletter control sequences out of 15000+600000
  598810 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,107p,890b,1620s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1497,9 +1509,9 @@ les/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a
 .pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
 s/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ics5510-asignment.pdf (22 pages, 2243798 bytes).
+Output written on ics5510-asignment.pdf (23 pages, 2266569 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
+ 256 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
