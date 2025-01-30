@@ -9,7 +9,7 @@ try:
 except FileNotFoundError:
     raise FileNotFoundError(f"Pipeline file not found at {pipeline_path}. Ensure the model is trained and saved.")
 
-def predict_single_nn(raw_data: dict):
+def predict_single(raw_data: dict):
     """
     Predicts the outcome for a single input row of raw data using the neural network.
     Args:
@@ -35,7 +35,7 @@ def predict_single_nn(raw_data: dict):
 
 
 # Define a function to preprocess and predict
-def predict_multiple_nn(input_data: pd.DataFrame) -> pd.DataFrame:
+def predict_multiple(input_data: pd.DataFrame) -> pd.DataFrame:
     """
     Predict using the trained neural network pipeline.
     
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     }
 
     # Predict using the neural network pipeline
-    result = predict_single_nn(data_line)
+    result = predict_single(data_line)
     print("Prediction Result:", result)
 
 
@@ -137,5 +137,5 @@ if __name__ == "__main__":
         }
     ])
     
-    result = predict_multiple_nn(test_data)
+    result = predict_multiple(test_data)
     print("Prediction Result:", result)

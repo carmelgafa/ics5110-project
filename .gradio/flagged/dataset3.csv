@@ -1,0 +1,2 @@
+age,sex,race,juv_fel_count,juv_misd_count,juv_other_count,priors_count,c_charge_degree,age_cat,c_jail_in,c_jail_out,in_custody,out_custody,kNN prediction,Neural network prediction,Logistic regression prediction,timestamp
+25,M,Caucasian,2,0,0,0,F,25 - 45,2020-01-01 00:00:00,2020-01-20 00:00:00,2020-01-01 00:00:00,2020-01-20 00:00:00,Likely to reoffend,Likely to reoffend,Likely to reoffend,2025-01-30 17:20:30.113526
