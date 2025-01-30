@@ -44,6 +44,15 @@ Data files are downloaded and saved in the **data** folder. Data preprocessing i
 3. feature_engineering.py
 4. test_train_split.py
 
+## Data analysis
+
+Data analysis is carried out in the **notebooks** folder
+
+1. data_preparation.ipynb - data exploration and analysis
+2. Compas Analysis.ipynb - analysis of the COMPAS dataset
+3. advanced_analysis.ipynb - advanced analysis of the COMPAS dataset
+
+
 ## Execution experiments
 
 Experiments for each technique are stored in the **experiments** folder, as follows:
