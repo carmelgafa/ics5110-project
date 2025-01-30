@@ -1,4 +1,4 @@
-# ICS5510
+# ICS5110
 
 
 ## Project structure
@@ -35,9 +35,43 @@
 ```
 
 
-## Execution order
+## Execution order feature engineering
+
+Data files are downloaded and saved in the **data** folder. Data preprocessing is carried out in the **utils** folder, as follows:
 
 1. data_aquisition.py
 2. data_integrity_check.py
 3. feature_engineering.py
 4. test_train_split.py
+
+## Execution experiments
+
+Experiments for each technique are stored in the **experiments** folder, as follows:
+
+1. knn_evaluation.py
+2. neural_network_evaluation.py
+3. logistic_regression_evaluation.py
+
+Each experiment does the following:
+
+1. loads the test and train datasets
+2. fits the specified model pipeline on the train data
+3. evaluates its performance on the test data using the functions explain previously
+4. saves the trained pipeline to a file in the **models** folder
+
+Hyperparameter tuning is carried out in the **experiments** folder, as follows:
+
+1. knn_grid_search.py
+2. neural_network_grid_search.py
+3. logistic_regression_grid_search.py
+
+
+## Production
+
+You can try the models in the **production** folder
+
+1. predict_knn.py
+2. predict_neural_network.py
+3. predict_logistic_regression.py
+
+This folder also has the Gradio app, which can be accessed at http://carmelgafa.github.io/ics5110-project/
